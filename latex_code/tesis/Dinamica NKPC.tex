@@ -1,0 +1,527 @@
+\documentclass[10pt]{beamer}
+%\usepackage[xllnames,table]{xcolor}
+%http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme_and_color.html
+%La opción pages puede ser all (para todo el documento) o some, para algunas partes del documento
+\usepackage[pages=all]{background}
+\usepackage{eso-pic}
+
+%%%%%%PRIMERA OPCIÓN
+\usetheme{Ilmenau}
+\usecolortheme{beaver}% tema de color crane
+
+\usepackage{color} % si
+%\usetheme{AnnArbor} % AnnArbor-defaulttema de presentación si
+ 
+%\usefonttheme{serif} % tema de fuente
+%\useinnertheme{circles} % tema interior
+%\useoutertheme{split} % tema exterior si
+%\definecolor{naranja}{cmyk}{0,0.5,1,0}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{ragged2e}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{amssymb, amsmath, amsbsy} % simbolitos
+\usepackage{upgreek} % para poner letras griegas sin cursiva
+\usepackage{cancel} % para tachar
+\usepackage{mathdots} % para el comando \iddots
+\usepackage{mathrsfs} % para formato de letra
+\usepackage{stackrel} % para el comando \stackbin
+\setbeamercovered{transparent}
+\author[Juan Pablo Cely Acero]{Juan Pablo Cely Acero}
+\institute[]{Universidad Pedagógica y Tecnológica de Colombia\\
+ \vspace*{0.5cm}
+Asesor: José Mauricio Gil León}
+\date[20]{\scriptsize{Noviembre 27, 2020}}
+\title[Dinámica de los precios en los departamentos en Colombia: una estimación usando la curva de Phillips neokeynesiana (2010-2019)]{Dinámica de los precios en los departamentos en Colombia: una estimación usando la curva de Phillips neokeynesiana (2010-2019)}
+%\subtitle{Input-output analysis: a case study in the Boyacá economy}
+%\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+%\logo{} 
+%\institute{} 
+%\date{} 
+\subject{Asesor} 
+%\logo{\includegraphics[width=1.5cm]{Graficas/images7}} 
+%importante sisolo el grafico en la portada o en todo el documento
+%\titlegraphic{\includegraphics[width=1.0cm]{Graficas/images2}}
+\justifying
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Esquema de presentación}
+\begin{itemize}
+\item Motivación 
+\item Marco teórico
+\item Metodología
+\item Datos y estadísticas descriptivas
+\item Resultados
+\item Conclusiones
+\end{itemize}
+\end{frame}
+
+
+\section{Motivación}
+\begin{frame}
+\frametitle{Motivación}
+\framesubtitle{Hechos estilizados}
+Evolución de la curva de Phillips
+\begin{itemize}[<i->]
+\item<2-> \textbf{Problema}
+\begin{itemize}
+\item<2-> Rigidez de precios en los departamentos de Colombia
+\end{itemize}
+%\item<2-> \textbf{Preguntas}
+%\begin{itemize}
+%\item<2-> ¿Cuáles son los determinantes del diferencial de precios en los departamentos?
+%\item<2-> ¿Se comportan los precios de igual manera en todo el país?
+%\item<2-> ¿Cómo estimarlos si se presenta competencia imperfecta en los mercados? 
+%\item<2-> ¿Con que frecuencia cambian las empresas el precio de su producto
+%principal?
+%\end{itemize}
+\item<3-> \textbf{Pregunta a responder}
+\begin{itemize}
+\item<3->  ¿Cuál ha sido el  grado de rigidez en los precios por departamento  bajo un entorno de competencia monopolística?
+\end{itemize}
+\item<4-> \textbf{Objetivo general}
+\begin{itemize}
+\justifying
+\item<4->  Explicar la dinámica de la inflación en los departamentos de Colombia a través de la estimación de la curva de Phillips Neokeynesiana en la última década.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+%Revisar la literatura  acerca de la
+%determinación de los precios en un entorno de rigideces nominales.
+% Exponer la metodología y el comportamiento de los precios y de los costos
+%marginales en los departamentos en Colombia.
+% Especificar y estimar una regresión econométrica
+%que de cuenta de las rigideces de precios en los
+%departamentos de Colombia en el periodo 2009-2019.
+
+\section{Marco teórico}
+\begin{frame}
+\frametitle{Marco teórico}
+%\framesubtitle{Hechos estilizados}
+\begin{itemize}
+\justifying
+\item<1->  Existen diversos trabajos que analizan esta problemática.Gali \& Gertler (1999); Gali, et al. (2001); Neiss \& Nelson (2005), Cespedes et al. (2005);  Mehrotra et al. (2010); entre otros.
+\item<2-> Para Colombia se han realizado diversos trabajos que estudia la dinámica de precios por medio de la curva de Phillips neokeynesiana (NKPC). Se estacan los trabajos de Bejarano (2005), Galvis (2010) y Hernández \& Guerra (2020).
+\item<3-> La estimación de la NKPC se realiza pensando en que la dinámica inflacionaria subnacional ha recibido menos atención en la literatura y en los análisis económicos y, sobre todo, en las economías emergentes.
+ \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Marco teórico}
+\framesubtitle{Especificación del modelo: Hogar}
+\begin{itemize}
+\item<1-> Problema de optimización
+\begin{equation*}
+\max_{\{c_{t},n_{t},B_{t},M_{t}\}} E_{t} \sum_{i=0}^{\infty}\widehat{a}_{t+i} B{i}
+\left[ \gamma_{c} ln y_{t+i} \gamma_{n}ln(1-n_{t+i})+\gamma_{m}ln v_{t+i}M_{t+i} \right] 
+\end{equation*}
+
+\item<2-> Sujeto a:
+\begin{equation*}
+(M_{t}-M_{t-1})+B_{t}=W_{t}n_{t}+r_{t-i}B_{t-1}+T_{t}- \int_{0}^{1} P_{t}(i) y_{t}(i)di
+\end{equation*}
+\item<3-> Explicación
+\begin{itemize}
+\item $\widehat{a}_{t+i}$ y $v_{t+i}$
+\item $y_{t}=c_{t}\Rightarrow lnc_{t+1}=lny_{t}$
+\end{itemize}
+\end{itemize}
+ \end{frame}
+ 
+ 
+ 
+\begin{frame}
+\frametitle{Marco teórico}
+\framesubtitle{Especificación del modelo: Hogar}
+\begin{itemize}
+\item<1-> Función de demanda
+\begin{equation}
+y_{t}(j)=\left(\frac{P_{t}(j)}{P_{t}} \right)^{-\epsilon}
+\end{equation}
+
+\item<2-> Índice agregado de precios
+\begin{equation}
+P_{t}=  \left( \int_{0}^{1} P_{t}(j) dj \right) ^{\frac{1}{1-\epsilon}}
+\end{equation}
+\end{itemize}
+ \end{frame}
+ 
+%\min\limits_{\forall s \in S_j} q_k(s)
+%\widehat{•}
+% \left( \right)
+ \begin{frame}
+\frametitle{Marco teórico}
+\framesubtitle{Especificación del modelo: Empresa}
+\textbf{Fijación de precios (precios flexibles)}
+\begin{itemize}
+\item<1-> Problema de optimización
+\begin{equation*}
+\max_{\{P_{t}(j)\}} P_{t}(j) y_{t}(j)- W_{t} n_{t}(j)   
+\end{equation*}
+\item<2-> Sujeto a:
+\begin{align*}
+y_{t}(j)&=z_{t}n_{t}(j)^{1-\alpha}\\
+y_{t}(j)&= \left( \frac{P_{t}(j)}{P_{t}} \right)^{-\epsilon}y_{t}
+\end{align*}
+\item<3-> Solución del problema
+\begin{equation*}
+P_{t}(j)=\frac{\epsilon}{1-\epsilon}mcr_{t}
+\end{equation*}
+\begin{itemize}
+\item<4-> $\frac{\epsilon}{1-\epsilon}$ es el mark-up
+\item<4-> $\epsilon=1\Rightarrow P_{t}(j)=mcr_{t}$
+\end{itemize}
+\end{itemize}
+\end{frame}
+%\section{Metodología}
+%\begin{frame}
+%\frametitle{Metodología}
+%\framesubtitle{Estimación de la curva de Phillips neokeynesiana (NKPC)}
+%\begin{itemize}
+%\item Gali \& Gertler (1999); Gali, et al. (2001); Neiss \& Nelson (2005)*, Cespedes et al. (2005);  Mehrotra et al. (2010); entre otros.
+%\item La NKPC supone que las empresas se encuentran en competencia monopolística, donde las empresas establecen los precios a través de una regla de tiempo dependiente.
+% \item Fijación de precios de Calvo (1983):
+% \begin{equation*}
+%  \sum_{k=0}^{\infty} (\theta\beta)^{k-1}=\frac{1}{1-\theta} \Rightarrow 1-\theta
+% \end{equation*}
+% \end{itemize}
+ %\end{frame}
+ 
+%\section{Metodología}
+%\begin{frame}
+%\frametitle{Metodología}
+%\framesubtitle{Estimación de la curva de Phillips neokeynesiana (NKPC)}
+%\begin{itemize}[<i->]
+%\item<1-> Supuestos básicos
+%\begin{itemize}
+%\justifying
+%\item<2->   Los hogares realizan sus decisiones de consumo, oferta de trabajo y demanda de dinero maximizando la corriente de utilidad esperada a lo largo de su vida, sujeto a una restricción intertemporal caracterizada por un mercado de capitales perfectamente competitivo.
+%\item<3-> Las empresas operan en un entorno de competencia imperfecta
+%(competencia monopolística). Las empresas fijan los precios que
+%maximizan los beneficios esperados.
+%\item<4-> Las empresas se enfrentan a costes cuando cambian los precios:
+%\begin{itemize}
+%\item<4-> Calvo (1983): modelo de cambio escalonado en los precios.
+%\item<4-> Modelo de costes de ajuste convexos en el nivel de precios.
+%\end{itemize}
+% \end{itemize} 
+% \end{itemize}
+% \end{frame}
+ 
+ 
+%\footnote{Para tener en cuenta que en el caso que la flexibilidad de precios sea $\theta=0$, la empresa ajusta su precio al instante, por lo tanto, solo el futuro es relevante cuando hay rigidez de precios, es decir, $\theta>0$
+
+
+
+
+\begin{frame}
+\frametitle{Marco teórico}
+\framesubtitle{Estimación de la curva de Phillips neokeynesiana (NKPC)}
+\textbf{Fijación de precios (precios rígidos)}
+\begin{itemize}
+\item<1-> Las empresas se enfrentan a costes cuando cambian los precios:
+\begin{itemize}
+\item<1-> Calvo (1983): modelo de cambio escalonado en los precios.
+\item<1-> Modelo de costes de ajuste convexos en el nivel de precios.
+\end{itemize}
+\begin{itemize}
+\item<2-> $\theta$
+\item<2-> $P_{t}^*$
+\item<3-> Considerando la ecuación (2)
+\begin{equation*}
+P_{t}=((1-\theta)P_{t}^{*1-\epsilon}+\theta P_{t-1}) ^\frac{1}{1-\epsilon}
+\end{equation*}
+ \end{itemize}
+ \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Marco teórico}
+\framesubtitle{Estimación de la curva de Phillips neokeynesiana (NKPC)}
+\begin{block}<1-> {Curva de Phillips tradicional}
+\begin{equation*}
+\pi_t=\pi_{t-1}+(\mu+z)-\alpha u_{t}
+\end{equation*}
+\end{block}
+\begin{block}<1-> {Curva de Phillips con expectativas}
+\begin{equation*}
+\pi_t=\pi_{t}^e-\alpha (u_{t}-u_{n})
+\end{equation*}
+\end{block}
+\begin{alertblock}<2-> {Curva de Phillips neokeynesiana}
+\begin{equation*}
+\pi_{t}=\beta E_{t}(\pi_{t+1})+\lambda(mcr_{t})
+\end{equation*}
+\end{alertblock}
+\begin{itemize}
+\item<2-> $\lambda =\frac{(1-\theta\beta)(1-\theta)}{\theta} $
+\end{itemize}
+\end{frame}
+
+% \begin{itemize}
+% \justifying
+% \item<2-> Esta representación establece un link directo entre la rigidez de precios y la brecha de los costos marginales:
+% \begin{itemize}
+% \justifying
+% \item<3-> Si todas las empresas ajustan de forma óptima sus precios ($\theta=0$) cada periodo, la inflación reaccionaría inmediatamente a cualquier shock que situara al costo marginal fuera de su nivel potencial.
+% \item<3-> Por otra parte, la rigidez de precios afectara a una gran proporción de empresas ($\theta=1$), entonces la inflación reaccionaría muy lentamente y las desviaciones del costo marginal (o de precios flexibles) podrían ser importantes y duraderas.
+% \end{itemize}
+% \end{itemize}
+
+
+\begin{frame}
+\frametitle{Marco teórico}
+\framesubtitle{Evidencia empírica en Colombia}
+\begin{figure}
+  % \caption{Multiplicadores de producto, ingreso y empleo}
+\includegraphics[width=9cm]{pant/col}
+\centering
+\label{fig:ejemplo}\\
+  \raggedright  \tiny \textbf{Fuente:} Bejarano (2005)\dag, Galvis (2010)\dag\dag, Hernández \& Guerra (2020)\dag\dag\dag.
+\end{figure}
+\begin{itemize}
+\justifying
+\item Para Galvis (2010), el 80\% de las empresas en Colombia mantienen los precios fijos en el tiempo durante cinco trimestres y aproximadamente el 20\% de las empresas fijan su precio al instante.
+\end{itemize}
+\end{frame}
+
+\section{Metodología}
+\begin{frame}
+\frametitle{Metodología}
+\framesubtitle{Estrategia econométrica}
+\begin{alertblock}<1-> {Curva de Phillips neokeynesiana con persistencia en la inflación}
+\begin{equation*}
+\pi_{t}= \gamma_{f}E_{t}(\pi_{t+1})+\gamma_{b}(\pi_{t-1})+\lambda(mcr_{t})
+\end{equation*}
+\end{alertblock}
+
+\begin{alertblock}<2-> {Estimación econométrica de la NKPC en su versión híbrida}
+\begin{equation*}
+E_{t}((\pi_{t}-\gamma_{f}\beta  \pi_{t+1}-\gamma_{b}\pi_{t-1}-\lambda(mcr_{t}))\zeta_{t})=0
+\end{equation*}
+\end{alertblock}
+
+\end{frame}
+ 
+\section{Datos y estadísticas descriptivas}
+\begin{frame}
+\frametitle{Datos y estadísticas descriptivas}
+\framesubtitle{Fuentes de datos}
+\begin{itemize}
+\item<1-> $\pi_{t}$
+\item<2-> $W_{t}N_{t}$
+\item<3-> $P_{t}Y_{t}$
+\end{itemize}
+
+\begin{figure}
+  % \caption{Multiplicadores de producto, ingreso y empleo}
+\includegraphics[width=10cm]{pant/fuente}
+\centering
+\label{fig:ejemplo}\\
+  \raggedright  \tiny \textbf{Fuente:} elaboración propia. 
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Datos y estadísticas descriptivas}
+\framesubtitle{Resumen de algunas estadísticas descriptivas de la inflación y los costos marginales (2010-2019)}
+\begin{columns}[c]
+		\column{0.5\textwidth}
+\begin{figure}
+  % \caption{Multiplicadores de producto, ingreso y empleo}
+\includegraphics[width=5.4cm]{pant/est}
+\centering
+\label{fig:ejemplo}\\
+  \raggedright  \tiny \textbf{Fuente:} DANE. Estimaciones propias.
+\end{figure} 
+\column{0.5\textwidth}
+
+\begin{itemize}
+\justifying
+\item<1-> Senda de crecimiento de la inflación entre el  3\% y 4\%. En el 2013 se alcanzó una inflación en promedio menor al 2\% y superior al 8 \% para 2016.
+\item<2-> Se destaca  Bogotá, Caquetá, Norte de Santander y Risaralda por sus costos marginales promedio mayores que al resto de los lugares. Caso contrario ocurrió con Meta, Cundinamarca, Cesar y Boyacá.
+\end{itemize}
+
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Datos y estadísticas descriptivas}
+\framesubtitle{Dispersión de la inflación y la brecha de los costos marginales}
+a) Inflación         \hspace*{4cm}                       b) Brecha de los costos marginales
+\begin{figure}
+  % \caption{Multiplicadores de producto, ingreso y empleo}
+\includegraphics[width=11.6cm]{pant/disp}
+\centering
+\label{fig:ejemplo}\\
+  \raggedright  \tiny \textbf{Fuente:} DANE. Estimaciones propias.
+\end{figure}
+\end{frame} 
+
+
+
+\begin{frame}
+\frametitle{Datos y estadísticas descriptivas}
+\framesubtitle{Correlación cruzada entre la tasa de inflación y costos marginales (HP) por departamento (2010-2019)}
+\begin{columns}[c]
+		\column{0.5\textwidth}
+\begin{figure}
+  % \caption{Multiplicadores de producto, ingreso y empleo}
+\includegraphics[width=6cm]{pant/corr1}
+\centering
+\label{fig:ejemplo}\\
+  \raggedright  \tiny \textbf{Fuente:} DANE. Estimaciones propias.
+\end{figure} 
+\column{0.5\textwidth}
+				 \vspace*{-0.8cm}
+\begin{figure}
+  % \caption{Multiplicadores de producto, ingreso y empleo}
+\includegraphics[width=6cm]{pant/corr2}
+\centering
+\label{fig:ejemplo}%\raggedright  \tiny \textbf{Fuente:} WOS. Estimaciones propias.
+\end{figure} 
+\end{columns}
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Estrategia de identificación}
+%\framesubtitle{Hechos estilizados}
+%\end{frame} 
+ 
+\section{Resultados}
+\begin{frame}
+\frametitle{Resultados}
+\framesubtitle{Estimación de forma reducida de la versión híbrida de la NKPC por departamento (2010-2019)}
+\begin{columns}[c]
+		\column{0.5\textwidth}
+\begin{figure}
+  % \caption{Multiplicadores de producto, ingreso y empleo}
+\includegraphics[width=6cm]{pant/res2}
+\centering
+\label{fig:ejemplo}\
+  \raggedright  
+\end{figure} 
+\column{0.5\textwidth}
+				 \vspace*{-0.6cm}
+\begin{figure}
+  % \caption{Multiplicadores de producto, ingreso y empleo}
+\includegraphics[width=6.2cm]{pant/res1}
+\centering
+\label{fig:ejemplo}%\raggedright  \tiny \textbf{Fuente:} WOS. Estimaciones propias.
+\end{figure} 
+\end{columns}
+\tiny \textbf{Fuente:} estimaciones propias.\\
+\raggedright \tiny \textbf{Nota:} ***,  **, * representan significancia estadistica al 1\%, 5\% y 10\%, respectivamente. Bartlett KerneL, Newey-West fijo, errores estándar robustos de HAC entre paréntesis.\\
+Instrumentos: brecha de los costos marginales: t-2 a t-7, inflación: t-1 a t-6.\\
+El coeficiente $\gamma_{f}$ es utilizado en la ecuación, en lugar de $\beta$ para calcular $\theta$. 
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados}
+\framesubtitle{Estimaciones espaciales}
+a) $\gamma_{b}$ \hspace*{2cm} b) $\gamma_{f}$ \hspace*{2cm} c) $\lambda$\hspace*{2cm} d) $\theta$
+\begin{figure}
+  % \caption{Multiplicadores de producto, ingreso y empleo}
+\includegraphics[width=11.6cm]{pant/map}
+\centering
+\label{fig:ejemplo}\\
+  \raggedright  \tiny \textbf{Fuente:} estimaciones propias.
+\end{figure}
+\end{frame} 
+
+\begin{frame}
+\frametitle{Resultados}
+\framesubtitle{Panel dinámico de la NKPC en Colombia (2010-2019)}
+\begin{figure}
+  % \caption{Multiplicadores de producto, ingreso y empleo}
+\includegraphics[width=11.6cm]{pant/panel}
+\centering
+\label{fig:ejemplo}\\
+  \raggedright  \tiny \textbf{Fuente:} estimaciones propias. \\
+\raggedright  \tiny \textbf{Nota:} ***,  **, * representan significancia estadistica al 1\%, 5\% y 10\%, respectivamente. Bartlett KerneL, Newey-West fijo, errores estándar robustos de HAC entre paréntesis.\\
+Instrumentos: inflación: t-12. Wardhono et al. (2018) utiliza  $\pi_{t-4}$ como variable instrumental para estudiar la NKPC para países del Sur de Asia con datos panel en trimestres.\\
+\end{figure}
+\end{frame} 
+
+\begin{frame}
+\frametitle{Resultados}
+\framesubtitle{Resultados de las estimaciones en $\gamma{b}$, $\gamma{f}$ y $\lambda$}
+a) $\lambda$ vs $\gamma_{b}$ \hspace*{4.5cm} b) $\lambda$ vs $\gamma_{f}$
+\begin{figure}
+  % \caption{Multiplicadores de producto, ingreso y empleo}
+\includegraphics[width=11.6cm]{pant/resul}
+\centering
+\label{fig:ejemplo}\\
+  \raggedright  \tiny \textbf{Fuente:} estimaciones propias.
+\end{figure}
+\end{frame} 
+
+
+\begin{frame}
+\frametitle{Resultados}
+\framesubtitle{Estimaciones por probit y OLS}
+a) Probit \hspace*{4cm} b) OLS
+\begin{columns}[c]
+		\column{0.5\textwidth}
+\begin{figure}
+  % \caption{Multiplicadores de producto, ingreso y empleo}
+\includegraphics[width=6cm]{pant/logit}
+\centering
+\label{fig:ejemplo}
+\end{figure} 
+\column{0.5\textwidth}
+\begin{figure}
+  % \caption{Multiplicadores de producto, ingreso y empleo}
+\includegraphics[width=6cm]{pant/ols}
+\centering
+\label{fig:ejemplo}
+\end{figure} 
+\end{columns}
+  \raggedright \tiny \textbf{Fuente:} estimaciones propias. \\
+\raggedright  \tiny \textbf{Nota:} ***,  **, * representan significancia estadistica al 1\%, 5\% y 10\%, respectivamente. Errores estándar entre paréntesis.
+\end{frame}
+
+
+
+\section{Conclusiones}
+\begin{frame}
+\frametitle{Conclusiones}
+
+\begin{itemize}[<i->]
+\justifying
+\item<1-> Proceso inflacionario ha sido más prospectivo en los últimos años, consistente con una mayor credibilidad en la meta de inflación.
+\item<2->  Persistencia de la inflación mantiene una menor incidencia.
+\item<3-> La formación de precios presenta comportamientos diferenciales entre departamentos.
+\item<4-> Departamentos en el centro del país  presentan  menor $\theta$.
+\item<5-> Zonas costeras  presentan  mayor $\theta$.
+\item<6->  Baja competitividad, incidencia por mayores ingresos en la población  y alta participación del sector terciario en las economías.
+\item<7-> NKPC es verificada empíricamente
+para los departamentos de Colombia.
+\end{itemize}
+\end{frame}
+
+
+
+%\begin{frame}
+%\frametitle{Conclusiones}
+%\end{frame} 
+
+
+%http://minisconlatex.blogspot.com/2010/11/ecuaciones.html (Latex matrices
+
+\end{document}

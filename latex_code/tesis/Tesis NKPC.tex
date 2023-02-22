@@ -1,0 +1,171 @@
+\documentclass[12pt,spanish,openany,letterpaper,pagesize]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}%escribir con acentos sin necesidad de comandos \'{} .
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+%Quitar para cambiar la letra
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\usepackage{fancyhdr}
+\usepackage{epsfig}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{amsmath}
+\usepackage{upgreek} % para poner letras griegas sin cursiva
+\usepackage{mathdots} % para el comando \iddots
+\usepackage{mathrsfs} % para formato de letra
+\usepackage{threeparttable}
+\usepackage{amscd}
+\usepackage{here}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{tabularx}
+%\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{longtable}
+\usepackage[left=4cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+%\usepackage[sort&compress]{natbib} 
+\usepackage{natbib}
+\usepackage{rotating} %Para rotar texto, objetos y tablas seite. No se ve en DVI solo en PS. Seite 328 Hundebuch
+\usepackage{ragged2e}
+
+     
+     
+     
+     
+% PACKAGES DE TENDENCIAS
+
+
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{makeidx}
+\usepackage{xcolor}
+\usepackage[stable]{footmisc}
+\usepackage[section]{placeins}
+%Paquetes necesarios para tablas
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xtab}
+\usepackage{multirow}
+\usepackage{colortab}
+%Paquetes necesarios para imágenes, pies de página, etc.
+\usepackage{graphicx}%
+\usepackage{rotating}
+\usepackage{lmodern}
+\usepackage{fancyhdr}     
+\usepackage{titlesec}
+%\usepackage{enumitem}
+%\usepackage{subfigure}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[colorlinks=true, 
+            linkcolor = black,
+            urlcolor  = black,
+            citecolor = black,
+            anchorcolor = blue]{hyperref}
+\usepackage[sc]{mathpazo}
+\usepackage{multicol}
+\usepackage{titling}
+\usepackage{titlesec}
+
+     
+     
+                        %se usa junto con \rotate, \sidewidestable ....
+
+%\renewcommand{\theequation}{\thechapter-\arabic{equation}}
+%\renewcommand{\theequation}{\arabic{equation}}
+\renewcommand{\thefigure}{\textbf{\thechapter-\arabic{figure}}}
+\renewcommand{\thetable}{\textbf{\thechapter-\arabic{table}}}
+
+%REVISAR ESTA PARTE
+\pagestyle{fancyplain}%\addtolength{\headwidth}{\marginparwidth}
+\textheight22.5cm \topmargin0cm \textwidth16.5cm
+\oddsidemargin0.5cm \evensidemargin-0.5cm%
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter\; #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\; #1}}
+\lhead[\fancyplain{}{\thepage}]{\fancyplain{}{\rightmark}}
+\rhead[\fancyplain{}{\leftmark}]{\fancyplain{}{\thepage}}
+\fancyfoot{}
+\thispagestyle{fancy}%
+%\renewcommand{\baselinestretch}{1.5} %Interlineado
+
+
+%\addtolength{\headwidth}{0cm}
+%\unitlength1mm %Define la unidad LE para Figuras
+%\mathindent8.25cm %Define la distancia de las formulas al texto,  fleqn las descentra 16.5 es 
+%\marginparwidth0cm
+\parindent0cm %Define la distancia de la primera linea de un parrafo a la margen
+
+%Para tablas,  redefine el backschlash en tablas donde se define la posici\'{o}n del texto en las
+%casillas (con \centering \raggedright o \raggedleft)
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\let\PBS=\PreserveBackslash
+
+%Espacio entre lineas
+\renewcommand{\baselinestretch}{1.1}
+
+%Neuer Befehl f\"{u}r die Tabelle Eigenschaften der Aktivkohlen
+\newcommand{\arr}[1]{\raisebox{1.5ex}[0cm][0cm]{#1}}
+
+%Neue Kommandos
+\usepackage{Befehle}
+%Inicio del documento. Tener en cuenta que hay archivos auxiliares
+
+\begin{document}
+\pagenumbering{roman}
+\include{encabezadoNKPC/encabezadoNKPC}
+
+\renewcommand{\tablename}{\textbf{Tabla}}
+\renewcommand{\figurename}{\textbf{Figura}}
+\renewcommand{\listtablename}{Lista de Tablas}
+\renewcommand{\listfigurename}{Lista de Figuras}
+\renewcommand{\contentsname}{Contenido}
+\renewcommand{\appendixname}{Anexo}
+
+
+%\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Lista de figuras} % para que aparezca en el indice de contenidos
+
+\listoffigures % indice de figuras
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Lista de tablas} % para que aparezca en el indice de contenidos
+\listoftables % indice de tablas
+\tableofcontents
+\cleardoublepage
+%\include{Tab_Simbolos/TabSimbolosMSc}
+%\include{Resumen}%\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+\pagenumbering{arabic}
+
+%Notas
+%Seguir el planteamiento de las graficas de kap1, correlaciones cruzadas Gali 99, compilacion mazumder(2010) mavroeidis 2014 evidencia empirica grafica.
+%Metadatos importante para recoger algunas discuciones en GMM y otros
+%GMM Dufour rudd2005 Gali
+%Federal Reserve Bank SF al final se puede pensar en un VAR  que se encuentra al final, asi como seguir mavroeidis 2014. Pedir codigos de GMM
+
+%Preguntar sobre la presicion que se le debe hacer a los costos marginales si son reales o nominales
+%Revisar especificaciones de las variables instrumentales que plantea Gali 99. Preguntar al profe.
+%Seguir el F estadistico de Vard(2011) como se mensiona que los instrumentos son debiles en Forware-looking, importante por suspruebas. Preguntar al profe. 
+
+%http://minisconlatex.blogspot.com/2012/03/simbolos-de-todo-tipo.html   
+%http://www.alciro.org/alciro/Matematicas-Web-LaTeX_14/S1imbolos-Matematicos-LaTeX_103.htm
+% Figuras para citar
+
+\include{Kap1/Kap1}
+\include{Kap2/Kap2}
+\include{Kap3/Kap3}
+%\include{Kap4/Kap4}
+%\include{Kap5/Kap5}
+%\include{Kap6/Kap6}
+\addcontentsline{toc}{chapter}{\numberline{}Bibliografia}
+\bibliography{biblio2}
+\bibliographystyle{apalike2}
+\include{Anexos/Anexos}
+\end{document}

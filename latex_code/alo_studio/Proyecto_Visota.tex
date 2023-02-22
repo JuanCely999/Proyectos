@@ -1,0 +1,1481 @@
+\documentclass[12pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[spanish]{babel}%escribir con acentos sin necesidad de comandos \'{} .
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{fancyhdr}
+\usepackage{epsfig}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{amsmath}
+\usepackage{upgreek} % para poner letras griegas sin cursiva
+\usepackage{mathdots} % para el comando \iddots
+\usepackage{mathrsfs} % para formato de letra
+\usepackage{threeparttable}
+\usepackage{amscd}
+\usepackage{here}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{tabularx}
+%\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{longtable}
+\usepackage[left=4cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+%\usepackage[sort&compress]{natbib} 
+\usepackage{natbib}
+\usepackage{rotating} %Para rotar texto, objetos y tablas seite. No se ve en DVI solo en PS. Seite 328 Hundebuch
+\usepackage{ragged2e}
+\usepackage{tablefootnote}
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{makeidx}
+\usepackage{xcolor}
+\usepackage[stable]{footmisc}
+\usepackage[section]{placeins}
+%Paquetes necesarios para tablas
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xtab}
+\usepackage{multirow}
+\usepackage{colortab}
+%Paquetes necesarios para imágenes, pies de página, etc.
+\usepackage{graphicx}%
+\usepackage{rotating}
+\usepackage{lmodern}
+\usepackage{fancyhdr}     
+\usepackage{titlesec}
+%\usepackage{enumitem}
+%\usepackage{subfigure}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[colorlinks=true, 
+            linkcolor = black,
+            urlcolor  = black,
+            citecolor = black,
+            anchorcolor = blue]{hyperref}
+\usepackage[sc]{mathpazo}
+\usepackage{multicol}
+\usepackage{titling}
+\usepackage{titlesec}
+
+
+\usepackage{url}
+\usepackage{rotating}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{tablefootnote}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\parindent0cm 
+
+\begin{document}
+\title{
+\vspace{-30mm}
+\includegraphics[width=1.0in]{Fig/visota}\\[0.5cm]Proyecto de Aprovechamiento de residuos sólidos para su utilización en equipamento urbano}
+\author{Alonso Ramírez Hernández}
+\maketitle
+\section{Introducción}
+En Colombia, la construcción ha sido la actividad económica con mayor dinamismo y uno de los sectores más relevantes en los últimos años.  Esto se explica principalmente por el aporte al crecimiento económico, la capacidad de generar empleo, su vinculo de la política pública en términos de vivienda de interés social y su amplio encadenamiento productivo sobre la industria y el comercio del país, haciendo de la construcción un pilar del desarrollo nacional y sub-nacional. El papel protagónico que tiene la construcción sobre las urbes permite soportar la gran infraestructura que requiere el resto de las actividades productivas. En contraste, el posterior desarrollo ha traído consigo problemas nocivos para el medio ambiente, sin tener en cuenta que los residuos generados posiblemente no sean reciclados. La importancia de la reutilización de residuos radica en que esta en constante  búsqueda de nuevas actividades productivas asociadas al desarrollo sostenible desde una perspectiva integral.  \\
+
+En respuesta, el Gobierno nacional ha tomado partida en la formulación de criterios a nivel normativo de la sostenibilidad del sector de la construcción, así mismo, le ha dado existencia a certificaciones voluntarias en el mercado de la construcción. Sin embargo, las normativas anteriores han presentado una débil inclusión de criterios de sostenibilidad en las etapas del ciclo de vida de las edificaciones (diseño, construcción, operación, y aprovechamiento), nuevas y usadas. Por lo tanto, el \cite{conpes2018} reconoce la necesidad de incorporar y promover criterios de sostenibilidad en edificaciones de todo tipo de uso, tanto nuevas como usadas en todo su ciclo de vida. Por lo anterior, el panorama es oportuno para la inserción al mercado de empresas comprometidas con el desarrollo sostenible a partir de nuevas maneras de reintegrar desechos de la actividad económica a la cadena productiva de manera rentable.
+% la siguiente propuesta pretende establecer la viabilidad económica de la empresa VISOTA a partir de la exploración de nuevos procesos -o modificados- que logren minimizar residuos promovidos por vínculos entre industrias por medio de su reutilización.
+
+% Siguiendo las estimaciones de la Misión del Sistema de Ciudades (2012), se espera que 18 millones de nuevos habitantes lleguen a las ciudades colombianas en los próximos 35 años. El rápido crecimiento de la población urbana y la consecuente dinámica del sector de las edificaciones contrasta con el ritmo de adopción de medidas que permitan mitigar las externalidades negativas del sector. A la fecha no se ha logrado la regularización de la inclusión de criterios de sostenibilidad en la totalidad de las etapas del ciclo de vida de las edificaciones3, hecho que supone un reto para la planeación sectorial y el desarrollo territorial. % demanda Doc Compes
+
+\section{Contexto Institucional}
+\subsection{Situación actual del aprovechamiento de residuos y su uso en la construcción}
+El sector de la construcción es una de las actividades impulsoras de crecimiento de la economía colombiana. Las cifras evidencian que el sector aportaba para el año 2001 menos del 1,8\% del Producto Interno Bruto (PIB), datos recientes muestra que la participación ha llegado a superar el 4,9\% (DANE, 2017). En este sentido, estimaciones de la Misión del Sistema de Ciudades (2012), señalan que aproximadamente 18 millones de habitantes lleguen a las ciudades colombianas en los próximos 35 años, lo cual supone un mayor crecimiento en la población urbana y el posterior origen de externalidades negativas.\\
+
+Por lo tanto, el país ha adoptado iniciativas para contener el impacto negativo que genera el sector de la construcción.  Entre ellos se encuentra la expedición de la Resolución 0549 de 2015 del Ministerio de Vivienda, Ciudad y Territorio, incluye una guía para el ahorro de agua y energía en edificaciones; así mismo, la expedición de la Norma Técnica Colombiana (NTC 6112 de 2016, Sello Ambiental Colombiano) del Ministerio de Ambiente y Desarrollo Sostenible, estableciendo  criterios ambientales para el diseño y construcción de edificaciones con uso diferente a vivienda. Dichas iniciativas no son consideradas acordes con los parámetros de sostenibilidad integral, a la vez que no enfrenta los retos en materia ambiental que plantea el crecimiento verde.\\
+
+Por consiguiente, la generación del CONPES aparece para alinear con el cumplimiento de los compromisos asumidos en la agenda internacional de desarrollo sostenible, especialmente con lo relacionado al cumplimiento de los Objetivos de Desarrollo Sostenible (ODS), con énfasis en el objetivo 11 sobre ciudades y comunidades sostenibles y el objetivo 12 de garantizar modalidades de consumo y producción sostenibles; la meta de reducción del 20\% de los gases de efecto invernadero (GEI) producto del Acuerdo de París (COP21); y el seguimiento a la Nueva Agenda Urbana (NAU) en consonancia con lo establecido en la Conferencia de las Naciones Unidas sobre Vivienda y Desarrollo Urbano Sostenible - Hábitat III \citep{conpes2018}.\\
+
+De acuerdo a la mencionada iniciativa, la situación actual de la producción sostenible en el sector de la construcción en  Colombia se puede revisar desde varias líneas estratégicas: 
+\begin{enumerate}
+\item\textbf{Desde la creación:} Los antecedentes a la reciente politica de edificaciones sostenibles establece seis grupos temáticos:
+\begin{itemize}
+\item Políticas y programas de mitigación al cambio climático
+\item Lineamientos de sostenibilidad en el sector en las edificaciones a nivel nacional y en entidades territoriales
+\item Programas y experiencias de eficiencia energética y uso eficiente del agua
+\item Uso eficiente de materiales y residuos
+\item Desarrollo urbano y suelo
+\item Innovación financiera.
+\end{itemize}
+\item \textbf{Desde la información e investigación:} Hay pocas investigaciones relacionadas al análisis del aprovechamiento de los residuos sólidos para la construcción.
+\item \textbf{Desde la Educación y la sensibilidad por el medio ambiente:} Entre las metas de los Objetivos de Desarrollo Sostenible  (ODS) relacionadas con las edificaciones sostenibles, la acción por el clima se convierte en uno de sus principales pilares, en donde se enmarca la incorporación de políticas, estrategias y planes nacionales para el cambio climático, y así mismo generar escenarios que mejoraren la educación y la sensibilización sobre el cambio climático. 
+\item \textbf{Desde la Proyección y apropiación de los recursos industriales regionales:}
+El Acuerdo de París, llevado a cabo en 2015, formula los compromisos de reducción de GEI en un 20\% para 2030 y propone acciones de mitigación para evitar que la temperatura mundial supere los 2°C. Durante este acuerdo en 2015, el Gobierno nacional determinó su contribución con compromisos de reducción del 20\% de sus GEI al horizonte 2030 para cada sector, con respecto a la línea base de emisiones proyectada para ese mismo año. Entre las metas subyace la producción y consumo eficientes, así como la promoción al uso de recursos de manera eficiente, teniendo en cuenta la restauración de los recursos en la cadena productiva en el marco de la generación de soluciones sostenibles para la economía regional.
+\item \textbf{Desde la Organización y participación:} A pesar de que en la actualidad no se ha implementado en Colombia un sistema organizado de incentivos económicos para la implementación de criterios de sostenibilidad en todos los grupos de edificaciones, son varios los proyectos de vivienda, instituciones educativas y edificios gubernamentales que han empezado a incluir este tipo de criterios a través de las certificaciones de sellos voluntarios. Estas medidas han sido impulsadas por empresas voluntarias capaces de tener mayor accesibilidad al mercado de estándares internacionales, y especialmente en edificaciones nuevas de uso corporativo.
+\end{enumerate}
+Los avances en materia de desarrollo sostenible depositados en el CONPES, resume el esfuerzo de la política nacional por incorporar y promover criterios de sostenibilidad en la construcción. Por lo tanto, surgen propuestas encaminadas a generar estrategias relacionadas con la inclusión de criterios sostenibles y mecanismos de seguimiento a resultados y financiamiento verde a través de incentivos económicos. \\
+
+En la creación del documento CONPES aparecen actores comprometidos con los acuerdos internacionales sobre el medio ambiente. Entre ellos se encuentra el Consejo Nacional de Política Económica y Social y el Departamento Nacional de Planeación (DNP). Así mismo, se suma el Departamento Nacional de Estadística  (DANE) en la generación de un Sistema de Contabilidad Ambiental y Económica, procurando contabilizar los activos como los recursos minerales y energéticos, tierra, recurso del agua, recurso de madera. Otras cuentas asociadas a los flujos y a las actividades ambientales han permitido cuantificar las unidades físicas y monetarias.\\
+
+Por lo tanto, la evidencia ha demostrado que la acumulación de residuos sólidos industriales y agrícolas no tratados, especialmente en los países en desarrollo, ha dado lugar a un aumento de la preocupación ambiental. El reciclaje de tales residuos y su posterior transformación en materiales de construcción sostenibles, parece ser una solución viable no sólo al problema de la contaminación, sino también como una opción económica para el diseño de edificios verdes \citep{raut2011development}.\\
+
+En la búsqueda de residuos sólidos para su uso en equipamento urbano, es fundamental en la medida que se cuente con información que permita sostener la empresa a largo plazo. Estudios demuestran que Boyacá cuenta con recursos hasta hoy poco explorados en la reincorporación de residuos potenciales con bajo impacto ambiental. Para \cite{quijano2014implementacion}, evaluar el  vinculo de los desechos de una industria como la siderúrgica, impulsaría  la actividad de otra industria como la mampostería en el departamento de Boyacá, teniendo en cuenta que el sector de la construcción es uno de los que más ha aportado al desarrollo económico del país durante los últimos años. Esto se debe en gran medida al comportamiento de las tasas de interés preferenciales para los créditos hipotecarios y a los programas de subsidio a viviendas para familias de escasos recursos. Esto ha originado una demanda creciente de todos los productos asociados a esta actividad, como los ladrillos.\\
+
+Por lo anterior,  nace el hecho de que emplear los residuos industriales puede ser una alternativa sostenible, según la desarrollada especialización de diversos sectores de la economía que se dedican a la transformación de materiales \citep{boada2003reciclaje}. Además, se puede destacar este hecho, observando que el reciclaje de materiales ha venido ganando aceptación como una alternativa para reducir el impacto ambiental negativo de las actividades productivas \citep{medina1999reciclaje} , lo cual, desde una óptica de sostenibilidad, tiene un menor efecto negativo en el medio ambiente que en la obtención de materiales de fuentes primarias.\\
+
+La información consultada evidencia  que a largo plazo el sector de la construcción tendrá mayor participación en el crecimiento económico, debido al alto perfil del consumidor, dado que la demanda por edificaciones se expande en un contexto de continua urbanización. Este flujo de residuos permitirá el aprovechamiento para la restauración hacia la cadena de valor, lo cual no solo logra apaciguar los impactos ambientales, sino también genera nuevas maneras de hacer empresa de manera sostenible.
+
+%Son muchos los tipos de residuos que han sido estudiados en lo referente a su posible reutilización (Martínez, 1996), razón por la cual se ha comenzado a implementar la reutilización de materiales y compo- nentes constructivos (Glinka, Vedoya & Pilar, 2006). Pre- cisamente existen criterios que permiten considerar la optimización de la sostenibilidad, como la funcionalidad, impacto ambiental, impacto social, impacto económico, demanda del mercado, cumplimiento de la legislación, entre otros (Van der Vorst, 2003).
+%Al respecto, se pretende que en la mayor cantidad de posibles industrias se implementen los sistemas sostenibles, que constituyen formas de obtener un rendimiento de los residuos, a la vez que permiten su reincorporación a los ciclos productivos, obteniendo un aprovechamiento más óptimo de los recursos naturales, minimizando el impacto sobre el medio ambiente al reducir la contaminación que generan los otros sis- temas (Lecitra, 2010).
+%Hablar de la  demanda en cuanto a metros cuadrados
+
+\section{Estudio de Mercado}
+Con el fin de caracterizar el comportamiento del sector de la construcción, es necesario evaluar los componentes de oferta y demanda frente a la situación actual del consumo de las edificaciones, en particular relacionado con la fabricación de ladrillos. En este sentido,  se mostrará información estadística para evidenciar el comportamiento de la oferta y demanda en el caso específico de la fabricación de ladrillos. En esta medida se acude a diferentes fuentes de información secundaria que se explicarán más adelante.   
+\begin{figure}[H]
+  	\centering 		
+  	\caption{Esquema de oferta y demanda de residuos sólidos}
+	\includegraphics[width=1\textwidth]{Fig/flujo2}
+\raggedright  \scriptsize \textbf{Fuente:} DANE.
+	\label{1}	
+	\end{figure}
+
+\subsection{Escenario Nacional}
+En este apartado se analizará en primera medida la oferta de la fabricación  de materiales de arcilla para la construcción dentro del cual se encuentra la fabricación de ladrillos, con el fin de analizar la la naturaleza y su ubicación. Por otro lado, se examinará el papel de la demanda de los $m^{2}$ en las edificaciones para estimar la posible demanda de ladrillos a partir de la información recopilada inicialmente por el Directorio Estadístico de Empresas y el Censo de edificaciones realizada por el DANE. 
+\subsubsection{Oferta}
+Dentro del componente de oferta es necesario vislumbrar las capacidades instaladas del país en la disponibilidad de escenarios que sirven para la fabricación de ladrillos ecológicos. En consecuencia, con los datos registrados en el Directorio Estadístico de Empresas, se encuentran más de 562 empresas que fabrican materiales de arcilla para la construcción, donde se puede identificar su naturaleza, distribución geográfica. A continuación se presentará los principales resultados de la oferta de las empresas en el país.
+\begin{figure}[H]
+  	\centering 		
+  	\caption{Empresas de fabricación  de materiales de arcilla para la construcción en Colombia}
+	\includegraphics[width=1\textwidth]{Fig/colombia5}
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+	\label{2}	
+	\end{figure}
+
+En la Figura \ref{2} se puede observar que hay una mayor cantidad de empresas de fabricación  de materiales de arcilla para la construcción concentradas en Bogotá, Cundinamarca, Antioquia y Norte de Santander, las cuales conservan el 54\% de las empresas en Colombia, siendo los principales epicentros de desarrollo. En seguida, se encuentran departamentos como Valle del Cauca con 8,3\% y Boyacá con 5,7\%.
+
+
+
+	\begin{figure}[H]
+  	\centering 		
+  	\caption{Balance de oferta y utilización de residuos sólidos y productos residuales (Millones de toneladas)}
+	\includegraphics[width=1\textwidth]{Fig/oferdem}
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+	\label{2}	
+	\end{figure}
+
+\begin{figure}[H]
+  	\centering 		
+  	\caption{ Tasa Nacional de aprovechamiento tasa de reciclaje y nueva utilización de residuos sólidos generados y la utilización de la oferta existente (Porcentaje)}
+	\includegraphics[width=1\textwidth]{Fig/tasas}
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+	\label{2}	
+	\end{figure}
+	
+	
+	\begin{figure}[H]
+  	\centering 		
+  	\caption{Flujo de residuos sólidos hacia el ambiente (Toneladas al año)}
+	\includegraphics[width=1\textwidth]{Fig/ambiente}
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+	\label{2}	
+	\end{figure}
+	
+	\begin{figure}[H]
+  	\centering 		
+  	\caption{Residuos sólidos por hogar y per cápita (Toneladas)}
+	\includegraphics[width=1\textwidth]{Fig/tonper}
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+	\label{2}	
+	\end{figure}
+	
+		\begin{figure}[H]
+  	\centering 		
+  	\caption{Consumo intermedio y final por tipo de residuo (miles de toneladas)}
+	\includegraphics[width=1\textwidth]{Fig/serie}
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+	\label{2}	
+	\end{figure}
+	
+	
+%Tambien se puede evaluar las empresas que pueden se asocian a otras empresas que generan residuos solidos
+\subsubsection{Demanda} 
+Con el fin de caracterizar el consumo de ladrillos en la construcción en Colombia utilizamos las Estadísticas de licencias de construcción (ELIC) del año 2006 al 2019, donde se calcula el área aprobada por metro cuadrado ($m^2$) y el número de viviendas frente a la posible fabricación de ladrillos equipados con bienes ecológicos.\\
+
+Por lo anterior, el área aprobada por $m^2$ concentra alrededor del 79\% en edificaciones de vivienda, tan solo para el año 2019 se aprobaron 42.570.883 $m^2$ de los cuales 33.436.660 $m^2$ fueron destinados para vivienda (Figura \ref{3}). En seguida, las construcciones con mayor área aprobada fueron comercio y educación con 3.452.558 $m^2$ y 1.211.203 $m^2$, respectivamente.
+\begin{figure}[H]
+  	\centering 		
+  	\caption{Área aprobada ($m^2$) en Boyacá y en Colombia en el 2019}
+	\includegraphics[width=1\textwidth]{Fig/destino}
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+	\label{3}	
+	\end{figure}
+
+Por la importancia que  preside la vivienda en las licencias de construcción vistas en el área aprobada, se procede a estimar el impacto de la vivienda que puede tener los residuos sólidos para equipamiento urbano. En este sentido, como la vivienda demanda mayor insumos para la construcción, analizar su dinámica en la que se encuentra nos permite vislumbrar el impacto de la fabricación de ladrillos ecológicos.\\
+
+En cifras de ELIC, se distinguen dos diferentes poblaciones en el momento de llevar a cabo la recolección de información. Entre los 88 municipios considerados por las ELIC, se encuentran las principales ciudades del país como lo son las capitales de cada departamento y sus ciudades conexas con mayor participación económica. Por otra parte, los 302 municipios que integran esta cuenta nacional, permite recoger de manera muestral el comportamiento del área aprobada y el número de viviendas en el resto del país.\\
+
+El número de viviendas se clasifica en viviendas de interés social (Vis) y las que no pertenecen a este grupo (No Vis), las cuales se distribuyen entre casas y apartamentos. Para el año 2019, Colombia alcanzo un total de 381.865 viviendas, las cuales por parte de las principales ciudades (88 municipios) aportaron más de 175.212 viviendas y por parte de los municipios restantes les correspondió 206.653 viviendas.\footnote{Para mayor información ver el Cuadro \ref{c1} }  La distribución entre Vis o No Vis es de proporciones similares, lo cual cabe destacar que Vis en Colombia permitió ha jalonado el sector de la construcción y sus insumos subyacentes (Figura \ref{4}).
+\begin{figure}[H]
+\caption{Composición de la vivienda en Colombia en el 2019}
+\begin{subfigure}{0.48\textwidth}
+  \centering
+  % include first image
+	\includegraphics[width=1\textwidth]{Fig/nac88} 
+  \caption{88 municipios}
+  \label{A11}
+\end{subfigure}
+\begin{subfigure}{0.48\textwidth}
+  \centering
+  % include second image
+	\includegraphics[width=1\textwidth]{Fig/nac302} 
+  \caption{302 municipios}
+  \label{A12}
+\end{subfigure}
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+	\label{4}	
+\end{figure}
+
+Por el comportamiento sobresaliente que ha tenido el sector de la construcción, ha permitido que se le catalogue  como el principal motor de crecimiento de los últimos periodos. En el caso de la vivienda Vis tuvo un desempeño destacado (Figura \ref{5}), a tal punto que supero el número de No Vis en el año 2013 antes de tener una prolongada caída y una posterior recuperación. Por otra parte, la No Vis presentó un crecimiento inmejorable para el año 2015, en donde posteriormente habían tenido un descenso en sus unidades de vivienda. El DANE explicó en su momento que esta caída se debe a la sobreoferta de vivienda y a la finalización del programa de viviendas, sujeto al período siguiente en el pronunciamiento que haría el Gobierno Nacional respecto al subsidio de vivienda. Por esta razón, los programas estatales han tenido gran incidencia en la demanda de insumos para la construcción, lo cual es un factor importante a tener en cuenta para la estimación de posibles recursos que generen de ella.\footnote{El comportamiento de la vivienda comprendido entre 2006 y 2019, tiene en cuenta únicamente los 88 municipios según la información obtenida por el DANE.}
+
+	\begin{figure}[H]
+  	\centering 		
+  	\caption{Comportamiento de la vivienda en Colombia (2006-2019)}
+	\includegraphics[width=1\textwidth]{Fig/colvivi}
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+	\label{5}	
+	\end{figure}
+	
+Por otra parte, se puede observar en la Figura \ref{611} el comportamiento del área aprobada por $m^2$ y unidades de vivienda en cada mes del año después del 2015. El destacado comportamiento que tuvo el sector de construcción para el año 2015 se aprecia en su constancia tanto área el aprobada por $m^2$ como las unidades de vivienda durante el año, alcanzando para que únicamente en el mes de diciembre se aprobaran 6.717.652 $m^2$ y 68.699 viviendas en las principales ciudades del país. A pesar de las fluctuaciones que ha tenido el sector de la construcción, el panorama parece ser prometedor, ya que al cierre del año 2019 el área aprobada cerro en 5.862.081 $m^2$ con un número de 72.075 viviendas superior al alcanzado por el país en el 2015.
+
+\begin{figure}[H]
+\caption{Comportamiento estacional del área aprobada por $m^2$ y unidades de vivienda (2015-2019)}
+\begin{subfigure}{0.48\textwidth}
+  \centering
+  % include first image
+	\includegraphics[width=1\textwidth]{Fig/unidades} 
+  \caption{$m^2$}
+  \label{61}
+\end{subfigure}
+\begin{subfigure}{0.48\textwidth}
+  \centering
+  % include second image
+	\includegraphics[width=1\textwidth]{Fig/m2} 
+  \caption{Unidades de vivienda}
+  \label{62}
+\end{subfigure}
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+	\label{611}	
+\end{figure}
+
+
+Adicionalmente, el Cuadro \ref{c1} y \ref{c2} contempla las cifras tanto en las principales ciudades del país (88 municipios) como en sus municipios aledaños (302 municipios), lo cual permite vislumbrar el panorama que se vera enfrentado el sector de la construcción y principalmente insumos para la elaboración de equipamiento urbano.
+\begin{table}[htbp]
+\centering
+\caption{Área aprobada ($m^2$) y unidades de vivienda en los 88 municipios de Colombia (2006-2019)}
+\begin{tabular}{ c | c c c | c c c }
+\hline
+&       & \multicolumn{1}{l}{Metros cuadrados} &       &       & \multicolumn{1}{l}{Unidades}  &  \\
+\hline
+\hline
+Año   &Total & Vis & No Vis &Total & Vis & No Vis\\
+\hline
+2006  & 12.068.186 & 2.682.798 & 9.385.388 & 122.455 & 45.971 & 76.484 \\
+2007  & 13.968.798 & 2.966.409 & 11.002.389 & 141.225 & 52.356 & 88.869 \\
+2008  & 12.002.347 & 2.355.025 & 9.647.322 & 123.050 & 42.403 & 80.647 \\
+2009  & 9.755.385 & 2.636.433 & 7.118.952 & 108.445 & 45.504 & 62.941 \\
+2010  & 13.534.854 & 4.241.222 & 9.293.632 & 153.903 & 71.008 & 82.895 \\
+2011  & 18.750.527 & 5.223.534 & 13.526.993 & 202.290 & 85.557 & 116.733 \\
+2012  & 16.082.932 & 4.220.604 & 11.862.328 & 172.334 & 72.220 & 100.114 \\
+2013  & 18.180.183 & 6.354.550 & 11.825.633 & 209.632 & 108.635 & 100.997 \\
+2014  & 18.107.071 & 5.159.218 & 12.947.853 & 192.268 & 89.372 & 102.896 \\
+2015  & 19.758.964 & 4.971.147 & 14.787.817 & 208.459 & 82.747 & 125.712 \\
+2016  & 16.345.203 & 4.310.116 & 12.035.087 & 170.341 & 68.332 & 102.009 \\
+2017  & 15.054.771 & 3.448.820 & 11.605.951 & 151.540 & 53.476 & 98.064 \\
+2018  & 14.070.278 & 3.957.500 & 10.112.778 & 154.183 & 63.645 & 90.538 \\
+2019  & 15.295.253 & 5.256.850 & 10.038.403 & 175.212 & 85.424 & 89.788 \\
+\hline
+\end{tabular}%
+\\
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+\label{c1}%
+\end{table}%
+
+\begin{table}[H]
+\centering
+\caption{Área aprobada ($m^2$) y unidades de vivienda en los 302 municipios de Colombia (2016-2019)} 
+\begin{tabular}{ c | c c c | c c c }
+\hline
+&       & \multicolumn{1}{l}{Metros cuadrados} &       &       & \multicolumn{1}{l}{Unidades}  &  \\
+\hline
+\hline
+Año   &Total & Vis & No Vis &Total & Vis & No Vis\\
+\hline
+2016  & 18.564.273 & 4.672.265 & 13.892.008 & 193.927 & 74.986 & 118.941 \\
+2017  & 17.551.475 & 4.026.431 & 13.525.044 & 180.001 & 64.149 & 115.852 \\
+2018  & 16.522.114 & 4.508.255 & 12.013.859 & 180.535 & 72.421 & 108.114 \\
+2019  & 18.141.407 & 5.988.512 & 12.152.895 & 206.653 & 97.474 & 109.179 \\
+\hline
+\end{tabular}%
+\\
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+\label{c2}%
+\end{table}%
+Para realizar la conversión de los datos recogidos de número de vivienda a unidades de ladrillos, se considera el trabajo de \cite{buitrago2013estudio} en el cual a partir de un estudio estadístico  a las construcciones realizadas en Boyacá durante los últimos años, concluyó que alrededor de 8.000 ladrillos en promedio son requeridos por cada vivienda. Así mismo, los autores encuentran que los la cuota de mercado de los ladrillos cerámicos provenientes de fabricación artesanal, es del 16,20\%. Por lo tanto, en el Cuadro \ref{c3} se procede hacer la respectiva conversión:\footnote{Los ladrillos cerámicos serán tenidos en cuenta a partir de lo que será considerado en la próxima sección} 
+\begin{table}[H]
+  \centering
+  \caption{Mercado de ladrillos en Colombia (2016-2019)}
+    \begin{tabular}{c c c c c}
+    \hline
+          & 2016  & 2017  & 2018  & 2019 \\
+          \hline
+          \hline
+    Viviendas* & 364.268 & 331.541 & 334.718 & 381.865 \\
+    Crecimiento de viviendas &   -    & 0,91\% & 1,00\% & 1,14\% \\
+    Proyección de ladrillos** & 472.091 & 429.677 & 433.794 & 494.897 \\
+\hline
+    \end{tabular} \\
+    \raggedright  \scriptsize *Se consideran todos los municipios\\
+    \raggedright  \scriptsize **Cifras en miles de unidades de ladrillos\\
+\raggedright  \scriptsize \textbf{Fuente}:Elaboración propia.
+\label{c3}%
+\end{table}%
+
+Con base en lo anterior, se continua en la proyección del mercado de ladrillos en Colombia a partir de las variaciones que las viviendas ha enfrentado en los últimos años, enfatizando el periodo en que el sector de la construcción atravesó descensos, es decir, se tendrá en cuenta el comportamiento que presentaría la construcción en época de pandemia por el Covid-19. Además,  se parte de la hipótesis de que el aumento de las unidades viviendas estarán correlacionadas con el crecimiento de los hogares, asumiendo que se mantendría el déficit habitacional actual según el DANE. \footnote{\url{ http://dane.gov.co/index.php/poblacion-y-demografia/proyecciones-de-poblacion}} 
+
+\begin{table}[H]
+  \centering
+  \caption{Proyección del mercado de ladrillos en Colombia (2020-2023)}
+    \begin{tabular}{c c c c c}
+          \hline
+          & 2020  & 2021  & 2022  & 2023 \\
+          \hline
+          \hline
+  Viviendas & 347.497& 361.397 & 396.146 & 411.992 \\
+    Crecimiento de viviendas & 0,91\%  & 1,04\%     & 1,14\%  & 1,10\% \\
+    Proyección de ladrillos* & 450.356 & 468.370 & 533.942 & 587.336 \\
+    \hline
+    \end{tabular} \\
+    \raggedright  \scriptsize *Se consideran todos los municipios\\
+    \raggedright  \scriptsize **Cifras en miles de unidades de ladrillos\\
+\raggedright  \scriptsize \textbf{Fuente}:Elaboración propia.
+\label{c4}%
+\end{table}%
+
+Se espera que la fabricación de elementos para equipamento urbano presente un panorama optimista, a pesar de la posible caída en la que se verá enfrentada en el 2020, partiendo que la producción de ladrillos puede estar en alrededor de 450.356.000 unidades.  Los años siguientes estarán seguidos de probables politicas de vivienda que tendrá que asumir el Gobierno por los extragos consernientes a la coyuntura actual. Así mismo, edificaciones de la salud tendrán un rol importante en la contención del virus, lo cual permitirá que jalone la recuperación de la actividad constructora del país.
+
+
+\begin{figure}[H]
+  	\centering 		
+  	\caption{Proyección del mercado de ladrillos en Colombia (2016-2023)}
+	\includegraphics[width=1\textwidth]{Fig/ladricol}
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+	\label{6}	
+	\end{figure}
+
+
+\subsection{Escenario Departamental}
+\subsubsection{Oferta}
+Boyacá cuenta con un total de 32 empresas de fabricación  de materiales de arcilla para la construcción. 
+La oferta de empresas en la fabricación de dichos materiales se encuentra principalmente en la ciudad de Sogamoso y Tunja con el 84\%.
+En la ciudad de Sogamoso se encuentran las 17 empresas llamadas: ARCILLAS SAN AGUSTIN S.A.S.,INDUSTRIA ALFARERA VERDE DE SOGAMOSO S.A.S., PRODUCTOS Y SERVICIOS LARCILLA LTDA.,ENTRO INDUSTRIAL COOPERATIVO DE TRABAJO, LADRILLERA IPANTE S.A..S., INDUSTRIA ALFARERA SAN JOSE S.A.S., 	ECO PRODUCTOS Y SERVICIOS MOL S.A.S., LADRILLERA CACIQUE GSOL S.A.S., LADRILLOS EL SOL S.A.S., CERAMICAS BUENA VISTA S.A.S, 	EMPRESA ALFARERA COLOMBIANA LTDA, ASOCIACION PARA LA VIVIENDA POPULAR , 	LADRILLO SUGAMUXI SAS, 	LADRILLERA BATA LIMITADA, 	ECOLADRILLO COLOMBIA SOCIEDAD POR ACCIONES S.A.S., 	LADRILLOS INDUSTRIALES DE COLOMBIA S.A.S., LADRILLOS SAN RAFAEL RL SAS. 
+%	\begin{figure}[H]
+%  	\centering 		
+%  	\caption{Empresas en la fabricación  de materiales de arcilla para la construcción en Boyacá}
+%	\includegraphics[width=1\textwidth]{Fig/boyaca4}
+%\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+%	\label{A2}	
+%	\end{figure}
+	\begin{figure}[H]
+  	\centering 		
+  	\caption{Empresas en la fabricación  de materiales de arcilla para la construcción en Boyacá}
+	\includegraphics[width=1\textwidth]{Fig/boyaca5}
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+	\label{A2}	
+	\end{figure}
+	Por otra parte, Tunja con 10 empresas tiene las siguientes: LADRILLERAS EL RUBI S.A.S, 	ARCITEK SAS, 	LADRILLERA FENIX TUNJA S.A.S., 	LADRILLERA BELLAVISTA LIMITADA, 	GRUPO SAN FERNANDO CONSTRUCTORES S.A.S., TEJAS Y LADRILLOS EL MORAL S.A.S., TIERRA CRUDA TECNOLOGIAS CON TIERRA, CASINO GOURMET MARTINEZ S.A.S., LADRILLERA EL PORVENIR IB S.A.S, ASESORES FINANCIEROS Y TRIBUTARIOS CNC SAS.\\
+
+Les sigue con de a una empresa: Pesca (INDUSTRIAS MANTI S.EN.C.), Samaca (LADRILLERA ANDALUCIA SAS), Sachica (BOYAG LTDA.), Sotaquira	(INVERSIONES LADRILLOS MAGUNCIA S.A.) y Paipa (LADRILLOS EL ZIPA LIMITADA).
+	
+	\subsubsection{Demanda}
+Como se observo anteriormente en la Figura \ref{3}, tanto a nivel nacional como local, el destino de las áreas aprobadas por $m^2$ se concentran en 80\% para el caso de la vivienda. Boyacá para el 2019 tuvo un total de 1.533.399 $m^2$ aprobados, siendo el 3.6\%  del área aprobada a nivel nacional. De la misma manera, les sigue los destinos de comercio y educación.\\
+
+A diferencia de la proporción de la composición de la  vivienda en Colombia para el año 2019, Boyacá cuenta con un cuarto de las viviendas a Vis tanto en las ciudades principales como en sus municipios circundantes. Esto demuestra que las  No Vis son parte fundamental de la demanda de insumos para la construcción.\footnote{Entre los 88 municipios tenidos en cuenta en las ELIC, los municipios para Boyacá son los siguientes:Tunja, Chiquinquirá, Duitama, Sogamoso.\\
+ En cuanto a los 302 municipios hacen parte: Villa de Leyva, Moniquirá, Paipa., Puerto Boyacá, Chivatá, Busbanzá, Tibasosa, Motavita, Nobsa, Cómbita, Iza, Tópaga, Monguí, Oicatá, Firavitoba, Corrales, Cerinza.} 
+
+\begin{figure}[H]
+\caption{Composición de la vivienda en Boyacá en el 2019}
+\begin{subfigure}{0.48\textwidth}
+  \centering
+  % include first image
+	\includegraphics[width=1\textwidth]{Fig/boy88} 
+  \caption{88 municipios}
+  \label{A11}
+\end{subfigure}
+\begin{subfigure}{0.48\textwidth}
+  \centering
+  % include second image
+	\includegraphics[width=1\textwidth]{Fig/boy302} 
+  \caption{302 municipios}
+  \label{A12}
+\end{subfigure}
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+	\label{A1}	
+\end{figure}	
+
+El comportamiento de la No Vis ha tenido una participación importantes en el sector de la construcción en el departamento de Boyacá, a tal punto que para el 2015 tuvo un máximo de viviendas en 5.841 unidades. La tendencia que se observa es la Figura \ref{7} presenta que tras de un descenso de las unidades de viviendas aprobadas en un período, al siguiente tiende a recuperarse, esto principalmente en la No Vis. Por otra parte, la Vis a mantenido una senda constante, lo cual permite inferir que este tipo de viviendas aseguran una fuente de estabilidad en el sector de la construcción junto con sus recursos requeridos.
+
+	\begin{figure}[H]
+  	\centering 		
+  	\caption{Empresas en la fabricación  de materiales de arcilla para la construcción en Boyacá}
+	\includegraphics[width=1\textwidth]{Fig/boyvivi}
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+	\label{7}	
+	\end{figure}
+A pesar que el año 2015 trajo consigo problemas para la construcción, en el último año se ha recuperado en términos de números de viviendas en todo el departamento. Por otra parte, el crecimiento de la vivienda en Boyacá desde el 2006 ha sido significativo, hasta hoy el crecimiento ha sido del 98,7\% superior que a nivel nacional que tiene una cifra de 43\%. 
+ 
+
+
+% Table generated by Excel2LaTeX from sheet 'Hoja2'
+\begin{table}[H]
+  \centering
+  \caption{Área aprobada ($m^2$) y unidades de vivienda en los principales municipios de Boyacá (2006-2019)}
+    \begin{tabular}{ c | c c c | c c c }
+        \hline
+          &       & \multicolumn{1}{l}{Metros cuadrados} &       &       & \multicolumn{1}{l}{Unidades} &  \\
+           \hline
+    \hline
+       Año   &Total & Vis & No Vis &Total & Vis & No Vis\\
+           \hline
+    2006  & 230.654 & 62.509 & 168.145 & 2.552  & 957   & 1.595 \\
+    2007  & 404.258 & 63.487 & 340.771 & 3.995  & 894   & 3.101 \\
+    2008  & 339.487 & 91.208 & 248.279 & 3.623  & 1.552  & 2.071 \\
+    2009  & 376.366 & 107.971 & 268.395 & 3.804  & 1.402  & 2.402 \\
+    2010  & 369.246 & 82.497 & 286.749 & 3.801  & 1.103  & 2.698 \\
+    2011  & 564.890 & 96.704 & 468.186 & 5.719  & 1.248  & 4.471 \\
+    2012  & 498.925 & 53.115 & 445.810 & 4.770  & 645   & 4.125 \\
+    2013  & 633.752 & 97.692 & 536.060 & 6.644  & 1.564  & 5.080 \\
+    2014  & 581.878 & 95.453 & 486.425 & 6.006  & 1.469  & 4.537 \\
+    2015  & 683.659 & 75.134 & 608.525 & 6.935  & 1.094  & 5.841 \\
+    2016  & 602.512 & 12.7618 & 474.894 & 6.434  & 1.705  & 4.729 \\
+    2017  & 616.147 & 93.266 & 522.881 & 6.131  & 1.188  & 4.943 \\
+    2018  & 415.342 & 75.123 & 340.219 & 4.575  & 1.110  & 3.465 \\
+    2019  & 480.460 & 95.636 & 384.824 & 5.073  & 1.322  & 3.751 \\
+        \hline
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+
+\begin{table}[H]
+\centering
+\caption{Área aprobada ($m^2$) y unidades de vivienda en el resto de municipios de Boyacá (2016-2019)}
+\begin{tabular}{ c | c c c | c c c }
+\hline
+&       & \multicolumn{1}{l}{Metros cuadrados} &       &       & \multicolumn{1}{l}{Unidades}  &  \\
+\hline
+\hline
+Año   &Total & Vis & No vis &Total & Vis & No vis\\
+\hline
+2016  & 707.682 & 142.357 & 565.325 & 7.449 & 1.975 & 5.474 \\
+2017  & 736.066 & 120.627 & 615.439 & 7.119 & 1.454 & 5.665 \\
+2018  & 633.870 & 134.131 & 499.739 & 6.768 & 1.954 & 4.814 \\
+2019  & 747.361 & 161.041 & 586.320 & 7.317 & 1.881 & 5.436 \\
+\hline
+\end{tabular}%
+\label{tab:addlabel}%
+\end{table}%
+
+De la misma manera, se realiza  la proyección del número de ladrillo requeridos para satisfacer la demanda de nuevas construcciones en el departamento con base de la investigación de \cite{buitrago2013estudio}. 
+
+
+
+\begin{table}[H]
+  \centering
+  \caption{Mercado de ladrillos en Boyacá (2016-2019)}
+    \begin{tabular}{c c c c c}
+    \hline
+          & 2016  & 2017  & 2018  & 2019 \\
+          \hline
+          \hline
+  Viviendas* & 13.883 & 13.250 & 11.343 & 12.390 \\
+    Crecimiento de viviendas &   -    & 0,95\%  & 0,86\%  & 1.09\% \\
+    Proyección de ladrillos** & 17.992& 17.172 & 14.700 & 16.057 \\
+\hline
+    \end{tabular}\\
+    \raggedright  \scriptsize *Se consideran todos los municipios\\
+    \raggedright  \scriptsize **Cifras en miles de unidades de ladrillos\\
+\raggedright  \scriptsize \textbf{Fuente}:Elaboración propia.
+  \label{tab:addlabel}%
+\end{table}%
+Para el año 2020, se espera que el departamento tenga un descenso pronunciado en el número de viviendas al igual que el número de elementos para la construcción que para esta caso es el mercado de ladrillos. La reducción en la producción de ladrillo puede presentarse en un 15\%  con una posible alza en el año 2021. La construcción en el departamento de Boyacá se ha caracterizado en que tras de un periodo positivo viene uno negativo en menor incidencia. En conclusión, el panorama en la producción de elementos para el equipamiento parece ser optimista a pesar de las turbulencias que se verá enfrentada el sector de la construcción en el futuro.
+
+\begin{table}[H]
+  \centering
+  \caption{Proyección del mercado de ladrillos en Boyacá (2020-2023)}
+    \begin{tabular}{c c c c c}
+          \hline
+          & 2020  & 2021  & 2022  & 2023 \\
+          \hline
+          \hline
+   Viviendas* & 10.532 & 12.532 & 12.407 & 13.524 \\
+    Crecimiento de viviendas & 0,85\%  & 1,19\%  & 0,99\%  & 1,09\% \\
+    Proyeccion de ladrillos** & 13.649 & 16.242 & 16.080 & 17.527 \\
+    \hline
+    \end{tabular}\\
+    \raggedright  \scriptsize *Se consideran todos los municipios\\
+    \raggedright  \scriptsize **Cifras en miles de unidades de ladrillos\\
+\raggedright  \scriptsize \textbf{Fuente}:Elaboración propia.
+  \label{tab:addlabel}%
+\end{table}%
+
+
+
+
+
+
+
+
+
+
+
+\begin{figure}[H]
+  	\centering 		
+  	\caption{Proyección del mercado de ladrillos en Boyacá (2016-2023)}
+	\includegraphics[width=1\textwidth]{Fig/ladriboy}
+\raggedright  \scriptsize \textbf{Fuente}:DANE. Elaboración propia.
+	\label{A2}	
+	\end{figure}
+
+	
+	
+	
+	
+	
+	\textbf{NOTA}:\\
+Con base en la investigación de \cite{quijano2014implementacion}, el  Proyecto de Aprovechamiento
+de residuos solidos para su utilización en equipamiento urbano se pretende orientar desde las viabilidades técnica y ambiental del proceso propuesto, a partir de las materias primas generadas de la escoria de alto horno las cuales son de fácil adquisición  al ser un desecho industrial, es de bajo costo principalmente por los residuos generados en la industrias metalurgicas  de la ciudad de Sogamoso.\\
+
+Considerando los problemas ambientales y los altos costos generados en el proceso de cocción para producir ladrillos de forma artesanal, se considera el método alternativo propuesto en León, \& otros (2009), para lo cual se utilizó como materias primas escoria de alto horno de la industria del acero y cal hidratada, dos materiales de gran abundancia en la región del Valle de Sogamoso. La mezcla se hidrató y se sometió a una presión de 300 kgf/cm2, luego se formaron los ladrillos y se sacaron a medio ambiente durante diez días.\\
+
+Una de las materias primas a utilizar, corresponde a la escoria separada en el proceso de fabricación de arrabio en la industria del acero. Los ladrillos que propone  \cite{quijano2014implementacion}, están constituidos a partir de un ecomaterial, entendiendo por ecomateriales "materiales que por su origen y composición no afectan de manera total al medio ambiente. Pueden ser de origen natural o producidos por el hombre. Su uso en el sector de la construcción, se inició formalmente hace pocos años, haciéndose más frecuente las experiencias de buenas practicas en su empleo de forma masiva en programas comerciales de construcción y conquistado un lugar en el mercado en muchos países, donde compiten con ventaja con materiales industriales. La viabilidad técnico económica de los proyectos demuestra su sustentabilidad".\\
+
+La idea de utilizar materiales de desecho de la industria metalúrgica, no es nueva. Las mezclas que consisten en sedimentos de los puertos y de residuos de escoria de la industria del acero que contiene componentes tóxicos, se calientan para producir materiales de construcción no peligrosos (Weia \& otros, 2014). Por ejemplo, bloques huecos de mampostería de peso ligero (CHLM), fueron producidos con una mezcla de cenizas volantes, escoria, piedra pómez de perlita y cemento, y podrían ser utilizados para los bloques de hormigón en la industria de la construcción (Gunduz, 2008).\\
+
+Dicha propuesta vincula los desechos de una industria como la siderúrgica, para mejorar la actividad de otra industria como la mampostería en el departamento de Boyacá. El proceso propuesto, no requiere de altas temperaturas, por lo tanto es favorable con respecto al artesanal en lo relacionado con la protección del medio ambiente, debido a que no genera emisiones contaminantes, elimina los requerimientos de energía de casi 1.500 kcal por ladrillo y no utiliza combustibles provenientes de recursos naturales no renovables como el carbón y el coque.
+
+
+%En la Figura \ref{Naturaleza} se puede observar que hay mayor cantidad de teatros con una naturaleza de administración privada, correspondiente al 76 \% por ciento, contrario a aquellos de naturaleza pública con un 24 por ciento. En este sentido, cabe resaltar que la inversión pública es bastante descentralizada en la financiación de este tipo de escenarios donde las principales están a cargo de las Alcaldías Municipales. Sin embargo, en el caso de los escenarios de naturaleza privada están altamente concentrados en Antioquia (37 escenarios), Cundinamarca (34 escenarios) y Valle de Cauca (13 escenarios) los cuales son grandes polos de desarrollo. 
+%%\begin{figure}[H]
+%%    \centering
+%%    \includegraphics[width=0.8\textwidth]{figures/Naturaleza_Teatros.png}
+%%    \caption{Naturaleza de Teatros en Colombia}
+%%    \label{Naturaleza}
+%%\end{figure}
+%En la Figura \ref{fig:demanda} se evidencia que el departamento con mayor oferta de Teatros es Antioquia con 44, seguido de Cundinamarca que cuenta con 37; mientras que Boyacá cuenta con tan solo 6 escenarios.
+%
+%%\begin{figure}[H]
+%%    \centering
+%%    \includegraphics[width=0.95\textwidth]{figures/Teatros_Colombia.png}
+%%    \caption{Oferta de Teatros por departamentos}
+%%    \label{fig:demanda}
+%%\end{figure}
+%Con relación a la Figura \ref{fig:Tipos} se encuentra que hay mayor número de salas que representan el 70\%, en cuanto a los teatros tiene una participación correspondiente al 28\%. Según el diccionario de la Real Academia Española, se denomina auditorio a una sala destinada a conciertos, recitales, conferencias, coloquios, lecturas públicas, etc. Por otro lado, un teatro es un edificio o sitio destinado a la representación de obras dramáticas o a otros espectáculos públicos propios de la escena. Dado que los teatros son sitios especializados en las artes escénicas representan un porcentaje bajo de los espacios destinados para este fin. En concreto, debido a la alta inversión que implica un teatro como espacio físico, la gran parte son de origen publico. Por otro lado, las salas en su mayoría son de propietarios privados, evidenciando que la inversión en obras de gran magnitud en cuanto a escenarios par teatro recaen en el sector público. 
+%%\begin{figure}[H]
+%%    \centering
+%%    \includegraphics[width=1.0\textwidth]{figures/Tipo_Escenarios.png}
+%%    \caption{Tipos de Escenarios}
+%%    \label{fig:Tipos}
+%%\end{figure}
+%A la hora de análisis las características de la oferta de escenarios para el teatro, un componente esencial es la capacidad de estos escenarios. Por tanto, la Figura \ref{fig:Sillas_Teatros} muestra la distribución del número de sillas de los 46 escenarios que se consideran como teatros. En este sentido, podemos observar que 16 escenarios se encuentra entre el rango de una distribución de 150 a 682 sillas.Igualmente, un dato relevante es que en promedio los teatros en Colombia tienen 726 sillas. Dentro de las ciudades con más sillas encontramos a Bogotá ( 3973 sillas), Medellín ( 2657 sillas ) y Cali ( 2168 sillas ).  Estos resultados reafirma el hecho de la alta concentración de la actividad teatral en las grandes ciudades del país, como se verá más adelante esto es impulsado por la alta disposición a pagar por las personas que habitan en esta regiones. Este fenómeno de alta demanda se explicará en el respectivo apartado con el fin de ilustrar la dinámica de la demanda y como se relaciona con la oferta de escenarios. 
+%%\begin{figure}[H]
+%%    \centering
+%%    \includegraphics[width=1.0\textwidth]{figures/Capacidad_Sillas_Teatros.png}
+%%    \caption{Capacidad de sillas en Teatros}
+%%    \label{fig:Sillas_Teatros}
+%%\end{figure}
+%
+%Por último, a lo largo de este apartado se caracterizado la oferta de escenarios para las artes escénicas, por tanto a continuación se señala las principales conclusiones: 
+%\begin{itemize}
+%    \item Existe una gran diversidad en escenarios destinados para la actividad es especial el 70\% son salas de baja capacidad, en particular con un promedio de sillas de 141 y en su totalidad de naturaleza privada. En consecuencia, las iniciativas privadas son de corto alcance en términos de la infraestructura destinada para el teatro pero más efectivas a la hora de la cobertura. 
+%    \item En cuanto al aspecto público dispone de escenarios de gran capacidad ( 726 sillas en promedio ). Como contraste este tipo de escenarios están concentradas en las principales ciudades del país (Bogotá, Medellín y Cali) representan el 39\% del total de sillas de los teatros. Luego de estas ciudades son escenarios que se ubican en capitales departamentales y ciudades intermedias. 
+%\end{itemize}
+%
+%
+%\subsubsection{Demanda}
+%Con el fin de caracterizar el consumo de teatro en Colombia utilizamos la Encuesta de Consumo Cultural (ECC) del año 2017, donde se encuestaron a 30623 personas. Dada esta información a continuación se presentará los principales hechos relevantes en la demanda por espectáculos relacionados con las artes escénicas, tales como: decisión de asistencia, frecuencia, motivos entre otros. 
+%
+%En primera medida, cabe señalar que según la ECC la asistencia a eventos relacionados con expresiones culturales es baja rodando en promedio 22.1\% de los encuestados mostrando el bajo consumo cultural del país. Ahora dentro de los asistentes a los diferentes tipos de presentaciones y espectáculos culturales representados en la Figura \ref{fig:Tipo_espectaculo} se encuentra que el 36\% de las personas acuden a eventos relacionados con espectáculos musicales. Por otra parte, en segundo lugar con el 30\% de los encuestados asisten a Ferias o exposiciones artesanales, seguido por los consumidores de teatro, ópera o danza que representan 5.563 personas (21\%). Por último, encontramos a los espectáculos concernientes a fotografía, dibujo y artes gráficas con el 13\% de los encuestados. \\
+%
+%%\begin{figure}[H]
+%%    \centering
+%%    \includegraphics[width=0.9\textwidth]{figures/Tipo_Espectaculo.png}
+%%    \caption{Asistencia por tipo de espectáculo \\ Fuente:DANE, ECC-2017.Elaboración Propia}
+%%    \label{fig:Tipo_espectaculo}
+%%\end{figure}
+%
+%Dado que el presente estudio es de carácter regional y tomando los enunciado en la figura anterior nos enfocaremos en los asistentes a espectáculos relacionados con teatro,ópera o danza, por lo tanto, en la Figura \ref{fig:Asistencia} se relaciona la asistencia a este tipo de presentaciones por regiones. Como se puede observar la región Central presenta la mayor asistencia el 28\% que involucran a los departamentos de  Caldas,Risaralda, Quindío, Tolima, Huila, Caquetá y Antioquia. En el caso Bogotá, ya que es el Distrito Capital por sí solo, cuenta con el 25\% de la asistencia del país; las regiones Pacífica, Oriental y Caribe cuentan con un 15\% de la asistencia, mientras que la región de Amazonía y Orinoquía tan solo cuenta con un 2\%.
+%
+%%\begin{figure}[H]
+%%    \centering
+%%    \includegraphics[width=0.9\textwidth]{figures/Asistencia_Regiones.png}
+%%    \caption{Asistencia a Teatro por regiones\\ Fuente:DANE, ECC-2017.Elaboración Propia}
+%%    \label{fig:Asistencia}
+%%\end{figure}
+%
+%Con el fin de complementar el análisis sobre la asistencia a espectáculos de teatro, ópera o danza en la Figura \ref{fig:Asistencia_Edades} se presenta la distribución de edades que asisten a este tipo de eventos. En esta medida se observa que la mayor asistencia a Teatros medido en edades es del público cuyas edades oscilan entre los 12 a 25 años con un 38\%, mientras que el público que sigue es aquel cuyas edades van desde los 26 hasta los 40 años con un 29 \%. Por último, dentro de los encuestados con edades entre 41 a 64 años y mayores de 65 años la asistencia fue del 27\% y el 6\%. Por lo tanto, esta figura nos muestra que a medida se avanza en términos de edad se asiste en menor medida a estos espectáculos. 
+%
+%%\begin{figure}[H]
+%%    \centering
+%%    \includegraphics[width=1.0\textwidth]{figures/Asistencia_Edades.png}
+%%    \caption{Asistencia a Teatro por edades}\\
+%%    Fuente:DANE, ECC-2017.Elaboración Propia
+%%    \label{fig:Asistencia_Edades}
+%%\end{figure}
+%
+%De acuerdo con lo señalado anteriormente el grupo principal de consumo de la actividad teatral es las personas entre 12 a 25 años. Otro factor importante es la distribución por genero como lo muestra la Figura \ref{fig:Asistencia_Genero}. Como se puede observar las mujeres son el público que mayor asistencia presenta los espectáculos y presentaciones de teatro, ópera o danza con un 56\% mientras que los hombres equivalen al restante 44\%. Esta información es relevante dado que es insumo trascendental al momento de la segmentación del mercado objetivo. En particular, se puede identificar un perfil donde los principales consumidores de teatro son personas jóvenes y en especial mujeres. 
+%
+%%\begin{figure}[H]
+%%    \centering
+%%    \includegraphics[width=1.0\textwidth]{figures/Asistencia_Genero.png}
+%%    \caption{Asistencia a Teatro por géneros\\
+%%    Fuente:DANE, ECC-2017.Elaboración Propia}
+%%    \label{fig:Asistencia_Genero}
+%%\end{figure}
+%Además, el perfil del posible consumidor es necesario señalar las características de los hábitos de consumo, como se muestra en  la Figura \ref{fig: Frecuencia_Asistencia} está relacionada sobre la frecuencia de asistencia a espectáculos de teatro, ópera o danza. Dentro de los resultados podemos ver que la gran parte de las personas (39.5\%) solo asisten una vez al año a este tipo de presentaciones. Seguido por una vez cada seis meses con 1136 personas y una vez al mes cada tres meses con 1186 personas. Del mismo modo el 11.3\% de los encuestados aseveran una asistencia a espectáculos de Teatro de una vez al mes, mientras que el 3.9\% asegura asistir al menos una vez a la semana. Además de lo señalado en el perfil del consumidor nos encontramos en un escenario de consumo esporádico y poco frecuente.
+%
+%En esta medida, con la información reportada hasta el momento podemos identificar que al momento de establecer un estrategia de promoción de un escenario como un teatro se debe tener en cuanta las características de los consumidores en Colombia. En principal medida que se debe apalancar en eventos originales que pueda llegar a los públicos juveniles y de igual manera que impulsen el consumo frecuente de estos espectáculos. Sin embargo para ahondar en la características de la demanda se deben analizar la disponibilidad a pagar por este tipo de presentaciones. 
+%
+%%\begin{figure}[H]
+%%    \centering
+%%    \includegraphics[width=1.0\textwidth]{figures/Frecuencia_Asistencia_Teatro.png}
+%%    \caption{Frecuencia de asistencia a Teatro \\
+%%    Fuente:DANE, ECC-2017.Elaboración Propia}
+%%    \label{fig: Frecuencia_Asistencia}
+%%\end{figure}
+%En esta medida la Figura \ref{fig:Asistencia_Gratuita} muestra la asistencia a eventos de  teatro, ópera o danza cuando la entrada es gratuita. Como se observa el 71\% de personas dicen asistir a presentaciones y espectáculos de entrada gratuita mientras que el 29\% restante dice No asistir todo esto en el marco de las 5563 que asisten a espectáculos de teatro, ópera o danza. \\
+%%\begin{figure}[H]
+%%    \centering
+%%    \includegraphics[width=0.8\textwidth]{figures/Asistencia_Gratuita.png}
+%%    \caption{Asistencia a presentaciones de entrada Gratuita\\
+%%    Fuente:DANE, ECC-2017.Elaboración Propia}
+%%    \label{fig:Asistencia_Gratuita}
+%%\end{figure}
+%En contraste con la información reportada respecto a la asistencia a eventos con entrada gratuita, en la Figura \ref{fig:Asistencia_Motivos} se reporta los principales motivos por los cuales no se asiste a presentaciones y espectáculos de teatro, ópera o danza, donde la falta de dinero no es un impedimento que restringe el consumo de las actividades teatrales (80.9\%). Por el contrario, el mayor motivo es el desinterés o la falta de gusto por este tipo de eventos con un 50\%, seguido por la falta de tiempo que corresponde a un 31.4\%. Otro aspecto a destacar esta relacionado con el motivo de \textit{Ausencia de este tipo de presentaciones} donde el 91.6\% de las personas dice que este NO es motivo de inasistencia a estos eventos, lo que puede implicar que si existe una oferta cultural amplía y hay ciertos aspectos culturales que no permiten incentivar la participación en esta manifestaciones culturales.
+%%\begin{figure}[H]
+%%    \centering
+%%    \includegraphics[width=1.0\textwidth]{figures/Motivos_No_Asistencia.png}
+%%    \caption{Motivos de NO Asistencia
+%%    Fuente:DANE, ECC-2017.Elaboración Propia}
+%%    \label{fig:Asistencia_Motivos}
+%%\end{figure}
+%
+%
+%
+%A partir de la información presentada a lo largo de este apartado se puede obtener las siguientes conclusiones: 
+%\begin{itemize}
+%    \item El consumo de presentaciones y espectáculos es bajo en sus distintas modalidades solo el 22.1\% de las personas encuestados manifestaron asistir a eventos culturales, lo cual representa un limitante al público que se puede atraer a este tipo de presentaciones. 
+%    \item Dentro los asistentes a eventos culturales, el teatro es el tercer tipo de espectáculo que eligen los consumidores, donde tiene una preponderancia importante los conciertos y las ferias artesanales. Dicho resultado puede estar ligado a una baja exposición a las actividades teatrales que puedan afianzar el consumo de este tipo de espectáculos. 
+%    \item El perfil del consumidor de contenido de las artes escénicas esta enmarcado en jóvenes de 12 a 25 años, en especial en el segmento de las mujeres. Este consumidor se caracteriza por asistencia a eventos de manera ocasional, es decir, no presenta una regularidad en su consumo y no parece estar relacionado con la baja oferta de espectáculos. Igualmente, el consumo que se realiza se hace en eventos con entradas gratuita, lo que contrasta con el hecho que el principal motivo de no asistencia es la falta de interés y en tercer lugar con un porcentaje mínimo se encuentra la falta de dinero. 
+%    \item De la información estadística reportada tentativamente se puede observar que los problemas del consumo cultural en especial de actividades teatrales pueden estar relacionados más con incentivos en el lado de la demanda. En especial, dado que principal motivo de inasistencia es la falta de interés o gusto por los espectáculos de teatro, ópera o danza se debe enfatizar en la promoción de la cultura del teatro para que obtenga una valoración social más amplia y pueda incentivar el consumo de estos espectáculos.
+%\end{itemize}
+%
+%\subsubsection{Teatros en Colombia}
+%\begin{enumerate}
+%    \item \textbf{Teatro Colón:}
+%Este escenario opera y es administrado por el Ministerio de Cultura, entidad que realiza un aporte de recursos públicos para suplir el funcionamiento básico del teatro incluido el pago de la nómina base y los gastos de funcionamiento.
+%El teatro para su funcionamiento cuenta con unas tarifas dependiendo de la solicitud de uso, las cuales se encuentran establecidas en la Resolución 2694 de 2018
+%expedida por el Ministerio de Cultura.
+%Tarifas:
+%\begin{itemize}
+%    \item Alquiler institucional: 22 Salarios Mínimos legales Mensuales Legales Vigentes.
+%    \item Día de montaje Alquiler institucional: 11 Salarios Mínimos legales Mensuales Legales Vigentes.
+%    \item Medio día de montaje Alquiler institucional: 5.5 Salarios Mínimos legales Mensuales Legales Vigentes.
+%    \item Alquiler Comercial - día de evento: 41 Salarios Mínimos legales Mensuales Legales Vigentes.
+%    \item Función adicional mismo día del evento: 3,5 Salarios Mínimos legales Mensuales Legales Vigentes.
+%    \item Sala principal Alquiler comercial día de montaje: 22 Salarios Mínimos legales Mensuales Legales Vigentes.
+%    \item Alquiler comercial medio día de montaje: 11 Salarios Mínimos legales Mensuales Legales Vigentes.
+%    \item Grabaciones audiovisuales 12 horas: 41 Salarios Mínimos legales Mensuales Legales Vigentes.
+%    \item Grabaciones audiovisuales 6 horas: 20 Salarios Mínimos legales Mensuales Legales Vigentes.
+%    \item Sesiones Fotográficas: 20 Salarios Mínimos legales Mensuales Legales Vigentes.- Día de ensayos: 22 Salarios Mínimos legales Mensuales Legales Vigentes.
+%\end{itemize}
+%Consumo de productos culturales teatro colón:
+%Los valores aproximados y tarifas \footnote{Información extraída de la página web 
+%\url{https://teatrocolon.gov.co/programacion}} de las boletas o derechos de asistencia que el consumidor cultural adquiere para eventos de música, danza y teatro principalmente, que el escenario ofrece a través de su programación son los siguientes:
+%\begin{itemize}
+%    \item Música:
+%    
+%    \begin{table}[H]
+%  \centering
+%  \caption{Tarifas Música-Teatro Colón}
+%    \begin{tabular}{|p{11.375em}|p{11.565em}|}
+%    \hline
+%    \textbf{VALOR MÍNIMO BOLETA} & \textbf{VALOR MÁXIMO BOLETA} \\
+%    \hline
+%    \$32.240 más Servicio (\$4.760) & \$92.310 más servicio (\$7.690) \\
+%    \hline
+%    \end{tabular}%
+%  \label{tab:addlabel}%
+%\end{table}%
+%
+%    \item Teatro:
+%    
+%    \begin{table}[H]
+%  \centering
+%  \caption{Tarifas Teatro-Teatro Colón}
+%    \begin{tabular}{|p{11.375em}|p{11.565em}|}
+%    \hline
+%    \textbf{VALOR MÍNIMO BOLETA } & \textbf{VALOR MÁXIMO BOLETA} \\
+%    \hline
+%    \$35.240 más Servicio (\$4.760) & \$35.240 más servicio (\$4.760)  \\
+%    \hline
+%    \end{tabular}%
+%  \label{tab:addlabel}%
+%\end{table}%
+%    \item Danza:
+%    
+%    \begin{table}[H]
+%  \centering
+%  \caption{Tarifas Danza-Teatro Colón}
+%    \begin{tabular}{|p{11.375em}|p{11.565em}|}
+%    \hline
+%    \textbf{VALOR MÍNIMO BOLETA} & \textbf{VALOR MÁXIMO BOLETA} \\
+%    \hline
+%    \$18.810 más servicio (\$1.190)   & \$35.240 más servicio (\$4.760) \\
+%    \hline
+%    
+%    \end{tabular}%
+%  \label{tab:addlabel}%
+%\end{table}%
+%
+%\end{itemize}
+%Las tarifas mencionadas tienen un costo variable, dependiendo de la franja, horarios, tipo de espectáculo y procedencia del artista (Nacional o Internacional).
+%La forma en que el consumidor cultural puede obtener la boletería o derecho de asistencia, se realiza a través de plataformas virtuales o páginas web como tuboleta.com.
+%\item \textbf{Teatro Jorge Eliecer Gaitán:}
+%Este teatro es operado y administrado por el Distrito de Bogotá. El teatro para su funcionamiento cuenta con unas tarifas dependiendo de la solicitud de uso, las cuales se encuentran establecidas en la Resolución 860 de 2017
+%(valores actualizados para 2019)
+%Tarifas:
+%\begin{itemize}
+%    \item COMODATO: El valor de los costos operativos diarios no será inferior a cuatro (4) Salarios Mínimos Mensuales Legales Vigentes.
+%    \item POR FUNCIÓN: Lo costos operativos serán de cuatro (4) Salarios Mínimos Mensuales Legales Vigentes.En el caso de realización de más de una función al día, se pagará el cuarenta por ciento (40\%) adicional de los costos operativos diarios por función adicional.
+%    \item CONVENIO O CONTRATO INTERADMINISTRATIVO: El valor de los costos operativos diarios no será inferior a cuatro (4) Salarios Mínimos Mensuales Legales Vigentes.
+%    \item POR FUNCIÓN: El canon de alquiler diario será de cuatro (4) Salarios Mínimos Mensuales Legales Vigentes. En el caso de realización de más de una función al día, se pagará el cuarenta por ciento (40\%) adicional del canon de alquiler diario por función adicional.
+%    \item ALQUILER CON VENTA PÚBLICA DE BOLETERÍA O INSCRIPCIÓN: 
+%    \begin{itemize}
+%        \item \textbf{POR FUNCIÓN:} El canon de alquiler diario será de veinte (20) Salarios Mínimos Mensuales Legales Vigentes, más un cinco (5\%) por ciento del valor total de la venta bruta de boletería, de acuerdo con los precios establecidos al público, reportada por el operador de boletería y verificada mediante controles de ingreso al teatro. En el caso de realización de más de una función al día, se pagará el cuarenta por ciento (40\%) adicional del canon de alquiler diario por función adicional y se mantendrá el cobro del 5\% de la venta bruta de cada función.
+%        \item \textbf{POR TEMPORADA:} Comprendida por tres o más funciones, en un mínimo de dos (2) días, que hagan parte integral del mismo evento, el canon de alquiler diario será de diecisiete (17) Salarios Mínimos Mensuales Legales Vigentes, más un cuatro (4\%) por ciento del valor total de la venta bruta de boletería, de acuerdo con los precios establecidos al público, reportada por el operador de boletería y verificada mediante controles de ingreso al teatro. En el caso de realización de más de una función al día (en temporada) se pagará el treinta por ciento (30\%) adicional del canon de alquiler diario por función adicional, más un cuatro por ciento (4\%) de la venta bruta de cada función.
+%    \end{itemize}
+%    \item ALQUILER SIN VENTA DE BOLETERÍA O INSCRIPCIÓN: El canon de alquiler, diario será de veintiocho (28) Salarios Mínimos Mensuales Legales Vigentes.
+%    \item ALQUILER DIDÁCTICO: El canon de alquiler diario para una función será de dieciséis (16) Salarios Mínimos Mensuales Legales Vigentes. En caso de realizarse funciones adicionales en el mismo día, se cobrará el veinte por ciento (20\%) del valor del canon de arrendamiento por cada función adicional.
+%    \item ALQUILER PARA GRABACIONES DE CINE Y/O TELEVISIÓN: El canon de alquiler diario para esta modalidad de uso será de treinta y dos (32) Salarios Mínimos Mensuales Legales Vigentes.
+%    \item VALOR DEL DÍA DE MONTAJE, DESMONTAJE Y/O ENSAYOS DE LA SALA DEL TEATRO MUNICIPAL JORGE ELIECER GAITÁN: El valor del día de montaje, desmontaje, y/o ensayo será de once (11) Salarios Mínimos Mensuales Legales Vigentes de la fecha de suscripción del contrato, sin importar la modalidad de contratación; teniendo en cuenta lo que señala en el artículo 6 del presente acto administrativo.
+%    \item ALQUILER DEL LOBBY, LA BAHÍA, EL CALLEJÓN DE EXPOSICIÓN Y FACHADA DE TELEVISIÓN POR DÍA: Diez (10) Salarios Mínimos legales Mensuales Legales Vigentes por espacio, por día.
+%    \item EVENTOS ARTÍSTICOS Y CULTURALES POR DÍA: Cuatro (4) Salarios Mínimos Mensuales Legales Vigentes, por día.
+%    \item JORNADA DE MONTAJE, DESMONTAJE, ENSAYOS Y HORARIOS DE USO: Una jornada puede comprender actividades de ingresos, descargues, montaje, desmontaje, carga y ensayos. Se contará con espacio de tiempo de hasta diez (10) horas, a partir de las 8:30 a.m. respetando el cronograma establecido en la reunión de pre producción del evento y acordado entre las partes. En una jornada de montaje/desmontaje o ensayo el horario máximo será de diez (10) horas, a partir de las 8:30 am, sin excederse de las 8:00 pm y respetando el cronograma establecido en la reunión de pre-producción del evento y acordado entre las partes. Cualquier tiempo adicional que exceda estos horarios, tendrá un cobro adicional por hora de un (1) Salario Mínimo Mensual Legal Vigente.
+%\end{itemize}
+%Consumo de productos culturales Teatro Jorge Eliecer Gaitán: Los valores aproximados y tarifas \footnote{Información extraída de la página web 
+%\url{http://www.idartes.gov.co/es/teatro-jorge-eliecer-gaitan/agenda-jeg}} de las boletas o derechos de asistencia que el consumidor cultural adquiere para eventos de música, danza y teatro principalmente, ofrecidos por el teatro a través de su programación son los siguientes:
+%\begin{itemize}
+%    \item Música:
+%    
+%    \begin{table}[H]
+%  \centering
+%  \caption{Tarifa Música-Teatro Jorge Eliecer Gaitán}
+%    \begin{tabular}{|p{11.57em}|p{14.355em}|}
+%    \hline
+%    \textbf{VALOR MÍNIMO BOLETA} & \textbf{VALOR MÁXIMO BOLETA} \\
+%    \hline
+%    \$98.000 más Servicio  & \$390.000 más servicio \\
+%    \hline
+%    \end{tabular}%
+%  \label{tab:addlabel}%
+%\end{table}%
+%    \item Teatro:
+%    
+%    \begin{table}[H]
+%  \centering
+%  \caption{Tarifa Teatro-Teatro Jorge Eliecer Gaitán}
+%    \begin{tabular}{|p{11.57em}|p{14.355em}|}
+%    \hline
+%    \textbf{VALOR MÍNIMO BOLETA } & \textbf{VALOR MÁXIMO BOLETA } \\
+%    \hline
+%    \$65.600 más Servicio  & \$102.000 más servicio  \\
+%    \hline
+%    \end{tabular}%
+%  \label{tab:addlabel}%
+%\end{table}%
+%
+%    \item Danza: En la actualidad, dentro de la agenda cultural ofrecida por el teatro, no hay eventos relacionados con danza.
+%\end{itemize}
+%
+%Las tarifas mencionadas tienen un costo variable, dependiendo de la franja, horarios, tipo de espectáculo y procedencia del artista (Nacional o Internacional).
+%La forma en que el consumidor cultural puede obtener la boletería o derecho de asistencia, se realiza a través de plataformas virtuales como tuboleta.com. 
+%\item \textbf{Teatro mayor Julio Mario Santo Domingo:}
+%El Teatro Mayor Julio Mario Santo Domingo, opera bajo la figura de Asociación Público Privada, donde a través del aporte de recursos tanto del sector público como
+%del privado, se logra su operación, administración y manejo.
+%
+%Consumo de productos culturales teatro Julio Mario Santo Domingo:
+%Los valores aproximados de las boletas o derechos de asistencia que el consumidor cultural adquiere para eventos de música, danza y teatro principalmente, que el
+%escenario ofrece a través de su programación son los siguientes:
+%\begin{itemize}
+%    \item Música:
+%    
+%    \begin{table}[H]
+%  \centering
+%  \caption{Tarifas Música-Teatro Julio Mario Santo Domingo}
+%    \begin{tabular}{|p{11.57em}|p{14.355em}|}
+%    \hline
+%    \textbf{VALOR MÍNIMO BOLETA} & \textbf{VALOR MÁXIMO BOLETA} \\
+%    \hline
+%    \$20.000 (No especifica valor por servicio) & \$300.000 (No especifica valor por servicio) \\
+%    \hline
+%    \end{tabular}%
+%  \label{tab:addlabel}%
+%\end{table}%
+%
+%    \item Teatro:
+%    
+%    \begin{table}[H]
+%  \centering
+%  \caption{Tarifas Teatro-Teatro Julio Mario Santo Domingo}
+%    \begin{tabular}{|p{11.57em}|p{14.355em}|}
+%    \hline
+%    \textbf{VALOR MÍNIMO BOLETA} & \textbf{VALOR MÁXIMO BOLETA } \\
+%    \hline
+%    \$25.000 (No especifica valor por servicio) & \$150.000 (No especifica valor por servicio) \\
+%    \hline
+%    \end{tabular}%
+%  \label{tab:addlabel}%
+%\end{table}%
+%
+%    \item Danza:
+%    
+%    \begin{table}[H]
+%  \centering
+%  \caption{Tarifas Danza-Teatro Julio Mario Santo Domingo}
+%    \begin{tabular}{|p{11.57em}|p{14.355em}|}
+%    \hline
+%    \textbf{VALOR MÍNIMO BOLETA} & \textbf{VALOR MÁXIMO BOLETA} \\
+%    \hline
+%    \$20.000 (No especifica valor por servicio)   & \$35.240 (No especifica valor por servicio) \\
+%    \hline
+%    \end{tabular}%
+%  \label{tab:addlabel}%
+%\end{table}%
+%
+%\end{itemize}
+%
+%Las tarifas\footnote{Información extraída de la página web \url{http:// www.primerafila.com.co/tmjmsd/online/}} mencionadas tienen un costo variable, dependiendo de la franja, horarios, tipo de espectáculo y procedencia del artista (Nacional o Internacional).
+%La forma en que el consumidor cultural puede obtener la boletería o derecho de asistencia, se realiza a través de plataformas virtuales como tuboleta.com. 
+%\end{enumerate}
+%
+%\subsection{Escenario Departamental}
+%\subsubsection{Oferta}
+%Situación de salas de teatro en Boyacá
+%
+%En Boyacá hay varios teatros que permiten actividades culturales, existe el teatro de Sogamoso con capacidad de 500 personas, allí se realizan actividades culturales diversas. Su edificación se inicia en 1920 por el General Víctor Óspina, entre otros. La construcción fue dirigida por el ingeniero Daniel Hernández, autor de la elegante portada sólida. Luego de repetidas interrupciones es entregado a la comunidad de Sogamoso en 1941. Consagrado como patrimonio cultural de la Nación es adquirido por el Municipio en el año de 1998, dando inicio a los trabajos de restauración con el apoyo del Ministerio de Cultura, Siendo hoy orgullo de los habitantes del municipio de Sogamoso. Cuenta con una capacidad de 500 sillas, se caracteriza por su hermosa e imponente fachada de estilo clásico, su luneta, sus balcones interiores y el recordado “gallino”. Actualmente está siendo remodelado para recuperar su espacio cultural, ubicado en la carrera 9 con calle 12.
+%Este teatro es administrado por la alcaldía y sus obras son buenas, pero aún no alcanza niveles de productividad y calidad, según opinión de los entendidos. 
+%
+%En Tunja se encuentra el Teatro Maldonado, Teatro Cinema Boyacá y teatros de las universidades. Pero el Teatro Suárez con la remodelación a la cual fue sometido, y entregado a la Alcaldía de Tunja a finales del año 2018, quedó calificado como un espacio de alto nivel escénico y de infraestructura en general, siendo esta una apreciación de los expertos delegados del Teatro Julio Mario Santo Domingo quienes lo afirmaron durante una visita realizada al lugar.
+%
+%La nación realizo un aporte para la competitividad a través del sector Industria Comercio y Turismo, aprobó en OCAD Regional del Proyecto: Adecuación, Remodelación y puesta en funcionamiento del Teatro Suárez en el marco del Contrato Plan Boyacá Municipio de Tunja - Departamento de Boyacá, por valor de \$6.525 millones. Actualmente el proyecto ejecuto la obra con un 100\%. El resto los aporto la alcaldía de Tunja de recursos propios.
+%
+%Con una inversión total por valor de los \$8.120’614.028.47 pesos, logrados a través de recursos del Sistema General de Regalías y del municipio de Tunja, los Tunjanos y los Boyacenses ahora podrán disfrutar de un escenario único de sus características en la región.
+%
+%El teatro fue calificado como uno de los mejores escenarios del país, de acuerdo a la junta directiva del Teatro Mayor Julio Mario Santo Domingo tras su visita al mismo.
+%
+%El teatro Suárez cuenta con la tecnología de punta que permite adecuar este espacio para diferentes tipos de puestas en escena.
+%Como parte de la entrega definitiva se dieron las aprobaciones en acabados de puntos específicos del teatro como las baterías de baños, el escenario, la pantalla, y demás, las cuales están en perfecto estado y podrán ser utilizadas desde ya por los Boyacenses.
+%la remodelación se incluyó una caja escénica, camerinos, foso de orquesta rectificado de modo que permite el uso de paneles de movimiento en la tarima; posee una estructura de trampilla, equipos electromecánicos y la tramoya.
+%El cuarto de control se modernizó con iluminación sonido y vídeo con equipamiento de última tecnología. Los baños, pasillos y mezannine se modernizaron.
+%El teatro posee varios sistemas: 
+%\begin{itemize}
+%    \item de iluminación
+%    \item de audio
+%    \item de vídeo
+%    \item de control
+%    \item de mecánica teatral
+%\end{itemize}  
+%
+%Se ha hecho pruebas técnicas del funcionamiento del sistema de forma mecánica, con la apertura y el cierre del telón de boca que funciona con un motor; se puede hacer un juego de luces en donde se logran ver luces robóticas, incandescentes, y luz ambiente que puede ser controlada desde una consola o desde varias botoneras ubicadas en el teatro.
+%De igual manera, el consorcio Teatro Suárez, mostró baños, accesos y tapetes; y se probó cómo suben y bajan las barras mecánicas en las que hay un ciclorama o telón de proyección de luces que permite la realización de efectos de amanecer y atardecer.
+%
+%El Teatro Suárez, cuenta con 649 sillas, 5 baterías de baño, plataforma de tarima, mecánica teatral, iluminación de sala, concha acústica retráctil, telón de boca mecanizado y acabados acústicos.
+%
+%La administración municipal de Tunja, planifica cómo será la puesta en funcionamiento y la administración de este escenario cultural de la Capital Boyacense.  
+%
+%Para ello invitaron a miembros de la junta directiva del Teatro Mayor Julio Mario Santo Domingo, quienes recorrieron las instalaciones del remodelado teatro, entregando opiniones favorables sobre este.
+%“Encuentro realmente un teatro magnífico. Han hecho una recuperación fantástica. El espacio con el que contaron cuando empezaron la obra lo han aprovechado de manera realmente sobresaliente. La dotación técnica, el diseño, la isóptica, que es esta línea que permite ver con comodidad, es perfecta. Yo creo que probando la acústica también por los materiales, va a ser muy buena. Creo que Tunja tiene un espacio realmente muy importante para las artes escénicas y musicales”, señaló Ramiro Osorio, director del Teatro Mayor Julio Mario Santo Domingo.
+%
+%Dentro de las apreciaciones a nivel de recomendación del doctor Osorio enfatizó sobre la importancia que tiene crear una programación nutrida con los mejores artistas de Boyacá y del país. “Creo que todas estas condiciones técnicas, todas estas condiciones acústicas e isópticas, permiten proponerse una programación muy importante (…) la sugerencia que yo le voy a dar (al alcalde) es un poco como nosotros concebimos la programación en el Teatro Mayor Julio Mario Santo Domingo. Bogotá es una ciudad donde viven ciudadanos de todo el país, por ello nosotros nos hemos propuesto lanzar en Bogotá todos los grandes festivales que se hacen en el país. Nosotros lanzamos el Petronio Álvarez, el de la Leyenda Vallenata, el Mono Núñez, el del porro, la cumbia, etcétera; entonces yo creo que la primera reflexión a hacer cuando uno tiene un escenario de estas características y de estas calidades es ¿Qué hay en Boyacá? ¿Cómo organizamos a partir de eso una oferta muy consistente?, aquí hay que tomar siempre una decisión, hay que tomar la decisión que tomamos nosotros todos los días en el Teatro Mayor, que es la de la excelencia, la de la calidad. Creo que estos son espacios que tienen que ser aspiracionales, aquí solo pueden llegar los artistas que tienen una cierta calidad, para que así el público venga, hay que ser claros en eso. Entonces es necesaria una programación que dé cuenta de lo que hay en Boyacá y de las posibilidades de que los artistas de Boyacá hagan puestas en común con artistas de otras partes del país”, indicó Osorio.
+%Igualmente, el doctor Osorio agregó que el Teatro, de manejarse bien, podría servir de escenario para la presentación de artistas internacionales, y aprovechó su visita a Tunja para proponerle al alcalde Pablo Cepeda, que varios de los empleados de la parte técnica del teatro; sonidistas, técnicos de iluminación, administradores y gestores, estén un par de meses en Bogotá, aprendiendo de la mano del personal del Teatro Mayor Julio Mario Santo Domingo.
+%El Alcalde celebró la visita de los miembros de la junta directiva del Teatro Mayor Julio Mario Santo Domingo, manifestó estar conforme por haber puesto a Tunja en boca de todo el país, y anunció la firma de dos convenios, uno para compartir parte de la programación del Teatro Mayor, y otro por medio del cual se capacitará a varios de los funcionarios en las instalaciones y con el apoyo del personal del Teatro Mayor.
+%“Ahora mismo les estamos pidiendo que nos ayuden a través de un convenio que tendremos que organizar con ellos, en la capacitación de las personas que van a operar la parte de luces, de sonido, la parte de tramoya; que nos ayuden a orientar sobre la persona que va a llegar a administrar el teatro, en la parte comercial, en la parte técnica, en la parte de gestión, que nos ayuden en ese tema (…) además de un convenio importante que tenemos que hacer con ellos, para que muchos de las cosas que están en la programación anual de ellos, quepan en la programación anual nuestra”
+%"El renovado espacio tiene las características perfectas para conciertos de cámara y presentaciones más grandes de teatro y danzas."
+%
+%El vocero del Teatro Julio Mario Santo Domingo resaltó la buena concha acústica que se logró adecuar por medio de un diseño innovador, que aprovechó el espacio existente con tecnología moderna.
+%El teatro Suárez quedó dotado con iluminación LED, que no solo permite una buena distribución de la luz, sino que es amigable con el medio ambiente, además de una tarima móvil para los músicos, a nivel técnico Osorio recomendó dotar a los camerinos con baños privados, ya que esa es la exigencia de algunos artistas.
+%Así mismo sugirió a la administración municipal que se elabore toda una oferta cultural para eventos de gran envergadura, ya que el espacio es propicio para traer eventos de talla nacional e internacional.
+%La imagen del teatro no solo cambio a nivel de infraestructura, sino que también cambiará su marca; según lo expresado por el alcalde de Tunja Pablo Cepeda, se le cambiará el nombre para darle mayor importancia a la cultura prehispánica e indígena de la ciudad.
+%“Cuando se tiene un escenario de estas calidades hay que organizar una oferta muy consistente. Este espacio debe brindarse a artistas de cierto nivel y calidad, hay que ser claros y selectivos en el tipo de eventos que se presenten. No debe ser para ‘amateurs’ sino para artistas que ya han logrado un nivel de profesionalización”, agregó Osorio.
+%Según el experto, el renovado espacio tiene las características perfectas para conciertos de cámara y presentaciones más grandes de teatro y danzas.
+%Otra de las iniciativas del experto, es que algunos de los funcionarios en cargados de los aspectos técnicos del teatro trabajen un tiempo en el Julio Mario Santodomingo, con el fin de que se formen en el manejo de las estructuras de un gran teatro como ese.
+%La gestión de una sala de teatro esta concebida como un proceso organizativo posibilita y soporta las condiciones el desarrollo del trabajo artístico, planteando estrategias para trascender en la sociedad y en el público.
+%La Propuesta contribuirá de manera efectiva en el establecimiento de una relación dinámica, consensuada y democrática entre los organismos del Estado y la sociedad civil colombiana, para el caso de Tunja se pone en escena con esta gran infraestructura falta conectarla con la superestructura teatral del territorio en alianza con otras artes escénicas del país.
+%
+%\subsubsection{Teatros en Boyacá}
+%\begin{enumerate}
+%    \item \textbf{Teatro Maldonado:}
+%Este escenario emblemático de la ciudad de Tunja es de naturaleza privada, razón por la cual su administración, operación y manejo se encuentra supeditado a los
+%lineamientos impartidos por sus propietarios.
+%Es así que el teatro en la actualidad no cuenta con un reglamento de usos formal, que permita estandarizar el valor de las tarifas que se cobran por los servicios allí ofrecidos.
+%Sin embargo, y luego de la investigación realizada se pudo establecer de manera provisional que las tarifas que se cobran en este escenario (de acuerdo a los usos
+%ofertados) dependen de los tiempos y características propias de los eventos a realizar.
+%También se informó por parte del administrador del teatro que las tarifas tienen un promedio variable dependiendo de la forma de pago, es decir si se realiza en efectivo (hecho que permite realizar negociación del valor por el uso solicitado), o si el pago se encuentra supeditado a radicación de cuentas de cobro (hecho que
+%genera que el pago genere un tiempo prudencial para su realización de pendiendo de naturaleza jurídica de las entidades que solicitan el uso en este escenario, así
+%como también la incorporación de los valores relacionados con retenciones de carácter legal).
+%
+%Tarifas:
+%\begin{itemize}
+%    \item Alquiler día Entidades públicas o privadas: \$2.000.000 (valor promedio)
+%    \item Día de Ensayo: \$1.000.000 (valor promedio).
+%    \item Jornada de montaje y desmontaje: \$2.000.000 (valor promedio).
+%    \item Grabaciones: entre \$2.000.000 y \$3.000.000 (valor promedio).
+%    \item Uso de fachada: No se cobra por este concepto.
+%\end{itemize}
+%Los valores aproximados de las boletas o derechos de asistencia que el consumidor cultural adquiere para eventos de música, danza y teatro principalmente, que el
+%escenario ofrece a través de su programación son los siguientes:
+%\begin{itemize}
+%    \item Música, danza y teatro:
+%    
+%    \begin{table}[H]
+%  \centering
+%  \caption{Tarifas Música, Danza y Teatro-Teatro Maldonado}
+%    \begin{tabular}{|p{11.57em}|p{14.355em}|}
+%    \hline
+%    \textbf{VALOR MÍNIMO BOLETA} & \textbf{VALOR MÁXIMO BOLETA } \\
+%    \hline
+%    \$10.000 (No especifica valor por servicio) & \$70.000 (No especifica valor por servicio) \\
+%    \hline
+%    \end{tabular}%
+%  \label{tab:addlabel}%
+%\end{table}%
+%\end{itemize}
+%La información recaudada, se obtuvo como consecuencia de reunión realizada con el administrador del escenario.
+%Las tarifas mencionadas tienen un costo variable, dependiendo de la franja, horarios, tipo de espectáculo y procedencia del artista (Nacional o Internacional).
+%La forma en que el consumidor cultural puede obtener la boletería o derecho de asistencia, se realiza a través de plataformas virtuales como tuboleta.com, en las taquillas del teatro o en puntos de venta autorizados.
+%
+%\item \textbf{Teatro Cinema Boyacá:}
+%Frente a este escenario, se debe manifestar que, de conformidad con la información suministrada por el área de inmuebles de la LOTERIA DE BOYACÁ, entidad que
+%administra el teatro, se pudo establecer, que en la actualidad no se cuenta con un reglamento de uso para las actividades que allí se desarrollan.
+%El uso que la entidad a cargo realiza sobre el escenario, se desarrolla a través del préstamo a entidades del orden público de manera exclusiva, sin realizar ningún tipo de cobro por las actividades a realizar. Este préstamo se concede de manera temporal, exigiendo solamente el pago de los servicios públicos que se generen por el uso.
+%Expresan que la razón por la cual no tienen reglamentadas tarifas y usos de manera específica, obedece a la necesidad de realizar algunas adecuaciones importantes en escenario, mismas que permitan ofertar servicios para las personas naturales o jurídicas, públicas o privadas que estuvieran interesadas en desarrollar algún evento o actividad en el teatro.
+%El escenario se concede a título de préstamo para desarrollar actividades de formación, congresos o reuniones de entidades públicas, como también para
+%eventos de carácter cultural.
+%\end{enumerate}
+%
+%\section{Evaluación Económica y Financiera}
+%\subsection{Reseña Teatro Suárez}
+%El Teatro Suárez fue construido en 1940 y fundado en abril de 1960, la construcción de la obra duró 5 años, con el propósito de traer entrenamiento a la ciudad de Tunja, albergar más de 800 espectadores y más de 300 personas detrás de pantalla; consta de 3 pisos, dos de ellos fueron adaptados para proyectar películas de 35 milímetros, cuyos equipos fueron traídos desde Chicago, EE.UU; las instalaciones fueron las más lujosas de la época, convirtiéndose en un espacio cultural muy importante para el departamento de Boyacá. Inició con el cine erótico, para luego dar paso a muchas proyecciones de películas que disfrutaron espectadores del séptimo arte. La estructura constaba de tres pisos con sala principal, balcón VIP, sala de proyecciones, además de 7 camerinos, 6 baños, oficina de administración, cuarto de mantenimiento, como también un hall de recepción y una taquilla. El pasar del tiempo, las malas administraciones, las condiciones climáticas, los roedores y la falta de mantenimiento e interés por el patrimonio fueron arruinando su infraestructura, sus instalaciones quedaron en pésimas condiciones, después de haber sido una de las instalaciones más importantes, se convirtió en ruinas al paso del tiempo. \cite{TS}
+%El teatro Suárez busca vincular los acontecimientos del pasado con las prácticas culturales escénicas del teatro moderno.
+%\subsection{Remodelación}
+%A continuación, se hace referencia a la remodelación realizada al Teatro Suárez de la ciudad de Tunja.
+%
+%Diseños de la adecuación del teatro Suárez, determinación aspectos técnicos
+%En la rendición de cuentas informe 2018 de los 122 proyectos del sistema general de regalías – informe final teatro Suárez. Los antecedentes administrativos del Proyecto de acuerdo, se generaron con la necesidad de dotar a la ciudad de Tunja con un escenario multifuncional y de gran capacidad, apto para realizar eventos tan variados como danza, teatro, ópera, música, conciertos y proyecciones entre otros, la Alcaldía municipal de Tunja tomó la decisión administrativa de recuperar el Teatro Suárez para convertirlo en un escenario de primera línea no solo a nivel local, sino a nivel nacional e internacional. Para lograrlo, se dio inicio a los trámites administrativos para la consecución de los recursos económicos, con el siguiente resultado:  Aprobación en OCAD Regional de la financiación del proyecto: Adecuación, remodelación y puesta en funcionamiento del Teatro Suárez en el marco del contrato Plan Boyacá, Municipio de Tunja, Departamento de Boyacá, por valor de \$6.524.859.132 de conformidad con la Ficha Informativa Contratos Plan del 9 de abril de 2015.  Aprobación para contratar la interventoría del proyecto, según acuerdo No.37 del 25 de junio de 2015 por medio del cual se adoptan decisiones relacionadas con proyectos de inversión financiados o cofinanciados con recursos del Sistema General de Regalías – SGR. Contratos Suscritos Contrato de obra: No.1024 del 23 de noviembre de 2015  Objeto: Adecuación, remodelación y puesta en funcionamiento del Teatro Suárez en el marco del contrato Plan Boyacá, Municipio de Tunja, Departamento de Boyacá  Contratista: Consorcio Teatro Suárez, Nit. 900908438-5
+%\begin{table}[H]
+%  \centering
+%  \caption{Remodelación Teatro Suárez}
+%    \begin{tabular}{|p{11.375em}|p{11.565em}|}
+%    \hline
+%    \multicolumn{2}{|p{22.94em}|}{\textbf{Presupuesto asignado Obra}} \\
+%    \hline
+%    Presupuesto inicial - Recursos SGR & \$ 6'078'641'965.00 \\
+%    \hline
+%    Recursos propios – Adicional No.1 & \$ 367'118'021.00  \\
+%    \hline
+%    Recursos propios- adicional No.2 & \$ 564'994'740.61 \\
+%    \hline
+%    Recursos propios – Adicional No.3 & \$ 579'831'883.46 \\
+%    \hline
+%    \textbf{TOTAL} & \textbf{\$ 7'590'586'610.07} \\
+%    \hline 
+%    \end{tabular}%
+%  \label{tab:addlabel}%
+%\end{table}%
+%
+%
+%
+%El porcentaje presentado corresponde a la ejecución de las actividades presentadas a continuación: 
+%\begin{itemize}
+%    \item Sótano: En esta área se ubican los camerinos, una batería sanitaria, el estar de artistas, la trampilla, la escalera de acceso a tarima y parrilla, el foso de orquesta, él espacio para la plataforma móvil de escenografía y el espacio del carro guarda butacas. Esta área fue remodelada totalmente y ampliada hacia la parte inferior de la platea del primer piso para dar el espacio estipulado en los diseños para el foso de orquesta y carro guarda butacas. Se realizaron demoliciones de muros y placas, retiro de pisos en madera, actividades de excavación, rellenos cimentación, estructura metálica y de concreto, construcción de pozo eyector, actividades de mampostería, pañetes y pintura, enchape de pisos y muros, instalación de aparatos sanitarios y divisiones de baño, instalación de redes eléctricas, de incendios, de seguridad y control, hidráulicas y sanitarias e instalación de plataforma móvil.
+%    \item Primer piso: En esta área se ubica el escenario, la platea, el cuarto de control (el cual no existía), dos baterías sanitarias, el lobby, un punto de información, bodega, el tanque de reserva, el cuarto de bombas, el acceso principal y la escalera de acceso al segundo piso. Esta área fue remodelada totalmente, ampliando las baterías sanitarias. En el área de platea se requirió hacer un reforzamiento estructural que permitiera dar cumplimiento a la norma NSR-10, consistente en la construcción de un diafragma en estructura metálica ubicado bajo la cubierta del área de platea, que transmite las cargas al suelo a través de columnas metálicas soportadas en dos vigas de cimentación ubicadas a lado y lado de la platea y a su vez, esta estructura está amarrada a dos muros pantalla que se ubican en las baterías sanitarias. El área de la tramoya (escenario) también cuenta con un reforzamiento en estructura metálica, consistente en cuatro columnas soportadas sobre dados de concreto y amarradas por cerchas que conforman un anillo. La placa de platea se reconstruyó completamente, ya que de acuerdo con los diseños se tuvo que aumentar la pendiente, de tal manera que se cumpla con los requerimientos de isóptica del recinto. En el área del lobby se construyó el tanque de reserva y el cuarto de bombas. En estas áreas se realizó el retiro de cielo rasos, pisos en madera y mobiliario existente, demoliciones de pisos y muros, estructura en concreto y estructura metálica, se instalaron acabados especiales en muros y cielo rasos, se realizó la construcción de la placas de piso, instalación de barandas, la instalación de silletería, enchape de muros y pisos en baños, instalación de divisiones de baño y aparatos sanitarios, instalación de iluminación de sala y artística, instalación de pisos de madera en escenario, instalación de mecánica teatral e instalaciones eléctricas, de red contra incendio, de seguridad y control y de ventilación mecánica y extracción, y la construcción del tanque de reserva y cuarto de bombas.
+%    \item Segundo piso: En esta área se ubica la platea superior o gradería, dos baterías sanitarias, lobby, cuarto eléctrico y área de museo. Esta área fue remodelada totalmente, ampliando las baterías sanitarias y aumentando la pendiente de la gradería, de tal manera que se cumpla con los requerimientos de isóptica del recinto y con los requerimientos estipulados en el diseño arquitectónico. Se realizaron demoliciones de placas, demoliciones de muros, actividades de reforzamiento estructural en perfilería metálica, mampostería, pañete, pintura y enchape de muros, enchape de pisos, instalación de silletería, acabados especiales de muros y cielo rasos, instalación de luminarias, instalación de aparatos sanitarios y divisiones de baño, instalación de redes eléctricas, hidráulicas, sanitarias, de red contra incendio y seguridad y control, construcción de placas y estructura de concreto. Parrilla: En esta zona se ubica en la parte superior de la caja escénica y en ella se encuentran instalados los motores de la mecánica teatral. Esta área es nueva, y se encuentra contemplada en el diseño arquitectónico. Está construida en estructura metálica y muros en superboard.
+%    \item Cubierta: Dentro de las actividades del proyecto, se realizó el cambio total de la cubierta, tanto del área de la platea como la de la caja escénica. La existente era teja de zinc y se reemplazó por teja termo acústica tipo sándwich.
+%    \item Lobby: Esta área se remodeló completamente, realizando cambio de pisos, enchapes en madera e instalación de cielo raso e iluminación. El Teatro cuenta con sistema de detección de incendios y señalización e iluminación de emergencia. 
+%    
+%\end{itemize}
+%
+%
+%  
+%En el mes de noviembre de 2018, se suscribió el acta de terminación del contrato de obra y a la fecha el proyecto se encuentra en trámites de liquidación.
+%
+%\begin{table}[H]
+%  \centering
+%  \caption{Interventoría}
+%    \begin{tabular}{|p{10.57em}|c|c|}
+%    \hline
+%    \textbf{Total ejecutado interventoría 1} & \multicolumn{1}{p{10.355em}|}{\textbf{Total interventoría ejecutado 2}} & \multicolumn{1}{p{10em}|}{\textbf{Total interventoría ejecutado 3}} \\
+%    \hline
+%    \$ 321.105.163,95 & \multicolumn{1}{p{10.355em}|}{\$ 65.760.000,00} & \multicolumn{1}{p{10em}|}{\$ 34'309'750.00} \\
+%    \hline
+%    47,68\% & 100\% & 100\% \\
+%    \hline
+%    \end{tabular}%
+%  \label{tab:addlabel}%
+%\end{table}%
+%
+%\subsection{Operación y Gestión del teatro Suárez de Tunja} 
+%
+%
+%La gestión de la sala de teatro debe ser a través de entidades culturales, que tienen a su cargo la administración y dirección de un espacio para el desarrollo de actividades acorde al funcionamiento. Es decir, un proceso organizativo que propicia y soporta el trabajo artístico y genere estrategias para que dicho trabajo trascienda a la sociedad y al público.
+%Para gestión de la sala de teatro Suárez, que permite permanente desarrollo y transformación a partir de la planeación, ejecución, evaluación y seguimiento de las actividades que encabeza un equipo humano, quien es el encargado de poner en marcha. Este proceso de gestión necesita un equipo humano que gestione tiempo, recursos económicos, tecnológicos, de infraestructura, de conocimiento y estructura organizacional, para cumplir objetivos, misión y visión en el corto, mediano y largo plazo dentro de un contexto regional y nacional.
+%
+%Por lo anterior necesita “ofrecer una programación del teatro Suárez, coherente con la identidad y objetivos de la organización, y que, a su vez, logre conformar publico y que asista y logre público y propiciar su participación artístico y cultural" \cite{MGST}
+%
+%
+%\subsubsection{Estructura Administrativa} 
+%
+%
+%Se debe construir una estructura organizativa de una sala de teatro con el fin de establecer responsabilidades a las personas que laboran en el teatro para gestionar y diseñar presupuestos financieros.
+%Según recomendaciones del Ministerio de Cultura se debe establecer un equipo humano básico para poder gestionar una sala de teatro, este debe estar compuesto por un equipo humano idóneo para actividades culturales con talentos, capacidades, habilidades y conocimiento para el desarrollo del trabajo artístico, técnico, administrativo y logístico. 
+%Esto depende de la sala de teatro y el tipo de administración, ya sea publica, privada o mixta; otro factor es la distribución adecuada y precisa de responsabilidades de acuerdo a la estructura organizacional.
+%El diseño de un organigrama y manual de funciones son herramientas útiles que ayudan a tomar decisiones asertivas para el buen funcionamiento del teatro.
+%En el estándar de salas de teatro se pueden identificar las siguientes áreas básicas de responsabilidad:
+%\begin{itemize}
+%    \item 1 gerente general
+%    \item 1 director Administrativo
+%    \item 1 director artística y de programación 
+%    \item 1 dirección técnica
+%    \item 1 coordinación, divulgación y mercadeo
+%    \item 1 coordinación logística
+%    \item 1 operadores técnicos para escenario: tramoya, luces y sonido
+%    \item 1 asistente administrativo
+%    \item 1 asistencia contable
+%    \item 1 secretaria
+%    \item 1 de taquilla
+%    \item 4 acomodadores
+%    \item 3 mantenimiento y Aseo
+%    \item 2 seguridad y vigilancia
+%
+%\end{itemize}
+% 
+%Para gestionar y operar el teatro Suárez de Tunja y por sus características de infraestructura y posibles servicios a ofertar, propone que equipo de recurso humano mínimo necesario puede iniciar a operar este espacio magníficamente remodelado y que está a disposición de la sociedad Tunjana, Boyacense y del país y se detalla así: 
+%\begin{itemize}
+%    \item Organización del Teatro. Con el propósito de que el Teatro Suárez pueda operar de manera idónea, se deberá contar con el personal administrativo y técnico que coordine y apoye su operación. 
+%    \item Director General Del Teatro (Administrador): Es el líder del escenario, encargado de la coordinación, gestión, administración y programación del teatro. Crea proyectos y alianzas estratégicas para la optimización del escenario y su sostenibilidad.
+%    \item Director De Producción Técnica: Planea y dirige la pre-producción, producción y post-producción técnica de todos los eventos que tengan lugar de realización en el Teatro y sus espacios conexos, velando porque los montajes y demás condiciones propias y particulares de cada uno de los eventos se lleven a cabo sin traumatismos y cuyo resultado final, sea la satisfacción de los espectadores, público en general y la Dirección General. También se encargará del mantenimiento de los equipos y el desarrollo tecnológico de la sala o escenario, así como del personal técnico (ingeniero de sonido, luminotécnico, técnico de escenografía y tramoya entre otros)
+%    \item Director de programación: Es el director de la parrilla artística del escenario, se encarga de responder a la expectativa de sostenimiento de públicos de acuerdo a las franjas de programación que coordine. Genera los conceptos artísticos y estructura la oferta cultural de acuerdo al mercado.
+%    \item Dirección De Mercadeo, Publicidad y Comunicaciones: Es el encargado de la promoción y comercialización de la agenda de eventos. Desarrolla la gestión de diseño y promoción de las piezas publicitarias de la sala. Se encarga de la promoción de la marca del escenario.
+%\end{itemize}
+%\subsubsection{Componente Financiero}
+%En este apartado se explicará el aspecto financiero que involucra el funcionamiento del Teatro Suárez de la ciudad de Tunja. Para este fin se tomará como escenario base la inversión realizada por la administración municipal por valor de \$ 7.590.586.601,07 para la remodelación de este escenario. Igualmente, se analizará el panorama de la operación del teatro bajo la administración de la alcaldía municipal con el fin de examinar la factibilidad económica de esta opción. A continuación se desglosará el proceso para el análisis financiero: 
+%\begin{enumerate}
+%    \item \textbf{Inversión}\\
+%    Se toma como base el valor de la remodelación realizada al teatro Suárez bajo el contrato de obra N°1024 cuyo valor final fue \$ 7.590.586.601,07. En el cuadro \ref{tab:Remodelacion} se presenta de manera discriminada la inversión realizada por los diferentes rubros.
+%    
+%    \begin{table}[htbp]
+%  \centering
+%  \caption{Inversión Remodelación Teatro Suárez}
+%    \begin{tabular}{|l|r|}
+%    \hline
+%    \multicolumn{1}{|c|}{\textbf{CONCEPTO}} & \multicolumn{1}{c|}{\textbf{VALOR}} \\
+%    \hline
+%    VEHICULOS &  \$                                                             -  \\
+%    \hline
+%    MAQUINARIA Y EQUIPO &  \$                                   3,831,806,199  \\
+%    \hline
+%    MUEBLES Y ENSERES &  \$                                       550,207,082  \\
+%    \hline
+%    EQUIPOS DE COMPUTO &  \$                                                             -  \\
+%    \hline
+%    TERRENOS &  \$                                                             -  \\
+%    \hline
+%    EDIFICIOS &  \$                                   3,208,573,320  \\
+%    \hline
+%    CAPITAL DE TRABAJO &  \$                                                             800,000,000  \\
+%    \hline
+%    \textbf{INVERSIÓN TOTAL} & \textbf{ \$                             7,590,586,601.07 } \\
+%    \hline
+%    \end{tabular}%
+%  \label{tab:Remodelacion}%
+%  \end{table}
+%\item \textbf{Depreciación:}\\
+%En el cuadro \ref{tab:depreciacion} se muestra los valores de depreciación por los diferentes rubros, con un horizonte de tiempo de 5 años y tomando los tiempos de depreciación para cada rubro. Respectivamente para maquinaria y equipos, muebles y enseres, el tiempo de depreciación de 10 años.En cuanto a los edificios son 40 años de depreciación.\\
+%La depreciación se realiza en línea recta en los diferentes horizontes de tiempo que se enunciaron anteriormente. \\  
+%
+%\begin{sidewaystable} 
+%    \caption{Tabla de Depreciación}
+%    \begin{tabular}{|l|r|r|r|r|r|}
+%    \hline
+%    \multicolumn{6}{|c|}{\textbf{TABLA DE DEPRECIACIÓN}} \\
+%    \hline
+%    \textbf{CONCEPTO/AÑO} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\
+%    \hline
+%    VEHICULOS &  \$                              -  &  \$                           -  &  \$                            -  &  \$                            -  &  \$                            -  \\
+%    \hline
+%    MAQUINARIA Y EQUIPO &  \$        383,180,620  &  \$     383,180,620  &  \$      383,180,620  &  \$      383,180,620  &  \$      383,180,620  \\
+%    \hline
+%    MUEBLES Y ENSERES &  \$          55,020,708  &  \$        55,020,708  &  \$         55,020,708  &  \$         55,020,708  &  \$         55,020,708  \\
+%    \hline
+%    EQUIPOS DE COMPUTO &  \$                              -  &  \$                           -  &  \$                            -  &  \$                            -  &  \$                            -  \\
+%    \hline
+%    EDIFICIOS &  \$          80,214,333  &  \$        80,214,333  &  \$         80,214,333  &  \$         80,214,333  &  \$         80,214,333  \\
+%    \hline
+%    \textbf{TOTAL} &  \$        518,415,661  &  \$     518,415,661  &  \$      518,415,661  &  \$      518,415,661  &  \$      518,415,661  \\
+%    \hline
+%    \multicolumn{6}{|c|}{\textbf{DEPRECIACIÓN ACUMULACIÓN}} \\
+%    \hline
+%    \textbf{CONCEPTO/AÑO} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\
+%    \hline
+%    VEHICULOS &  \$                              -  &  \$                           -  &  \$                            -  &  \$                            -  &  \$                            -  \\
+%    \hline
+%    MAQUINARIA Y EQUIPO &  \$        383,180,620  &  \$     766,361,240  &  \$   1,149,541,860  &  \$   1,532,722,480  &  \$   1,915,903,100  \\
+%    \hline
+%    MUEBLES Y ENSERES &  \$          55,020,708  &  \$     110,041,416  &  \$      165,062,125  &  \$      220,082,833  &  \$      275,103,541  \\
+%    \hline
+%    EQUIPOS DE COMPUTO &  \$                              -  &  \$                           -  &  \$                            -  &  \$                            -  &  \$                            -  \\
+%    \hline
+%    EDIFICIOS &  \$          80,214,333  &  \$     160,428,666  &  \$      240,642,999  &  \$      320,857,332  &  \$      401,071,665  \\
+%    \hline
+%    \end{tabular}%
+%  \label{tab:depreciacion}
+%\end{sidewaystable}
+%
+%\item \textbf{Gastos Administrativos:}\\
+%En el cuadro \ref{tab:gastos_administrativos} se presenta la evolución de la nomina para la operación del teatro, esta contiene los siguientes cargos: 
+%\begin{itemize}
+%    \item Director de producción técnica 
+%    \item Ingeniero de sonido 
+%    \item Técnico en escenografía y tramoya 
+%    \item Director General 
+%    \item Director de programación 
+%    \item Servicios Generales 
+%    \item Vigilancia y seguridad 
+%    \item Director de publicidad mercadeo y comunicaciones 
+%\end{itemize}
+%Estos cargos se adaptaron del Manual para gestión de salas de teatro del Ministerio de Cultura para el caso del Teatro de la ciudad de Tunja teniendo en cuenta sus necesidades más urgentes y en el marco de la gestión del teatro por parte de la administración municipal. 
+%
+%Igualmente, se tuvieron en cuenta para los cálculos en primer lugar el aumento del salario mínimo que se realiza anualmente y a su vez se calcularon los valores de los parafiscales de los empleados. En esta medida se contemplo vinculación directa a la planta de la alcaldía pero sin embargo los costos no varían demasiado con otras formas de contratación del personal. 
+%
+%
+%\begin{sidewaystable}
+%    \caption{Gastos Administrativos}
+%   \begin{tabular}{|p{10.43em}|r|r|r|r|r|}
+%    \hline
+%    \multicolumn{1}{|c|}{\textbf{CARGO/AÑO}} & \multicolumn{1}{c|}{\textbf{1}} & \multicolumn{1}{c|}{\textbf{2}} & \multicolumn{1}{c|}{\textbf{3}} & \multicolumn{1}{c|}{\textbf{4}} & \multicolumn{1}{c|}{\textbf{5}} \\
+%    \hline
+%    DIRECTOR DE PRODUCCIÓN TÉCNICA &  \$                        4,500,000  &  \$        4,680,000  &  \$           4,867,200  &  \$           5,061,888  &  \$           5,264,364  \\
+%    \hline
+%    INGENIERO DE SONIDO &  \$                        3,500,000  &  \$          3,640,000  &  \$           3,785,600  &  \$           3,937,024  &  \$           4,094,505  \\
+%    \hline
+%    TÉCNICO DE ESCENOGRAFÍA Y TRAMOYA &  \$                        1,500,000  &  \$          1,560,000  &  \$           1,622,400  &  \$           1,687,296  &  \$           1,754,788  \\
+%    \hline
+%    DIRECTOR GENERAL &  \$                        6,000,000  &  \$          6,240,000  &  \$           6,489,600  &  \$           6,749,184  &  \$           7,019,151  \\
+%    \hline
+%    DIRECTOR DE PROGRAMACIÓN &  \$                        4,500,000  &  \$          4,680,000  &  \$           4,867,200  &  \$           5,061,888  &  \$           5,264,364  \\
+%    \hline
+%    SERVICIOS GENERALES  &  \$                        2,484,348  &  \$          2,583,722  &  \$           2,687,071  &  \$           2,794,554  &  \$           2,906,336  \\
+%    \hline
+%    SECRETARIA &  \$                           828,116  &  \$              861,241  &  \$               895,690  &  \$               931,518  &  \$               968,779  \\
+%    \hline
+%    VIGILANCIA  &  \$                        1,656,232  &  \$          1,722,481  &  \$           1,791,381  &  \$           1,863,036  &  \$           1,937,557  \\
+%    \hline
+%    DIRECTOR DE MERCADEO, PUBLICIDAD Y COMUNICACIONES &  \$                        4,500,000  &  \$          4,680,000  &  \$           4,867,200  &  \$           5,061,888  &  \$           5,264,364  \\
+%    \hline
+%    \textbf{SUBTOTAL MENSUAL } & \textbf{ \$                     29,468,696 } & \textbf{ \$        30,647,444 } & \textbf{ \$         31,873,342 } & \textbf{ \$         33,148,275 } & \textbf{ \$         34,474,206 } \\
+%    \hline
+%    \textbf{MESES} & \textbf{ \$                                      12 } & \textbf{ \$                        12 } & \textbf{ \$                         12 } & \textbf{ \$                         12 } & \textbf{ \$                         12 } \\
+%    \hline
+%    \textbf{TOTAL ANTES DE PARAFISCALES } & \textbf{ \$                   353,624,352 } & \textbf{ \$     367,769,326 } & \textbf{ \$      382,480,099 } & \textbf{ \$      397,779,303 } & \textbf{ \$      413,690,475 } \\
+%    \hline
+%    \textbf{GASTO NOMINA ADMINISTRATIVA} & \textbf{ \$                   473,430,868 } & \textbf{ \$     492,368,103 } & \textbf{ \$      512,062,827 } & \textbf{ \$      532,545,340 } & \textbf{ \$      553,847,153 } \\
+%    \hline
+%    \end{tabular}%
+%    \label{tab:gastos_administrativos}
+%\end{sidewaystable}
+%
+%\item \textbf{Características de la demanda:}\\
+%En el cuadro \ref{tab:Carac_Demanda} se muestra los datos obtenidos de diferentes fuentes de información estadísticas para caracterizar la demanda en cuando a espectáculos de teatro en la ciudad de Tunja. Estos datos nutren el análisis para poder determinar el entorno de la actividad teatral en la ciudad. Por tal motivo es necesario mencionar que los datos que ilustra el cuadro son de fuentes secundarias, lo que limita la extropolación de conclusiones más particulares sobre la demandar en especifico por el escenario. En esta línea a continuación se explica como se realizaron los cálculos de algunos de los datos reportados. 
+%\begin{table}[h]
+%  \centering
+%  \caption{Características de la demanda}
+%    \begin{tabular}{|l|r|}
+%    \hline
+%    \multicolumn{2}{|c|}{\textbf{Características de la demanda}} \\
+%    \hline
+%    Población Total (N° de personas)\tablefootnote{Información tomada de Terridata-DNP}  & 202.996 \\
+%    \hline
+%    Población mayor de 14  años (N° de personas) \tablefootnote{Cálculos a partir de la información de Terridata DNP} & 179.296 \\
+%    \hline
+%    Integrantes por hogar (N° de personas) \tablefootnote{Datos del Censo Nacional de Población y Vivienda 2018- DANE}  & 3 \\
+%    \hline
+%    Número de Hogares & 67.665 \\
+%    \hline
+%    Gasto por hogar en Recreación y Cultura\tablefootnote{Encuesta Nacional de Presupuesto de los Hogares 2017-DANE} &  \$                              67.000  \\
+%    \hline
+%    Gasto por persona en Recreación y Cultura\tablefootnote{Encuesta Nacional de Presupuesto de los Hogares 2017-DANE} &  \$                              22.000  \\
+%    \hline
+%    Porcentaje de personas Consumo Cultural \tablefootnote{Datos de la Encuesta de Consumo Cultural 2017- DANE} & 22,1\% \\
+%    \hline
+%    Porcentaje de Asistencia a eventos de Teatro & 16,6\% \\
+%    \hline
+%    \end{tabular}%
+%  \label{tab:Carac_Demanda}%
+%\end{table}%
+%\begin{itemize}
+%    \item \textbf{Población total:} La información se tomo de la base de datos TERRIDATA del Departamento Nacional de Planeación (DNP) donde la fuente de los datos es el DANE a partir de las proyecciones de población. Esta información es clave al momento de analizar el limite demográfico de la demanda. 
+%    \item \textbf{Población mayor de 14 años: } Al igual que el dato anterior se extrajo la información de TERRIDATA-DNP y se realizó el calculo a partir de la información de la pirámide poblacional donde los niños entre 0 a 14 años representan el 11.675\% de la población total. En esa medida encontrando el valor equivalente a la población en ese rango de edad y descontándolo de la población total obtenemos la información reportada. Esta información aterriza el hecho que los consumidores más habituales como se mostró en la sección del Estudio Mercado se encuentran entre 12 a 25 años.
+%    \item \textbf{Hogares:} La información sobre las personas que conforman un hogar en Boyacá fue obtenida del Censo Nacional de Población y Vivienda de 2018. Por otro lado, la información de cuantos hogares existen en Tunja, el gasto por hogar y por persona en Recreación y Cultura se recopilaron de la Encuesta Nacional de Presupuestos de los Hogares. El dato relacionado con el número de hogares provienen de dividir la población total entre el número de integrantes promedio de un hogar en Boyacá.  Con esta información podemos identificar la disponibilidad por las actividades que se realizarán en el teatro. 
+%    \item \textbf{Consumo de Cultural y Teatro:} Estos datos fueron reportados en el Estudio de Mercado y se calcularon a partir de la información de la Encuesta Nacional de Consumo Cultural. Con esta información se puede delimitar el segmento del mercado interesado en acceder a actividades teatrales, es decir, define el mercado objetivo. 
+%
+%
+%
+%\end{itemize}
+%Por otro lado, a partir de los datos reportados en el cuadro \ref{tab:Carac_Demanda} se cuantificar el valor de mercado de la demanda potencial. La información acerca del segmento Potencial de Consumo Cultural y de Teatro se encuentran a partir de multiplicar la población mayor de 14 años por el porcentaje de personas que reportan tener consumo cultural (22.1\%) y el porcentaje de asistencia a actividades teatrales (16.6\%). Además, el cuadro \ref{tab:demanda_potencial} presenta el número de personas que representan el mercado objetivo y el valor de mercado de la demanda que resulta de multiplicar el segmento de las personas por el gasto promedio en actividades de recreación y cultura reportado anteriormente.  \\
+%
+%\begin{table}[h]
+%  \centering
+%  \caption{Valor de la Demanda Potencial}
+%    \begin{tabular}{|l|r|}
+%    \hline
+%    \multicolumn{1}{|c|}{\textbf{Demanda}} & \multicolumn{1}{c|}{\textbf{Valor/N° de personas}} \\
+%    \hline
+%    Segmento Potencial Consumo Cultural & 39.624 \\
+%    \hline
+%    Segmento Potencial Teatro  & 29.763 \\
+%    \hline
+%    Demanda Potencial Consumo Cultural &  \$                   871,738,207  \\
+%    \hline
+%    Demanda Potencial Teatro  &  \$                   654,789,784  \\
+%    \hline
+%    \end{tabular}%
+%  \label{tab:demanda_potencial}%
+%\end{table}%
+%El valor presentado en el cuadro \ref{tab:demanda_potencial} es el valor mensual de la demanda potencial, por tal razón, se debe calcular el valor anual. En el cuadro \ref{tab:anual_demanda_potencial} se reporta el valor total de la demanda potencial, el cual se obtiene con base en la información de la frecuencia de asistencia de la ECC. Estos datos de frecuencia de asistencia representan el promedio nacional, como se mencionó en la sección del estudio del mercado, la mayoría de personas (39.5\%) solo asisten una vez al año, lo cual implica un ingreso bajo, por taquilla en este segmento de la población. Igualmente, como es lógico a medida que la frecuencia de asistencia aumenta, el valor de la demanda de esa frecuencia es mayor. Cabe resaltar que los porcentajes de asistencia pueden variar para el caso de Tunja, donde por razones socio-económicas puede ubicarse en mayor o menor medida en estos rangos de asistencia. 
+%
+%\begin{table}[H]
+%  \centering
+%  \caption{Frecuencia y Valor anual Demanda Potencial}
+%    \begin{tabular}{|l|r|r|}
+%    \hline
+%    \textbf{Frecuencia } & \multicolumn{1}{l|}{\textbf{Valor }} & \multicolumn{1}{l|}{\textbf{Participación }} \\
+%    \hline
+%    Un año  &  \$                   258,641,965  & 39.5\% \\
+%    \hline
+%    Seis meses  &  \$                   314,299,097  & 24.0\% \\
+%    \hline
+%    Tres meses  &  \$                   557,880,896  & 21.3\% \\
+%    \hline
+%    Una vez al mes  &  \$                   887,894,948  & 11.3\% \\
+%    \hline
+%    Un vez a la semana  &  \$               1,327,913,683  & 3.9\% \\
+%    \hline
+%    \textbf{TOTAL } &  \$               3,346,630,588  & 100\% \\
+%    \hline
+%    \end{tabular}%
+%  \label{tab:anual_demanda_potencial}%
+%\end{table}%
+%
+%\item \textbf{Escenarios Financieros:} \\
+%De manera inicial se pretende ilustrar 3 escenarios financieros que se explicarán en cada literal en que consisten con el fin de ilustrar los indicadores financieros sobre la rentabilidad y factibilidad de cada escenario. Los escenarios tienen en común los gastos administrativos, en general, no se modificará la estructura de costos en los escenarios, lo que se quiere evidenciar es como es la factibilidad del teatro en tres escenarios de ingresos operacionales. Este supuesto de costos constantes lo que permite es analizar la sensibilidad del proyecto a cambios a niveles de ventas, representado en este caso por los ingresos operacionales. Otra de las aclaraciones es que los ingresos operacionales se entiende como ingresos por boletería con un precio único de boleta, sin embargo, en otras simulaciones esto no afecta los resultados si se tuviera en cuenta que se alquila el escenario dado que los ingresos por el alquiler de una semana son equivalentes a una función con lleno total.  Para cada escenario se enunciarán los supuestos base con los que se están haciendo los escenarios. 
+%\begin{itemize}
+%    \item \textbf{Escenario 1:} En este escenario analizaremos el caso donde se realiza un evento mensual cobrando el precio de  mercado (\$22.000) con lleno en cada función o se alquila por una semana cada mes el teatro teniendo en cuenta la capacidad del escenarios (649 personas). Este escenario es plausible en la medida de la regularidad de los eventos realizados en la ciudad dado que en promedio se podría suponer que se realiza un evento mensual. \\
+%    En el cuadro \ref{tab:escenario_1} se evidencia el escenario expuesto no es rentable debido a que los ingresos operacionales no garantizan la recuperación de la inversión. Como se observa en los indicadores financieros del VPN (Valor Presente Neto) es negativo lo que significa que al nivel de ingresos operacionales el proyecto esta perdiendo valor. Recordemos que en el caso del VPN el criterio de aceptación se basa en que este valor es mayor a 0 para poder inferir que el proyecto es factible.
+%    
+%    Por parte de la TIR (Tasa Interna de Retorno) el cuadro \ref{tab:escenario_1} muestra que su valor es de -28.27\%, en esta medido por el hecho de ser negativo significa que por cada peso de inversión estoy perdiendo ese porcentaje. Igualmente, en caso de que la TIR fuese positiva deber se superior a la tasa de descuento, usualmente medida con la tasa de los Depósitos a Termino Fijo (DTF), para nuestro caso se tomo una tasa igual a 12,8\% efectivo anual.  
+%    
+%    De acuerdo con este escenario dado que existen unos gastos administrativos que representan unos costos fijos de funcionamiento, los cuales son inflexibles y no se pueden modificar, es necesario mantener el precio de mercado e impulsar los ingresos operacionales con un aumento de los eventos o ingresos que hagan sus veces (alquileres del escenario), para garantizar mejor rentabilidad. 
+%% \begin{landscape} 
+%%   \begin{table}
+%%    \caption{Escenario 1}
+%%   
+%%    \begin{tabular}{|p{7.215em}|ccccc}
+%%    \hline
+%%    \multicolumn{1}{|c|}{\textbf{Concepto/Año}} & \multicolumn{1}{c|}{\textbf{1}} & \multicolumn{1}{c|}{\textbf{2}} & \multicolumn{1}{c|}{\textbf{3}} & \multicolumn{1}{c|}{\textbf{4}} & \multicolumn{1}{c|}{\textbf{5}} \\
+%%    \hline
+%%    Ingresos operacionales & \multicolumn{1}{r|}{ \$      171,336,000 } & \multicolumn{1}{r|}{ \$   245,042,747 } & \multicolumn{1}{r|}{ \$  275,109,493 } & \multicolumn{1}{r|}{ \$  308,865,427 } & \multicolumn{1}{r|}{ \$      346,763,215 } \\
+%%    \hline
+%%    Costos de producción & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{ \$                         - } & \multicolumn{1}{r|}{ \$                        - } & \multicolumn{1}{r|}{ \$                        - } & \multicolumn{1}{r|}{ \$                            - } \\
+%%    \hline
+%%    Gastos administrativos & \multicolumn{1}{r|}{ \$      523,830,868 } & \multicolumn{1}{r|}{ \$   544,280,103 } & \multicolumn{1}{r|}{ \$  565,532,187 } & \multicolumn{1}{r|}{ \$  587,618,781 } & \multicolumn{1}{r|}{ \$      610,572,797 } \\
+%%    \hline
+%%    Intereses & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{ \$                         - } & \multicolumn{1}{r|}{ \$                        - } & \multicolumn{1}{r|}{ \$                        - } & \multicolumn{1}{r|}{ \$                            - } \\
+%%    \hline
+%%    Depreciación & \multicolumn{1}{r|}{ \$      518,415,661 } & \multicolumn{1}{r|}{ \$   518,415,661 } & \multicolumn{1}{r|}{ \$  518,415,661 } & \multicolumn{1}{r|}{ \$  518,415,661 } & \multicolumn{1}{r|}{ \$      518,415,661 } \\
+%%    \hline
+%%    Venta de activos & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{ \$   1,610,000,000 } \\
+%%    \midrule
+%%    Valor en libros & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{ \$   4,998,508,296 } \\
+%%    \hline
+%%    UTILIDAD ANTES DE IMPUESTO & \multicolumn{1}{r|}{-\$     870,910,529 } & \multicolumn{1}{r|}{-\$  817,653,016 } & \multicolumn{1}{r|}{-\$  808,838,355 } & \multicolumn{1}{r|}{-\$  797,169,015 } & \multicolumn{1}{r|}{-\$  4,170,733,539 } \\
+%%    \hline
+%%    Impuestos & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{ \$                         - } & \multicolumn{1}{r|}{ \$                        - } & \multicolumn{1}{r|}{ \$                        - } & \multicolumn{1}{r|}{ \$                            - } \\
+%%    \hline
+%%    Depreciación & \multicolumn{1}{r|}{ \$      518,415,661 } & \multicolumn{1}{r|}{ \$   518,415,661 } & \multicolumn{1}{r|}{ \$  518,415,661 } & \multicolumn{1}{r|}{ \$  518,415,661 } & \multicolumn{1}{r|}{ \$      518,415,661 } \\
+%%    \hline
+%%    Amortización del crédito & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{ \$                         - } & \multicolumn{1}{r|}{ \$                        - } & \multicolumn{1}{r|}{ \$                        - } & \multicolumn{1}{r|}{ \$                            - } \\
+%%    \hline
+%%    Valor en libros & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{ \$   4,998,508,296 } \\
+%%    \hline
+%%    Recuperación del capital de trabajo & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{ \$      800,000,000 } \\
+%%    \hline
+%%    Crédito & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} \\
+%%    \hline
+%%    Inversiones & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} \\
+%%    \hline
+%%    \textbf{FLUJO DE CAJA NETO} & \multicolumn{1}{r|}{\textbf{-\$     352,494,868 }} & \multicolumn{1}{r|}{\textbf{-\$  299,237,355 }} & \multicolumn{1}{r|}{\textbf{-\$  290,422,694 }} & \multicolumn{1}{r|}{\textbf{-\$  278,753,353 }} & \multicolumn{1}{r|}{\textbf{ \$   2,146,190,418 }} \\
+%%    \hline
+%%   \textbf{VALOR PRESENTE NETO} & \multicolumn{5}{c|}{\textbf{-\$                                                                                                                                 8,137,561,276 }} \\
+%%    \hline
+%%    \textbf{TIR} & \multicolumn{5}{c|}{\textbf{-28.27\%}} \\
+%%    \hline
+%%    \textbf{TIRM} & \multicolumn{5}{c|}{\textbf{-25.907\%}} \\
+%%    \hline
+%%\end{tabular}
+%%
+%%   \label{tab:escenario_1}
+%%   \end{table}
+%%\end{landscape}
+%
+%\item \textbf{Escenario 2:} De acuerdo a lo descrito en el inicio de este apartado se examina los posibles escenarios modificando los ingresos operacionales por eso para este caso analizaremos el punto de equilibrio donde no existen perdidas y tampoco ganancias, es decir, la utilidad operacional es 0. Por tal razón se calcula los ingresos operacionales correspondientes a un flujo de caja neto igual a 0. En esta medida, se obtiene que el ingreso operacional debe ser igual a \$ 523.830.868 con el fin que el flujo de caja neto sea nulo para el primer año. Este valor de los ingresos operacionales equivale a realizar 37 eventos donde el escenario esté en su totalidad lleno. Como se observa en este caso, implica el triple de eventos en comparación del escenario 1. 
+%
+%Al analizar el cuadro \ref{tab:escenario_2}  observamos que el valor del flujo neto de caja es positivo. Sin embargo, los indicadores financieros para analizar la factibilidad son igualmente negativos. En la misma linea, como se se afirmo en el escenario anterior con un VPN negativo el proyecto no esta generando ningún valor, por lo contrario, esta perdiendo valor sin recuperación de la inversión inicial. En el caso de la TIR (tasa interna de retorno) sigue siendo negativa evidenciando que incluso teniendo un flujo positivo este caso no es rentable si bien es un valor más pequeño comparado al escenario 1 sigue siendo insuficiente el aumento ingresos operacionales para tener valores s . \\
+%%
+%%\begin{landscape}
+%%   \begin{table}
+%%    \caption{Escenario 2}
+%%   \begin{tabular}{|p{7.0em}|cccccc|}
+%%    \hline
+%%    \multicolumn{1}{|c|}{\textbf{Concepto}} & \multicolumn{1}{c|}{\textbf{0}} & \multicolumn{1}{c|}{\textbf{1}} & \multicolumn{1}{c|}{\textbf{2}} & \multicolumn{1}{c|}{\textbf{3}} & \multicolumn{1}{c|}{\textbf{4}} & \multicolumn{1}{c|}{\textbf{5}} \\
+%%    \hline
+%%    Ingresos operacionales & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{ \$   523,830,868 } & \multicolumn{1}{r|}{ \$  602,405,498 } & \multicolumn{1}{r|}{ \$     602,405,498 } & \multicolumn{1}{r|}{ \$  602,405,498 } & \multicolumn{1}{r|}{ \$      602,405,498 } \\
+%%    \hline
+%%    Costos de producción & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{ \$                         - } & \multicolumn{1}{r|}{ \$                        - } & \multicolumn{1}{r|}{ \$                           - } & \multicolumn{1}{r|}{ \$                        - } & \multicolumn{1}{r|}{ \$                            - } \\
+%%    \hline
+%%    Gastos administrativos & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{ \$   523,830,868 } & \multicolumn{1}{r|}{ \$  544,280,103 } & \multicolumn{1}{r|}{ \$     565,532,187 } & \multicolumn{1}{r|}{ \$  587,618,781 } & \multicolumn{1}{r|}{ \$      610,572,797 } \\
+%%    \hline
+%%    Intereses & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{ \$                         - } & \multicolumn{1}{r|}{ \$                        - } & \multicolumn{1}{r|}{ \$                           - } & \multicolumn{1}{r|}{ \$                        - } & \multicolumn{1}{r|}{ \$                            - } \\
+%%    \hline
+%%    Depreciación & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{ \$   518,415,661 } & \multicolumn{1}{r|}{ \$  518,415,661 } & \multicolumn{1}{r|}{ \$     518,415,661 } & \multicolumn{1}{r|}{ \$  518,415,661 } & \multicolumn{1}{r|}{ \$      518,415,661 } \\
+%%    \hline
+%%    Venta de activos & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{ \$  1,610,000,000 } \\
+%%    \hline
+%%    Valor en libros & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{ \$  4,998,508,296 } \\
+%%    \hline
+%%    UTILIDAD ANTES DE IMPUESTO & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{-\$  518,415,661 } & \multicolumn{1}{r|}{-\$  460,290,266 } & \multicolumn{1}{r|}{-\$    481,542,350 } & \multicolumn{1}{r|}{-\$  503,628,944 } & \multicolumn{1}{r|}{-\$ 3,915,091,256 } \\
+%%    \midrule
+%%    Impuestos & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{ \$                         - } & \multicolumn{1}{r|}{ \$                        - } & \multicolumn{1}{r|}{ \$                           - } & \multicolumn{1}{r|}{ \$                        - } & \multicolumn{1}{r|}{ \$                            - } \\
+%%    \hline
+%%    Depreciación & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{ \$   518,415,661 } & \multicolumn{1}{r|}{ \$  518,415,661 } & \multicolumn{1}{r|}{ \$     518,415,661 } & \multicolumn{1}{r|}{ \$  518,415,661 } & \multicolumn{1}{r|}{ \$      518,415,661 } \\
+%%    \hline
+%%    Amortización del crédito & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{ \$                         - } & \multicolumn{1}{r|}{ \$                        - } & \multicolumn{1}{r|}{ \$                           - } & \multicolumn{1}{r|}{ \$                        - } & \multicolumn{1}{r|}{ \$                            - } \\
+%%    \hline
+%%    Valor en libros & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{ \$  4,998,508,296 } \\
+%%    \hline
+%%    Recuperación del capital de trabajo & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{ \$      800,000,000 } \\
+%%    \hline
+%%    Crédito & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} &  \\
+%%    \hline
+%%    Inversiones & \multicolumn{1}{r|}{ \$  8,390,586,601 } & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} & \multicolumn{1}{r|}{} &  \\
+%%    \hline
+%%    \textbf{FLUJO DE CAJA NETO} & \multicolumn{1}{r|}{\textbf{-\$  8,390,586,601 }} & \multicolumn{1}{r|}{\textbf{-\$                       0 }} & \multicolumn{1}{r|}{\textbf{ \$     58,125,395 }} & \multicolumn{1}{r|}{\textbf{ \$       36,873,311 }} & \multicolumn{1}{r|}{\textbf{ \$     14,786,717 }} & \multicolumn{1}{r|}{\textbf{ \$  2,401,832,701 }} \\
+%%    \hline
+%%    \textbf{VALOR PRESENTE NETO} & \multicolumn{6}{c|}{\textbf{-\$                                                                                                                                                                         6,994,863,119 }} \\
+%%    \hline
+%%    \textbf{TIR} & \multicolumn{6}{c|}{\textbf{-21.74\%}} \\
+%%    \hline
+%%    \textbf{TIRM} & \multicolumn{6}{c|}{\textbf{-21.203\%}} \\
+%%    \hline
+%%    \end{tabular}%
+%%
+%%
+%%   \label{tab:escenario_2}
+%%    \end{table}
+%%\end{landscape}
+%\item \textbf{Escenario 3:} En los escenarios anteriores hemos visto el caso de flujo de caja neto negativo con TIR (tasa interna de retorno) negativa, al igual que el caso con flujo de caja neto positivo y TIR negativa. Por tal razón, en el escenario 3 vamos a examinar el caso donde se pueda maximizar los ingreso operacionales garantizando un VPN (valor presente neto) nulo y una TIR alta con el fin que el escenario sea rentable. Como se puede observar en el cuadro \ref{tab:escenario_3} se muestra que se recupera la inversión en 5 años si se puede generar ingresos operacionales por \$ 2.657.608.089,42, esto equivale a 186 funciones al año con lleno total. Exactamente este resultado implica que cerca de la mitad de los días del año se este realizando un evento. En comparación con los escenarios 1 y 2 en este caso se obtiene un VPN igual a cero lo que significa que recupera la inversión pero no se genera valor para tener ganancias. En el caso de la TIR se obtiene el valor de 12,80\%, la cual es igual a la tasa de descuento por lo tanto la relación entre la inversión y la rentabilidad es uno a uno. 
+%
+%Por último, es necesario tener como referencia el escenario máximo que es factible, el cual consistiría en que se realizará un evento diario; en este contexto los ingresos operacionales serían iguales a \$5.211.470.000. Sin embargo este escenario no es factible porque el valor de mercado de la demanda es menor al valor de mercado de la oferta. Por tal razón el máximo ingreso que puede alcanzar este escenario sería el valor de mercado de la demanda reportado en el cuadro \ref{tab:anual_demanda_potencial} equivalente a  \$3,346,630,588. Con este valor se tendría que proyectar 234 funciones con lleno total para garantizar estos ingresos operacionales. 
+%
+%
+%\begin{landscape}
+%   \begin{table}
+%    \caption{Escenario 3}
+%  \begin{tabular}{|p{7.215em}|c|c|c|c|c|}
+%    \hline
+%    \multicolumn{1}{|c|}{\textbf{Concepto/Año}} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\
+%    \hline
+%    Ingresos operacionales & \multicolumn{1}{r|}{ \$  2,657,608,089 } & \multicolumn{1}{r|}{ \$   3,056,249,303 } & \multicolumn{1}{r|}{ \$  3,056,249,303 } & \multicolumn{1}{r|}{ \$  3,056,249,303 } & \multicolumn{1}{r|}{ \$    3,056,249,303 } \\
+%    \hline
+%    Costos de producción & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{ \$                             - } \\
+%    \hline
+%    Gastos administrativos & \multicolumn{1}{r|}{ \$      523,830,868 } & \multicolumn{1}{r|}{ \$      544,280,103 } & \multicolumn{1}{r|}{ \$      565,532,187 } & \multicolumn{1}{r|}{ \$      587,618,781 } & \multicolumn{1}{r|}{ \$       610,572,797 } \\
+%    \hline
+%    Intereses & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{ \$                             - } \\
+%    \hline
+%    Depreciación & \multicolumn{1}{r|}{ \$      518,415,661 } & \multicolumn{1}{r|}{ \$      518,415,661 } & \multicolumn{1}{r|}{ \$      518,415,661 } & \multicolumn{1}{r|}{ \$      518,415,661 } & \multicolumn{1}{r|}{ \$       518,415,661 } \\
+%    \hline
+%    Venta de activos &       &       &       &       & \multicolumn{1}{r|}{ \$    1,610,000,000 } \\
+%    \hline
+%    Valor en libros &       &       &       &       & \multicolumn{1}{r|}{ \$    4,998,508,296 } \\
+%    \hline
+%    UTILIDAD ANTES DE IMPUESTO & \multicolumn{1}{r|}{ \$  1,615,361,560 } & \multicolumn{1}{r|}{ \$   1,993,553,539 } & \multicolumn{1}{r|}{ \$  1,972,301,455 } & \multicolumn{1}{r|}{ \$  1,950,214,861 } & \multicolumn{1}{r|}{-\$   1,461,247,451 } \\
+%    \hline
+%    Impuestos & \multicolumn{1}{r|}{ \$      403,840,390 } & \multicolumn{1}{r|}{ \$      498,388,385 } & \multicolumn{1}{r|}{ \$      493,075,364 } & \multicolumn{1}{r|}{ \$      487,553,715 } & \multicolumn{1}{r|}{ \$                             - } \\
+%    \hline
+%    Depreciación & \multicolumn{1}{r|}{ \$      518,415,661 } & \multicolumn{1}{r|}{ \$      518,415,661 } & \multicolumn{1}{r|}{ \$      518,415,661 } & \multicolumn{1}{r|}{ \$      518,415,661 } & \multicolumn{1}{r|}{ \$       518,415,661 } \\
+%    \hline
+%    Amortización del crédito & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{ \$                            - } & \multicolumn{1}{r|}{ \$                             - } \\
+%    \hline
+%    Valor en libros &       &       &       &       & \multicolumn{1}{r|}{ \$    4,998,508,296 } \\
+%    \hline
+%    Recuperación del capital de trabajo &       &       &       &       & \multicolumn{1}{r|}{ \$       800,000,000 } \\
+%    \hline
+%    Crédito &       &       &       &       &  \\
+%    \hline
+%    Inversiones &       &       &       &       &  \\
+%    \hline
+%    \textbf{FLUJO DE CAJA NETO} & \multicolumn{1}{r|}{\textbf{ \$  1,729,936,831 }} & \multicolumn{1}{r|}{\textbf{ \$   2,013,580,815 }} & \multicolumn{1}{r|}{\textbf{ \$  1,997,641,752 }} & \multicolumn{1}{r|}{\textbf{ \$  1,981,076,807 }} & \multicolumn{1}{r|}{\textbf{ \$    4,855,676,505 }} \\
+%    \hline
+%    \textbf{VALOR PRESENTE NETO} & \multicolumn{5}{c|}{\textbf{ \$                                                                                                                                                                             0 }} \\
+%    \hline
+%    \textbf{TIR} & \multicolumn{5}{c|}{\textbf{12.80\%}} \\
+%    \hline
+%    \textbf{TIRM} & \multicolumn{5}{c|}{\textbf{12.800\%}} \\
+%    \hline
+%    \end{tabular}%
+%   \label{tab:escenario_3}
+%    \end{table}
+%\end{landscape}
+%    
+%\end{itemize}
+%
+%\end{enumerate}
+%\section{Conclusiones}
+%A partir de la información recopilada y expuesta se plantea las siguientes conclusiones para el estudio: 
+%\begin{itemize}
+%    \item En el caso de la oferta nos encontramos un escenario donde los escenarios de gran capacidad son de naturaleza publica pero en particular son gestionados de manera privada o mixta, donde en muchos de estos se realizan eventos con un costo de entrada establecido. Por otro lado, tenemos un gran número de salas de teatro de baja capacidad que en su totalidad son privadas. 
+%    \item En cuanto a la sección de demanda del Estudio de Mercado se ilustró con información secundaria un bajo consumo cultural en Colombia y en el especifico para el caso del teatro es más bajo que el promedio nacional con un 16.6\% . 
+%    \item En especial para el caso de Tunja se obtuvieron las cifras con base a los resultados nacionales esto plantea una limitante a la hora de identificar particularidades propias de la ciudad. En esta medida es necesario acceder a recolección de información primaria para una mejor caracterización de la demanda. 
+%    \item La información sobre la oferta de escenarios para Teatro en Boyacá y en Tunja no se encuentra consolidada y por ello no es posible realizar una aproximación más cercana a la estructura de costos de un teatro
+%    \item El análisis financiero muestra que es necesario un gran volumen de asistencia y la disposición de las personas a pagar por espectáculos de este tipo con el fin de recobrar la inversión. A su vez, es claro señalar que la operación del teatro por parte de la administración es costosa en términos de costo de oportunidad y requiere altos estándares de eficiencia para su operación. 
+%    \item Se recomienda examinar figuras de administración o concesión donde se garantice un flujo de recursos que recuperen la inversión sin incurrir en gastos administrativos que como se mostró son altos. Figuras como las Alianzas Público-Privadas puede dinamizar la gestión del escenario pero a su vez generar los incenitvos a la demanda para el consumo de estos espectáculos. 
+%    
+%\end{itemize}
+\newpage
+\bibliography{bib}
+\bibliographystyle{apalike2}
+
+\end{document}

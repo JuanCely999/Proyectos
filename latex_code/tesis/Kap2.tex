@@ -1,0 +1,286 @@
+\chapter{Metodología y análisis de información}\label{cap2}
+En este capítulo se describen los elementos que permiten el desarrollo de la estimación del modelo NKPC para los departamentos de Colombia. En la primera parte se establece la metodología de análisis, en seguida se realiza la descripción de las variables observadas que serán ajustadas al modelo de referencia, finalmente se lleva a cabo un análisis previo de la información para continuar con el capitulo final.
+\section{Metodología de análisis}
+En el proceso de la metodología de análisis se utiliza la información y los datos disponibles consistentes con la teoría prevista. Por lo tanto, este apartado comprende la identificación de los costos marginales  reales que dará lugar a la estimación econométrica de la NKPC (ecuación \eqref{21}). 
+\subsection{Identificación de los costos marginales reales}
+Inicialmente,  \cite{gali1999inflation} consideran que los costos marginales reales parten de una Cobb-Douglas,\footnote{La función de producción Cobb-Douglas \citep{cobb1928theory,douglas1948there}  es un enfoque que estima la función de producción de un país, involucrando las variaciones de los insumos capital (K), trabajo (N), y en adición la tecnología, para luego ser llamada como la productividad total de los factores (PTF).}  tomando la siguiente forma: 
+
+\begin{equation}\label{23}
+MCR_{t}=\frac{W}{P_{t}\delta Y_{t}/\delta N_{t}} 
+\end{equation}
+Donde  $Y_{t}=K_{t}^{\alpha} N_{t}^{1-\alpha}$, se compone del stock de capital, $K_{t}$, y  el número de ocupados, $N_{t}$. A partir del cociente de la ecuación \eqref{23},  se iguala $\frac{\delta Y_{t}}{\delta N_{t}}=(1-\alpha)Y_{t}/N_{t}$, para obtener  el costo laboral unitario según la división entre los ingresos laborales y  el PIB nominal ($S_{t}=\frac{W_{t}N_{t}}{P_{t}Y_{t}}$). En este sentido, se tiene que el costo  laboral unitario y la elasticidad producto del trabajo, van a ser la aproximación de los costos marginales. Estos se presentan así:
+\begin{equation}\label{24}
+MCR_{t}=\frac{S_{t}}{1-\alpha}
+\end{equation}
+Finalmente, se toma en logaritmos la brecha de los costos marginales con respecto de su estado estacionario, $mcr$,\footnote{\cite{galvis2010estimacion} denomina a $mcr_{t}$ como la brecha de los costos marginales.}  para luego ser empleada en la ecuación \eqref{19}. Como resultado, las estimaciones de la NKPC en \cite{gali1999inflation} arrojan la siguiente ecuación:\footnote{La interpretación de los coeficientes se encuentran en la sección \ref{s141}.} 
+\begin{equation}\label{25}
+\pi_{t}= \underbrace{0.926 E_{t}(\pi_{t+1}}_{(0.024)})+\underbrace{0.047 mcr_{t}}_{(0.008)}
+\end{equation}
+Los errores estándar se muestran entre paréntesis. Para el caso de la estimación de la NKPC en los departamentos de Colombia, los costos marginales reales serán aproximados a partir de los ingresos laborales obtenidos de la Gran Encuesta Integrada de Hogares (GEIH). Esta \textit{proxy} de los costos marginales reales estará acompañada de la tasa de crecimiento del Índice de Precios al Consumidor (IPC) como estimador de la inflación.
+
+ \subsection{Estrategia econométrica}  \label{secgmm}
+Uno de los métodos de estimación más populares en la econometría aplicada es el Método Generalizado de Momentos (GMM, \textit{sigla en inglés}). GMM generaliza el método clásico de estimador de momentos al permitir modelos que tienen más ecuaciones que parámetros desconocidos y, por lo tanto, están sobreidentificados. GMM incluye como casos especiales  mínimos cuadrados ordinarios (OLS, \textit{sigla en inglés}), variables instrumentales, regresión multivariada y mínimos cuadrados de dos etapas (2SLS, \textit{sigla en inglés}). Para el caso de su aplicación en la NKPC, bajo expectativas racionales, la ecuación \eqref{19} va a definir el conjunto de ortogonalidad de la forma reducida de la línea de base:%el error en el pronóstico de $\pi_{t+1}$ no está correlacionado con la información fechada $t$ anterior,:
+\begin{equation}\label{22}
+E_{t}((\pi_{t}-\beta  \pi_{t+1}-\lambda(mcr_{t}))\zeta_{t})=0
+\end{equation}
+
+Para la versión híbrida de la NKPC se parte de la ecuación \eqref{21} para tener que: 
+ 
+\begin{equation}\label{22b}
+E_{t}((\pi_{t}-\gamma_{f}\beta  \pi_{t+1}-\gamma_{b}\pi_{t-1}-\lambda(mcr_{t}))\zeta_{t})=0
+\end{equation}
+
+En este caso, $\zeta$ es el vector de variables datadas en $t$. Dada esta condición de ortogonalidad se puede estimar el modelo utilizando el  GMM propuesto por \cite{hansen1982generalized}.  En adición, se utilizan instrumentos con fecha $t-1$ (o anteriores) para contener el posible error al obtener los costos marginales. Suponiendo que este error no esté correlacionado con información pasada, es apropiado usar instrumentos rezagados \citep{gali2001european}.  La recomendación en la estimación de los parámetros de la ecuación \eqref{22b} por GMM, se debe precisamente a que los parámetros no son lineales y el número de instrumentos utilizado para esta estimación son mayores que el número de parámetros por estimar. Además, a diferencia de otros estimadores del GMM, no hay necesidad de suponer la distribución de probabilidad de los datos.\\%, $t-1$ y en la inflación en $t+1$
+
+Otra razón para optar por esta estimación subyace en el uso de variables instrumentales. En la práctica resulta altamente plausible que las variables utilizadas que sirven de instrumento estén correlacionadas con $\zeta_{t}$, lo cual no deja de ser un problema en la magnitud del sesgo que pueda generar. Para el caso de \cite{galvis2010estimacion}, utiliza como variables instrumentales $\pi_{t-1}$ y $mcr_{t}$ en tres rezagos, debido a su estacionalidad en orden tres y la composición de los datos, que en este caso son trimestrales.\\
+
+La estimación de la NKPC por GMM favorece la inferencia estadística debido a que no hay necesidad de tener normalidad en los errores de la  estimación, esto se debe fundamentalmente a que las propiedades del estimador de GMM cuentan con normalidad en los errores de la estimación. Sin embargo, a medida que la popularidad y el uso de la curva han crecido, se han suscitado críticas desde su identificación empírica. El problema principal es que los métodos de las variables instrumentales  como el GMM, no son inmunes a la presencia de instrumentos débiles \citep{dufour2006inflation}.\\
+
+Así mismo, también se expresa que el GMM tiene los siguientes problemas: a) procedimientos asintóticos estándar defectuosos y direccionados a rechazos falsos, incluso no solo a muestras pequeñas (se le acuña una de las mayores críticas), sino también a grandes muestras, b) pruebas de tipo t con niveles de significancia que limitan la distribución del estadístico de prueba, c) intervalos de tipo Wald limitados por la construcción, a partir de la forma en que se estima el error estándar asintótico y el punto crítico asintótico \citep{dufour1997some}.\\
+
+No obstante, han surgido múltiples estimadores que han sobresalido para compensar las limitaciones del GMM, entre ellos se destaca la eficiencia que tienen los métodos de estimación por máxima verosimilitud con plena información (FIML). Estos métodos cuentan con propiedades superiores en muestras pequeñas \citep{lendvai2005hungarian} y  funciones adaptables bajo el modelo de especificación errónea y errores de medición no distribuidos normalmente. Esta última condición, está basada en las simulaciones de Monte Carlo, donde \cite{linde2005estimating} concluye que no se pueden obtener estimaciones confiables del NKPC por métodos de ecuación única, lo cual favorece la implementación de FIML.\\
+
+Sin embargo, estos puntos críticos que ha enfrentado GMM fueron revisados por  \cite{gali2005robustness} y argumentaron que las principales conclusiones del trabajo empírico base de la NKPC, 	\cite{gali1999inflation}, permanecen intactas bajo métodos alternativos de estimación. Estos autores concluyen que sus estimaciones son sólidas bajo una variedad de procedimientos econométricos diferentes al escenario establecido por \cite{rudd2005new}, sugiriendo además la inclusión en la estimación GMM de una economía cerrada junto con variables instrumentales no lineales en el espíritu de \cite{linde2005estimating}.\\
+
+En resumen, la estimación de la NKPC por GMM tiene aún gran acogida por la comunidad académica, lo cual es evidenciado recientemente por   \cite{fidrmuc2020meta}, quienes se encargaron de realizar un estudio bibliométrico vinculado a la NKPC. Concluyen que las estimaciones por GMM son usadas con mayor frecuencia en la literatura, lo que significa un mayor apoyo empírico para la crítica generalizada del método GMM. %en la busqueda por encontrar el método ideal para estudiar la dinámica inflacionaria
+
+\section{Datos y análisis descriptivo}
+En esta sección se aborda las fuentes de información que permiten estimar la NKPC en los departamentos de Colombia (2010-2019). Para el caso de la construcción de los ingresos laborales se recurre a recabar información en las fuentes de tipo secundaria. De igual manera ocurre con la tasa de crecimiento del IPC y el PIB nominal. Adicionalmente, se realiza la descripción estadística de cada variable.
+\subsection{Fuentes de información}
+Las variables necesarias para la estimación de la NKPC son: 	$\pi_{t}$ y $mcr_{t}$. En primer lugar,  $\pi_{t}$ se obtiene calculando la tasa de crecimiento del IPC en datos mensuales entre el período 2010 a 2019 de cada una de las 23 ciudades principales que son expresadas en sus respectivos departamentos.\footnote{La tasa de crecimiento del IPC es anualizada, por lo tanto, se tiene en cuenta los datos de 2009. Durante la estimación de la NKPC departamental, como el dato del IPC está por ciudades, se supone que tendrá el mismo comportamiento con el departamento. Para el caso particular de Bogotá (capital del país y del departamento de Cundinamarca), se asume un comportamiento independiente como capital del país y en conjunto con Cundinamarca }  Estos datos se recogen del Departamento Administrativo Nacional de Estadística (DANE).\\
+
+En el caso de $mcr_{t}$, inicialmente se construyen los costos laborales unitarios ($S_{t}$) a partir de los ingresos laborales de los trabajadores ($ W_{t}N_{t}$) y el PIB nominal ($P_{t}Y_{t}$). Los ingresos laborales de los trabajadores en cada departamento se recolectan de la GEIH depositada en el DANE en datos mensuales para 2010-2019.\footnote{Para $ W_{t}N_{t}$, los datos se consideran en meses corridos, en este sentido, de la misma manera que el calculo de $\pi_{t}$, se utilizan los datos del 2009.} Por otra parte, el $P_{t}Y_{t}$ tiene la particularidad que para los datos departamentales  están disponibles únicamente con una frecuencia anual en el DANE. Por esta razón, los datos anuales se desagregan mensualmente usando la metodología de \cite{chow1971best}.\footnote{ Esta metodología fue utilizada de igual manera por \cite{romero2008transmision} en su estudio de Transmisión regional  de la política monetaria en Colombia.} \\
+
+Para tener un marco de referencia de los estudios en Colombia \citep{galvis2010estimacion,bejarano2005estimacion,hernandez2020evidencia}, la elasticidad del producto de la economía al factor trabajo ($1-\alpha$) será del 60\%.\footnote{En \cite{urrutia2002crecimiento} y \cite{tribin2006tasa}  se estima dicha elasticidad y se encuentra que en promedio está entre 56\% y 60\%.} Finalmente, se extrae el componente tendencial a esta variable ($MCR_{t}$) utilizando el filtro Hodrick-Prescott (HP) con un valor lambda estándar de 100 como una desviación de los costos marginales de su valor de tendencia ($mcr_{t}$).
+
+% Table generated by Excel2LaTeX from sheet 'Est.descrip'
+\begin{table}[H]
+  \centering
+  \caption{ Definición de las variables}
+   \resizebox{15cm}{!} {
+  \begin{tabular}{ p{4cm} p{1.2cm} p{4cm} p{5cm}}
+  \hline
+    Variable & Simbolo & Unidad & Descripción \\
+    \hline
+    \hline
+    Inflación  &    $	\pi_{t}$   & Porcentaje & $\pi_{t}=\frac{p_{t}-p_{t-12}}{p_{t-12}}*100$  \\
+    Costos marginales &  $MCR_{t}$     & Billones de pesos & $MCR_{t}=\frac{W_{t}N_{t}/P_{t}Y_{t}}{1-\alpha}$   \\
+    Brecha de los costos marginales &   $mcr_{t}$    & Billones de pesos & Costos marginales  utilizando el método de filtro HP \\ 
+    \hline
+    \end{tabular}%
+    }
+  \label{tab:addlabel}\\
+  \raggedright  \scriptsize \textbf{Fuente:} elaboración propia.
+\end{table}%
+
+
+\subsection{Estadísticas descriptivas}
+En general, la tasa de inflación en Colombia ha disminuido desde que se implementó el régimen de inflación objetivo. La tabla \ref{res3} muestra que el período comprendido entre  2010 a 2019 la inflación en promedio mantiene una senda de crecimiento entre el  3\% y 4\% a pesar que en el 2013 se alcanzó una inflación en promedio menor al 2\% y superior al 8 \% para 2016. Lo último se debió principalmente a la depreciación del peso, generando incremento en el precio de los productos importados. Adicionalmente, como consecuencia de aspectos climáticos relacionados con el fenómeno de El Niño, aumentó el precio de los alimentos.\\
+
+Por otra parte, se destaca  Bogotá, Caquetá, Norte de Santander y Risaralda por sus costos marginales promedio mayores que al resto de los lugares. En caso opuesto según el promedio, los departamentos con menores costos marginales son Meta, Cundinamarca, Cesar y Boyacá. Por períodos, los costos marginales más grandes se encuentran en Norte de Santander, principalmente entre 2010 y 2014, seguido por Risaralda y Caquetá. Por otra parte, Meta conservaría las cifras más inferiores en el período 2010-2014, donde más adelante es reemplazado por departamentos como Cundinamarca y Cesar.
+
+
+
+\begin{table}[H]
+  \centering
+  \caption{Resumen de algunas estadísticas descriptivas de la inflación y los costos marginales (2010-2019)}
+    \begin{tabular}{c c c c c c c c c }
+     \hline
+    \multirow{2}{*}{Departamentos}& \multicolumn{2}{c}{Media} & \multicolumn{2}{c}{st.dev.}& \multicolumn{2}{c}{Min} & \multicolumn{2}{c}{Max}  \\
+     &      $\pi_{t}$ & $MCR_{t}$ & $\pi_{t}$ & $MCR_{t}$ & $\pi_{t}$ & $MCR_{t}$ & $\pi_{t}$ & $MCR_{t}$ \\
+      \hline
+       \hline
+    Antioquia  & 0.039 & 1.162 & 0.016 & 0.059 & 0.018 & 1.037 & 0.087 & 1.265 \\
+    Atlántico  & 0.039 & 1.071 & 0.017 & 0.141 & 0.014 & 0.769 & 0.085 & 1.340 \\ Bogotá & 0.037 & 1.440 & 0.016 & 0.095 & 0.016 & 1.249 & 0.090 & 1.571 \\
+    Bolívar  & 0.037 & 0.721 & 0.017 & 0.092 & 0.011 & 0.573 & 0.082 & 0.926 \\
+    Boyacá  & 0.034 & 0.549 & 0.016 & 0.032 & 0.009 & 0.482 & 0.088 & 0.605 \\
+    Caldas  & 0.038 & 1.235 & 0.021 & 0.035 & 0.009 & 1.176 & 0.093 & 1.302 \\
+    Caquetá  & 0.032 & 1.464 & 0.020 & 0.110 & 0.009 & 1.305 & 0.097 & 1.707 \\
+    Cauca  & 0.034 & 0.635 & 0.018 & 0.052 & 0.007 & 0.563 & 0.087 & 0.765 \\
+    Cesar  & 0.036 & 0.516 & 0.017 & 0.049 & 0.010 & 0.417 & 0.087 & 0.598 \\
+    Córdoba  & 0.035 & 1.061 & 0.017 & 0.041 & 0.011 & 0.970 & 0.087 & 1.177 \\
+    Chocó  & 0.029 & 0.901 & 0.018 & 0.161 & 0.004 & 0.573 & 0.081 & 1.335 \\
+    Cundinamarca  & - & 0.514 & - & 0.034 & - & 0.459 & - & 0.583 \\
+    Huila  & 0.035 & 0.665 & 0.018 & 0.036 & 0.012 & 0.603 & 0.092 & 0.751 \\
+    La Guajira & 0.034 & 0.736 & 0.018 & 0.075 & 0.010 & 0.619 & 0.090 & 0.901 \\
+    Magdalena  & 0.033 & 0.730 & 0.015 & 0.095 & 0.014 & 0.534 & 0.080 & 0.840 \\
+    Meta  & 0.033 & 0.481 & 0.017 & 0.118 & 0.008 & 0.323 & 0.093 & 0.678 \\
+    Nariño  & 0.033 & 1.373 & 0.021 & 0.079 & 0.007 & 1.230 & 0.098 & 1.562 \\
+    N. Santander  & 0.033 & 1.501 & 0.021 & 0.231 & 0.000 & 1.136 & 0.106 & 1.934 \\
+    Quindío  & 0.033 & 1.149 & 0.019 & 0.109 & 0.007 & 0.934 & 0.086 & 1.335 \\
+    Risaralda  & 0.035 & 1.472 & 0.017 & 0.045 & 0.010 & 1.384 & 0.078 & 1.618 \\
+    Santander  & 0.040 & 0.891 & 0.014 & 0.107 & 0.018 & 0.730 & 0.084 & 1.068 \\
+    Sucre  & 0.034 & 0.964 & 0.021 & 0.037 & 0.007 & 0.906 & 0.094 & 1.047 \\
+    Tolima  & 0.035 & 1.056 & 0.017 & 0.045 & 0.011 & 0.975 & 0.092 & 1.130 \\
+    V. Cauca  & 0.035 & 0.988 & 0.018 & 0.030 & 0.012 & 0.949 & 0.100 & 1.096 \\
+    Todas las regiones & 0.037 & 1.055 & 0.016 & 0.043 & 0.018 & 0.974 & 0.090 & 1.150 \\
+     \hline
+    \end{tabular}%
+  \label{res3}\\
+  \raggedright  \scriptsize \textbf{Fuente:} DANE. Estimaciones propias.
+\end{table}%
+ En comparación con la inflación, los costos marginales presentan una mayor volatilidad, principalmente para departamentos como Norte de Santander, Chocó y Atlántico. Estas diferencias regionales pueden observarse en la figura \ref{cm22}. Por lo general, la tasa de inflación regional con el tiempo presenta comportamientos similares, pero al observar el comportamiento según su ubicación, se puede encontrar ciertas diferencias  con la tasa de inflación nacional.\footnote{Para mayor información de la dinámica en  la inflación vista de manera espacial estimando la NKPC, véase \cite{yesilyurt2014regional,vaona2012regional}.} La figura \ref{infla21} presenta el comportamiento de la inflación regional en Colombia en cuatro momentos, en función de cuatro cuantiles. Para el año 2013 y 2016 se evidencia una ruptura estructural en cuanto al cambio radical del comportamiento de la inflación, lo cual  podría  significar cierta divergencia por regiones. Esta ruptura estructural se evidencia al comparar la dispersión de la inflación en diferentes períodos, como se observa en la tabla \ref{dispt} y en la figura \ref{dispf}. 
+
+
+\begin{figure}[H]
+\caption{Costos marginales en Colombia}
+\begin{subfigure}{0.22\textwidth}
+  \centering
+  % include first image
+	\includegraphics[width=2\textwidth]{Figuras/a2010a} 
+  \caption{2010}
+  \label{A41}
+\end{subfigure}
+\begin{subfigure}{0.22\textwidth}
+  \centering
+  % include second image
+	\includegraphics[width=2\textwidth]{Figuras/b2013b} 
+  \caption{2013}
+  \label{A42}
+\end{subfigure}
+\begin{subfigure}{0.22\textwidth}
+  \centering
+  % include first image
+	\includegraphics[width=2\textwidth]{Figuras/c2016c} 
+  \caption{2016}
+  \label{A43}
+\end{subfigure}
+\begin{subfigure}{0.22\textwidth}
+  \centering
+  % include second image
+	\includegraphics[width=2\textwidth]{Figuras/d2019d} 
+  \caption{2019}
+  \label{A44}
+\end{subfigure}\\
+  \raggedright  \scriptsize \textbf{Fuente:} DANE. Estimaciones propias.\\
+\raggedright  \scriptsize \textbf{Nota:} La representación gráfica de los costos marginales ($MCR_{t}$) se expresa en promedio anual por cuantiles. El color oscuro presenta menores costos marginales y el más claro mayor. Color gris no presenta información.
+\label{cm22}	
+\end{figure}
+
+
+\begin{figure}[H]
+\caption{Inflación en Colombia}
+\begin{subfigure}{0.22\textwidth}
+  \centering
+  % include first image
+	\includegraphics[width=2\textwidth]{Figuras/in2010a} 
+  \caption{2010}
+  \label{A41}
+\end{subfigure}
+\begin{subfigure}{0.22\textwidth}
+  \centering
+  % include second image
+	\includegraphics[width=2\textwidth]{Figuras/in2013b} 
+  \caption{2013}
+  \label{A42}
+\end{subfigure}
+\begin{subfigure}{0.22\textwidth}
+  \centering
+  % include first image
+	\includegraphics[width=2\textwidth]{Figuras/in2016c} 
+  \caption{2016}
+  \label{A43}
+\end{subfigure}
+\begin{subfigure}{0.22\textwidth}
+  \centering
+  % include second image
+	\includegraphics[width=2\textwidth]{Figuras/in2019d} 
+  \caption{2019}
+  \label{A44}
+\end{subfigure}\\
+  \raggedright  \scriptsize \textbf{Fuente:} DANE. Estimaciones propias.\\
+\raggedright  \scriptsize \textbf{Nota:} De la misma manera, la tasa de inflación se expresa en cuantiles. El color oscuro presenta menor inflación y el más claro mayor. Color gris no presenta información.\\
+Quibdó (Capital de Chocó) no presenta datos de inflación para el 2019. Para el caso de Cundinamarca, se asume que la inflación de Bogotá es similar a la del departamento ya que no se cuenta con datos propios. Esto se mantendrá durante cada análisis descriptivo (figuras \ref{icm23} y \ref{cor24}) y en las estimaciones econométricas.
+\label{infla21}	
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Dispersión regional (puntos porcentuales)}
+\begin{tabular}{ccc}
+\hline
+& Inflación   & Brecha de los costos marginales \\
+\hline
+\hline
+2010-14 & 1.01  & 5.19  \\
+2015-19 &  2.05  & 5.24 \\
+\hline
+\end{tabular}%
+\label{dispt} \\
+  \raggedright  \scriptsize \textbf{Fuente:} DANE. Estimaciones propias.
+\end{table}%
+
+\begin{figure}[H]
+\caption{Dispersión de la inflación y la brecha de los costos marginales}
+\begin{subfigure}{0.48\textwidth}
+  \centering
+  % include first image
+	\includegraphics[width=1\textwidth]{Figuras/infsd} 
+  \caption{Inflación}
+  \label{dispfa}
+\end{subfigure}
+\begin{subfigure}{0.48\textwidth}
+  \centering
+  % include second image
+	\includegraphics[width=1\textwidth]{Figuras/cmsd} 
+  \caption{Brecha de los costos marginales}
+  \label{}
+\end{subfigure}
+	\label{dispf}\\
+  \raggedright  \scriptsize \textbf{Fuente:} DANE. Estimaciones propias.
+\end{figure}	
+
+
+
+\begin{figure}%[H]
+  	\centering 		
+  	\caption{Tasa de inflación y costos marginales (HP) por departamento (2010-2019)}
+	\includegraphics[width=1\textwidth]{Figuras/infcm3}
+	\raggedright  \scriptsize % \textbf{Nota:} 
+		\label{icm23}\\
+  \raggedright  \scriptsize \textbf{Fuente:} DANE. Estimaciones propias.
+	\end{figure}
+
+En concordancia con la descripción de las dos variables principales del marco de estimación, la tasa de inflación y los costos marginales (HP), la figura \ref{icm23} muestra en detalle su comportamiento desde el 2010 hasta el 2019. Para la mayoría de las regiones, dos casos de mayor presión inflacionaria son prominentes. Estos ocurren primero en el 2011 por problemas originados por el invierno en Colombia, en donde los  alimentos (5,27\%), educación (4,57\%)  y vivienda (3,78\%) fueron los sectores que presionaron la inflación según el DANE. Por ciudades, las capitales de los departamentos de Santander y Huila presentaron mayores variaciones en el año, caso contrario sucedió con Nariño (2,41\%).\\
+ 	
+El segundo repunte de la inflación sucedió en el 2015, coincidiendo con la fuerte presión de la  devaluación del dólar  debido al aumento en el precio del petróleo y en parte por fenómenos climáticos. La inflación en Colombia alcanzó el 6,77\%,  donde  los alimentos tuvieron una variación en precios del 10,85\%, todo esto ocurre  lejos de la meta del Banco de la República que actualmente se encuentra en 3\%. En seguida, el segundo semestre del 2016 presentó una leve recuperación en este indicador, manteniéndose en 5,75\%. La tasa de inflación fue más alta en la capital del departamento de Norte de Santander para mediados del año 2016 con 10,6\%,  junto con una volatilidad pronunciada medida por la desviación estándar (tabla \ref{res3}).\\
+
+En cuanto a la brecha de los costos marginales, estos difieren más entre departamentos que por las tasas de inflación, como se ilustra en la figura \ref{icm23}. Los departamentos con mayor participación en el sector primario presentan mayores fluctuaciones al momento de observar el comportamiento de la brecha de los costos marginales, es decir, la participación laboral es susceptible a los fenómenos climáticos  en departamentos como Chocó, Nariño, Quindio, Caquetá y Magdalena.\footnote{La estructura económica de cada departamento se puede apreciar en la tabla \ref{variab}.} En el caso de los departamentos con mayor participación del sector secundario, principalmente por la actividad que abarca la minería y suministro de energía, coincide la época del aumento en el precio del petróleo con la creciente participación laboral como \textit{proxy} de los costos marginales.\\
+
+No obstante, la consolidación del esquema de inflación objetivo a inicios de la década del 2000 en Colombia trajo consigo la conducción de la política monetaria y la incidencia que pueda generar en la actividad económica real por medio de la tasa de interés de intervención del Banco de la República, principal instrumento de política monetaria. El canal de tasa de interés genera efectos regionales de la política monetaria, toda vez  que los sectores de la economía no reaccionan en la misma proporción en reacción a los cambios en la tasa de interés. \\
+
+Las características de los mercados en los cuales operan las empresas son determinantes importantes de las políticas de fijación de precios \citep{misas2009formacion}. La industria manufacturera o la construcción pueden ser más sensibles que otros sectores como la minería o el sector agropecuario debido a que el movimiento de la tasa de interés repercute en los costos del uso de capital, teniendo efectos en las inversiones y posteriormente en la demanda agregada. En la mayoría de los departamentos, estos sectores se ubican en regiones específicas. \\
+
+Por otra parte, la vinculación económica entre departamentos puede responder de manera desigual frente a choques agregados. \cite{carlino1998differential} evidencian que el efecto en el cambio de los precios del petróleo afecta de manera diferente a las regiones productoras y consumidoras. Igualmente, atribuyen que los choques de la política monetaria -caso de la tasa de interés- difiere según las elasticidades de los sectores productivos y la distribución de las industrias en las regiones.\\
+   
+El comportamiento de la tasa de interés ha generado un impacto diverso en cada estructura económica en los departamentos vistos desde la incidencia de los costos marginales. En el período 2010 a 2012 cuando se presentó un aumento en la tasa de interés de 2.25 puntos porcentuales,  departamentos como Chocó y Norte de Santander tuvieron un crecimiento pronunciado de los costos marginales por debajo de la tendencia, caso opuesto se observó en Caquetá, siendo el más destacado. Sin embargo, \cite{quintero2019impactos}  propuso una agrupación departamental que vinculara el tipo de actividad principal de cada departamento frente al impacto de política monetaria, coincidencialmente los departamentos mencionados pertenecen a diversos, es decir, su actividad económica principal no se encuentra en la minería, servicios e industriales.\\
+
+El retorno de la tasa de interés en el año 2014, permitió observar a los departamentos en dicha agrupación de la actividad productiva, reaccionar en oposición al período de descenso de la tasa de interés, donde los costos marginales tuvieron un destacado comportamiento en Chocó y Norte de Santander, contrario a Caquetá. Otros departamentos pertenecientes a actividades económicas  diversas como Quindio y Magdalena, presentaron comportamientos acordes a las decisiones de política monetaria, es decir, un aumento -disminución- de la tasa de interés contribuyó en un efecto de menor -mayor- demanda agregada. Para el caso de las actividades económicas industriales, mineras y de servicios no se observa patrones claros que evidencien alguna relación entre la tasa de interés y el comportamiento de la brecha de los costos marginales.
+
+
+\section{Análisis de la información}
+Otro tema importante que debe considerarse en el análisis de la dinámica de la inflación es el efecto temporal de las variables. Mientras que para la curva de Phillips tradicional la inflación debería depender negativamente de la brecha del producto rezagada, caso contrario ocurriría con la NKPC (ecuación \eqref{20}). \cite{fuhrer1995inflation} señala que la NKPC implica que la inflación debe tener un comportamiento procíclico con la brecha del producto o la brecha de los costos marginales para este caso, es decir,  un aumento (disminución) de la inflación actual debe indicar un aumento (disminución) posterior en la brecha de los costos marginales. Esto termina siendo un problema cuando se confronta con los datos debido a que pueden evidenciar un patrón opuesto.\\
+
+Por lo anterior, \cite{gali1999inflation}  observan que  la brecha del producto actual se mueve positivamente con la inflación futura y negativamente con la inflación rezagada. Esto señala que la brecha del producto sobre la inflación explica por qué la brecha del producto rezagada entra con un coeficiente positivo, consistente con la teoría de la curva de Phillips tradicional, pero contraria a la NKPC.\footnote{La forma que tomaría la curva de Phillips tradicional seria: $\pi_{t}=\pi_{t-1}+k(y_{t-1})$ (ecuación 9 en \cite{gali1999inflation}).} Por esta razón, la lectura que se hará a las correlaciones cruzadas será opuesta a las mencionadas para satisfacer la NKPC (ecuación \eqref{21}).\\
+
+Adicionalmente, \cite{gali1999inflation} evidencian que la participación de los ingresos laborales (la medida considerada para determinar la brecha de los costos marginales) superan la brecha de producción en la estimación de la NKPC, toda vez que conduce a la inflación, y no al revés, en contradicción directa con la teoría. Por el contrario, la brecha de los costos marginales muestra una fuerte correlación  contemporánea con la inflación e incluso la inflación rezagada se correlaciona positivamente con la participación del ingreso laboral, de acuerdo con la teoría. En este sentido, no sorprendería que entrara a la ecuación de inflación estructural significativa y con el signo correcto. \\
+
+Por otra parte, el comportamiento lento del costo marginal podría ayudar a explicar la lenta respuesta de la inflación al producto y, por lo tanto, por qué las desinflaciones pueden implicar costosas reducciones del producto. Por ejemplo, \cite{blanchard1993competitiveness} encontraron que las desinflaciones en Francia se han asociado con disminuciones en los costos laborales unitarios reales.  Por esta razón, modificar las teorías existentes para dar cuenta de las rigideces en los costos marginales sugeridos y evidenciadas por  \cite{gali1999inflation}  podrían ofrecer información importante para la dinámica de la inflación. Dado el vínculo entre la participación laboral y los costos marginales, una fuente candidata para la fricción necesaria es la rigidez salarial.\\
+
+En síntesis, las correlaciones cruzadas dinámicas de la brecha del costo marginal y las tasas de inflación en cada región presentadas en la figura \ref{cor24} ayudan a enmarcar el problema. La importancia de esta manera de observar la información, subyace en el sentido en que el comportamiento prospectivo, retrospectivo de la inflación y la brecha de los costos marginales, no solo dará lugar a una buena explicación de la modelación de la dinámica inflacionaria, sino que también   sugerirá el uso de variables instrumentales para el control de problemas de endogeneidad en las estimaciones obtenidas más adelante. \\
+
+Los movimientos negativos de la brecha de los costos marginales sobre la inflación futura van a ser posibles en  departamentos  como Atlántico, Boyacá,  Caldas, Caquetá y Chocó. Estas correlaciones son superiores al 50\%, lo cual puede suponer la aceptación del modelo NKPC. En menor incidencia aparecen los departamentos de Bolivar, Huila, Meta, Norte de Santander y Risaralda. \\
+
+Los principales epicentros de desarrollo del país como Bogotá, Antioquia y Valle del Cauca parecen no evidenciar con claridad las posibles dinámicas inflacionarias que pueda ofrecer el modelo en referencia. De la misma manera, departamentos que principalmente se encuentran ubicados en la zona costera del país van a tener movimientos positivos de la inflación prospectiva y la brecha de los costos marginales, sin dar espacio al posible cumplimiento de la NKPC.\\
+
+\begin{figure}[H]
+  	\centering 		
+  	\caption{Correlación cruzada entre la tasa de inflación y costos marginales (HP) por departamento (2010-2019)}
+	\includegraphics[width=0.95\textwidth]{Figuras/corre}
+	\raggedright % \scriptsize \textbf{Nota:} 
+		\label{cor24}\\
+  \raggedright  \scriptsize \textbf{Fuente:} DANE. Estimaciones propias.	
+	\end{figure}
+
+Las diversas direcciones que toma la brecha de los costos marginales frente a la inflación, presume posibles efectos diferenciales de la política monetaria, no solo entre departamentos, sino entre regiones. Una alta variabilidad de los resultados entre departamentos, inclusive entre los pertenecientes a una misma región geográfica indican que la dinámica inflacionaria explicada por los costos marginales y la inflación prospectiva pueden tener incidencia en estructuras económicas no muy claras, opuesto a lo considerado por \cite{quintero2019impactos}, donde encuentra que los sectores más sensibles a la política monetaria son la industria manufacturera, construcción y transporte y comunicaciones.
+

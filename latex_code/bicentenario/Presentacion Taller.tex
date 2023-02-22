@@ -1,0 +1,318 @@
+\documentclass[11pt]{beamer}
+%\useoutertheme{split} % tema exterior si
+%\definecolor{naranja}{cmyk}{0,0.5,1,0}
+\usetheme{CambridgeUs}
+%\usecolortheme{crane}% tema de color siwhale
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{tikz}
+\usepackage{hyperref}
+\author[Juan Pablo Cely]{Juan Pablo Cely}
+\title[Análisis bibliométrico \\ \& \\ Análisis textual]{Análisis bibliométrico \\ \& \\ Análisis textual}
+\setbeamercovered{transparent} 
+\setbeamertemplate{navigation symbols}{} 
+\institute[]{TALLER DE REFLEXIÓN TEÓRICA Y METODOLÓGICA "UNA HISTORIA POR HACER"}
+ 
+\date[]{2019} 
+
+\titlegraphic{\includegraphics[width=1.5cm]{Figura/uptc}}
+%\titlegraphic{\includegraphics[width=2cm]{Figuras/UMNG.png}}
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\begin{frame}
+%\tableofcontents
+%\end{frame}
+
+%%%%%%%%%%%%%%%%%
+%%%se puede omitir %%%%%%%%%
+%\begin{figure}
+%\includegraphics[width=9.0cm]{R/temas}
+%\label{fig:ejemplo}
+%% \scriptsize \textbf{Nota:}....	\label{anos}
+%\end{figure}
+
+\begin{frame}
+\frametitle{Contenido}
+\begin{enumerate}
+\item Parte l: Introducción a Web of Science \& R
+\begin{enumerate} [a]
+\item ¿Qué es Web of Science?
+\item ¿Qué es R?
+\item Pagina de R
+\item ¿Qué es Rstudio?
+\end{enumerate}
+\item Parte ll: Análisis bibliométrico
+\begin{enumerate} [a]
+\item Publicaciones por año y en promedio
+\item Redes de cooperación
+\item Redes de palabras claves
+\end{enumerate}
+\item Parte lll: Análisis textual
+\begin{enumerate} [a]
+\item Análisis de sentimientos
+\item Nubes de palabras 
+\end{enumerate}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Contenido}
+\begin{enumerate}[<i->]
+\item<1-> Parte l: Introducción a Web of Science\& R
+\begin{enumerate} [a]
+\item<1-> ¿Qué es Web of Science?
+\item<1-> ¿Qué es R? 
+\item<1-> Pagina de R
+\item<1->  ¿Qué es Rstudio?
+\end{enumerate}
+\item Parte ll: Análisis bibliométrico
+\begin{enumerate} [a]
+\item Publicaciones por año y en promedio
+\item Redes de cooperación
+\item Redes de palabras claves
+\end{enumerate}
+\item Parte lll: Análisis textual
+\begin{enumerate} [a]
+\item Análisis de sentimientos
+\item Nubes de palabras 
+\end{enumerate}
+\end{enumerate}
+\end{frame}
+
+
+
+\section{Parte l: Introducción a Web of Science  \& R}
+\begin{frame}
+\frametitle{Parte l: Introducción a Web of Science}
+\framesubtitle{¿Qué es Web of Science?}
+\begin{itemize}
+\item Es una plataforma on-line que contiene Bases de Datos de información bibliográfica y recursos de análisis de la información
+\item Su contenido es multidisciplinar y proporciona información de alto nivel académico y científico.
+\end{itemize}
+\begin{figure}
+
+\includegraphics[width=3.0cm]{Figura/wos}
+\centering
+  \label{figure:Consumo}  
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Parte l: Introducción a R}
+\framesubtitle{¿Qué es R?}
+\begin{itemize}
+\item R es un lenguaje de programación para análisis de datos y elaboración de gráficos
+\item Software libre, corre en diferentes sistemas operativos.
+\item Interacción por linea de comandos (reglas de sintaxis).
+\item https://www.r-project.org/
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Parte l: Introducción a R}
+\framesubtitle{Pagina de R}
+\begin{figure}
+
+\includegraphics[width=10.0cm]{Figura/pag}
+\centering
+  \label{figure:Consumo}  
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Parte l: Introducción a R}
+\framesubtitle{¿Qué es Rstudio?}
+\begin{figure}
+
+\includegraphics[width=13.0cm]{Figura/rstudio}
+\centering
+  \label{figure:Consumo}  
+  \end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Parte l: Introducción a R}
+\framesubtitle{¿Qué es Rstudio?}
+\begin{itemize}
+\item Console: Ejecuta comandos y muestra los resultados.
+\item Editor: Aca se escribe lo que se quiere ejecutar (script)
+\item History - Environment
+\item Files - Plots - Packages - Help - Viewer
+\item https://www.rstudio.com/
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Contenido}
+\begin{enumerate}[<i->]
+\item Parte l: Introducción a Web of Science\& R
+\begin{enumerate} [a]
+\item ¿Qué es Web of Science?
+\item ¿Qué es R? 
+\item Pagina de R
+\item  ¿Qué es Rstudio?
+\end{enumerate}
+\item<1-> Parte ll: Análisis bibliométrico
+\begin{enumerate} [a]
+\item<1-> Publicaciones por año y en promedio
+\item<1-> Redes de cooperación
+\item<1-> Redes de palabras claves
+\end{enumerate}
+\item Parte lll: Análisis textual
+\begin{enumerate} [a]
+\item Análisis de sentimientos
+\item Nubes de palabras 
+\end{enumerate}
+\end{enumerate}
+\end{frame}
+
+
+
+\section{Parte ll: Análisis bibliométrico}
+\begin{frame}
+\frametitle{Parte ll: Análisis bibliométrico}
+\framesubtitle{Publicaciones por año y en promedio}
+\begin{figure}
+{\includegraphics[width=0.47\textwidth]{Figura/ASP}} 	{\includegraphics[width=0.47\textwidth]{Figura/AACY}}	\\
+%	 \scriptsize \textbf{Nota:}....	\label{anos}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Parte ll: Análisis bibliométrico}
+\framesubtitle{Redes de cooperación}
+\begin{figure}
+{\includegraphics[width=0.47\textwidth]{Figura/MPP}} 	{\includegraphics[width=0.47\textwidth]{Figura/RE}}	\\
+%	 \scriptsize \textbf{Nota:}....	\label{anos}
+	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Parte ll: Análisis bibliométrico}
+\framesubtitle{Redes de cooperación}
+
+\begin{figure}
+{\includegraphics[width=0.4\textwidth]{Figura/red}} 	{\includegraphics[width=1.0\textwidth]{Figura/red1}}	\\
+%	 \scriptsize \textbf{Nota:}....	\label{anos}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Parte ll: Análisis bibliométrico}
+\framesubtitle{Redes de cooperación}
+
+\begin{figure}
+ 	{\includegraphics[width=1\textwidth]{Figura/red3}}	\\
+%	 \scriptsize \textbf{Nota:}....	\label{anos}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Parte ll: Análisis bibliométrico}
+\framesubtitle{Redes de cooperación}
+
+\begin{figure}
+{\includegraphics[width=0.3\textwidth]{Figura/red4}} 	{\includegraphics[width=0.7\textwidth]{Figura/red5}}	\\
+%	 \scriptsize \textbf{Nota:}....	\label{anos}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Parte ll: Análisis bibliométrico}
+\framesubtitle{Redes de palabras claves}
+
+\begin{figure}
+{\includegraphics[width=0.4\textwidth]{Figura/dendo}} 	{\includegraphics[width=0.5\textwidth]{Figura/MCA2}}	\\
+%	 \scriptsize \textbf{Nota:}....	\label{anos}
+	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Contenido}
+\begin{enumerate}[<i->]
+\item Parte l: Introducción a Web of Science\& R
+\begin{enumerate} [a]
+\item ¿Qué es Web of Science?
+\item ¿Qué es R? 
+\item Pagina de R
+\item  ¿Qué es Rstudio?
+\end{enumerate}
+\item Parte ll: Análisis bibliométrico
+\begin{enumerate} [a]
+\item Publicaciones por año y en promedio
+\item Redes de cooperación
+\item Redes de palabras claves
+\end{enumerate}
+\item<1-> Parte lll: Análisis textual
+\begin{enumerate} [a]
+\item<1-> Análisis de sentimientos
+\item<1-> Nubes de palabras 
+\end{enumerate}
+\end{enumerate}
+\end{frame}
+
+
+\section{Parte lll: Análisis textual}
+\begin{frame}
+\frametitle{Parte lll: Análisis textual}
+\framesubtitle{Análisis de sentimientos}
+El análisis de sentimientos, también llamado minería de opinión, es en una serie de técnicas informáticas que se utilizan para clasificar automáticamente un texto con un sentimiento positivo o negativo (Pang y Lee 2008) e incluso con alguna de las emociones básicas (Plutchik 1980).
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Parte lll: Análisis textual}
+\framesubtitle{Análisis de sentimientos}
+\begin{figure}
+{\includegraphics[width=1\textwidth]{Figura/libro3}} 	\\
+%	 \scriptsize \textbf{Nota:}....	\label{anos}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Parte lll: Análisis textual}
+\framesubtitle{Análisis de sentimientos}
+\begin{figure}
+{\includegraphics[width=1\textwidth]{Figura/libro2}} 	\\
+%	 \scriptsize \textbf{Nota:}....	\label{anos}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Parte lll: Análisis textual}
+\framesubtitle{Análisis de sentimientos}
+\begin{figure}
+{\includegraphics[width=1\textwidth]{Figura/general}} 	\\
+%	 \scriptsize \textbf{Nota:}....	\label{anos}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Parte lll: Análisis textual}
+\framesubtitle{Análisis de palabras}
+\begin{figure}
+{\includegraphics[width=1\textwidth]{Figura/wc3}} 	\\
+%	 \scriptsize \textbf{Nota:}....	\label{anos}
+	\end{figure}
+\end{frame}
+
+\end{document}

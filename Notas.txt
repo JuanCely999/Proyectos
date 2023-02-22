@@ -1,0 +1,17 @@
+Guias
+Bibli -Analisis de bibliometria
+Vio-análisis de cajas y violin
+Map -Mapas
+Caj -analisis de caja
+Tui -Analisis con twiter
+Sen- análisis de sentimientos
+Tre_ Google trends 
+Web- web scrapping
+Bar-diagrama de barras
+Mat- matemáticas
+Dat- desagregaron de datos
+dir_ directorios
+Ser-series de tiempo
+Cla- clases
+Inf- informe
+Tex- análisis de texto

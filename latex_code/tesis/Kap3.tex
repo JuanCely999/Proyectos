@@ -1,0 +1,382 @@
+\chapter{Resultados y discusión} \label{cap3}
+Este capítulo aborda la estimación econométrica de la NKPC para los departamentos de Colombia y de manera nacional por medio de un panel dinámico. Los resultados encontrados serán fuente de comparación de variables que puedan dar explicación a la dinámica inflacionaria de cada región. Posteriormente, se discuten los hallazgos.
+
+\section{NKPC por departamentos}
+Las estimaciones de la forma reducida del NKPC de referencia para cada departamento, se deriva de la especificación en la ecuación \eqref{22b}, siguiendo las variables instrumentales para datos mensuales  que sugiere \cite{ramos2008inflation}.\footnote{La especificación del modelo considera $\pi_{t-3}$ y $\pi_{t+3}$, dado su nivel estacional.}  Consistente con la teoría NKPC, los coeficientes del término prospectivo ($\gamma_{f}$)  y retrospectivo  ($\gamma_{b}$)  son positivos y estadísticamente significativos al 1\% con GMM (tabla \ref{tab31}). En todos los casos, los coeficientes del término prospectivo, $\gamma_{f}$, es mayor que el coeficiente de inflación rezagada, $\gamma_{b}$. Este último tiene un tamaño del coeficiente entre  0.213-0.399. Para el caso de $\gamma_{f}$, el rango esta entre  0.682-1.002.\\
+
+La estimación para todas las regiones frente a la inflación prospectiva fue de 0.7, inferior a los reportados en trabajos previos (tabla \ref{t2}). Por el lado del coeficiente de la brecha de los costos marginales, se obtiene que no es estadísticamente significativa con signo negativo, evidenciando  diferencias considerables entre procesos inflacionarios por departamento. Sin embargo, se observa que $\lambda$ es positivo y negativo con significancia estadística al 5\% y al 1\% para 42\% de los 24 departamentos (incluida la ciudad capital, Bogotá). La estimación significativa al 5\% aparece para el coeficiente negativo en el caso de Bolivar (-0.074), y al 1\% para Cundinamarca (-0.093) y Tolima (-0.111).  Al 1\%  con coeficiente positivo (consistente con la teoría), la brecha de los costos marginales varia entre 0.018 (Atlántico) y 0.158 (Caldas).
+
+\begin{table}[H]
+\centering
+\caption{Estimación de forma reducida de la versión híbrida de la NKPC por departamento (2010-2019)}
+\begin{tabular}{lllllll}
+\hline
+Departamento & Constante  & $\gamma_{b}$  & $\gamma_{f}$ & $\lambda$   & $\theta$ & J -Test \\
+ &       &   $\pi_{t-3}$    &    $\pi_{t+3}$    &  $mcr_{t}$    &   $\frac{1}{1-\theta}$    & (p-value) \\
+\hline
+\hline
+\vspace{-0.3cm} Antioquia & -0.002** & 0.370*** & 0.682*** & -0.023 &       & 8.156\\   
+ & \scriptsize{(0.001)} & \scriptsize{(0.040)} & \scriptsize{(0.054)} & \scriptsize{(0.015)} &       & \scriptsize{(0.518)} \\
+\vspace{-0.3cm} Atlántico & -0.003*** & 0.337*** & 0.737*** & 0.018*** & 0.944 & 5.071\\   
+& \scriptsize{(0.001)} & \scriptsize{(0.043)} & \scriptsize{(0.051)} & \scriptsize{(0.005)} & \scriptsize{18}    & \scriptsize{(0.828)} \\
+\vspace{-0.3cm} Bogotá & -0.001 & 0.294*** & 0.721*** & -0.006 &       & 7.32 \\  
+& \scriptsize{(0.002)} & \scriptsize{(0.052)} & \scriptsize{(0.065)} & \scriptsize{(0.007)} &       & \scriptsize{(0.603)} \\
+\vspace{-0.3cm} Bolivar & -0.008** &	0.213***  &	1.002*** &	-0.074** &  & 5.464\\   
+& \scriptsize{(0.003)} & \scriptsize{(0.077)} & \scriptsize{(0.134)} & \scriptsize{(0.034)} &     & \scriptsize{(0.792)} \\ 
+\vspace{-0.3cm} Boyacá & -0.007*** & 0.226*** & 0.975*** & 0.141*** & 0.695 & 4.349\\   
+& \scriptsize{(0.002)} & \scriptsize{(0.059)} & \scriptsize{(0.091)} & \scriptsize{(0.026)} & \scriptsize{3}     & \scriptsize{(0.886)} \\
+\vspace{-0.3cm} Caldas & -0.008*** & 0.321*** & 0.869*** & 0.158*** & 0.709 & 79.204\\   
+& \scriptsize{(0.002)} & \scriptsize{(0.060)} & \scriptsize{(0.077)} & \scriptsize{(0.031)} & \scriptsize{3}     & \scriptsize{(0.542)} \\
+\vspace{-0.3cm} Caquetá & -0.002*** & 0.257*** & 0.805*** & 0.029*** & 0.904 & 42.663\\   
+& \scriptsize{(0.001)} & \scriptsize{(0.043)} & \scriptsize{(0.044)} & \scriptsize{(0.008)} & \scriptsize{10}    & \scriptsize{(0.893)} \\
+\vspace{-0.3cm} Cauca & -0.003** & 0.354*** & 0.739*** & 0.019 & 0.941 & 5.998\\   
+& \scriptsize{(0.002)} & \scriptsize{(0.040)} & \scriptsize{(0.052)} & \scriptsize{(0.034)} & \scriptsize{17}    & \scriptsize{(0.74)} \\
+\vspace{-0.3cm} Cesar & -0.004* & 0.322*** & 0.789*** & -0.011 &       & 15.304\\   
+& \scriptsize{(0.002)} & \scriptsize{(0.070)} & \scriptsize{(0.076)} & \scriptsize{(0.031)} &       & \scriptsize{(0.082)} \\
+\vspace{-0.3cm} Córdoba & -0.003 & 0.339*** & 0.715*** & -0.005 &       & 9.606\\   
+& \scriptsize{(0.002)} & \scriptsize{(0.059)} & \scriptsize{(0.061)} & \scriptsize{(0.020)} &       & \scriptsize{(0.383)} \\
+\vspace{-0.3cm} Cundinamarca & -0.002 & 0.228*** & 0.813*** & -0.093*** &       & 4.311\\   
+& \scriptsize{(0.001)} & \scriptsize{(0.037)} & \scriptsize{(0.060)} & \scriptsize{(0.018)} &       & \scriptsize{(0.889)} \\
+\vspace{-0.3cm} Chocó & -0.001 & 0.399*** & 0.627*** & 0.001 &       & 83.287\\   
+& \scriptsize{(0.002)} & \scriptsize{(0.056)} & \scriptsize{(0.054)} & \scriptsize{(0.008)} &       & \scriptsize{(0.501)} \\
+\vspace{-0.3cm} Huila & -0.005*** & 0.360*** & 0.784*** & 0.052*** & 0.862 & 4.202\\   
+& \scriptsize{(0.001)} & \scriptsize{(0.030)} & \scriptsize{(0.030)} & \scriptsize{(0.010)} &  \scriptsize{7}    & \scriptsize{(0.897)} \\
+\vspace{-0.3cm} La Guajira & -0.007*** & 0.357*** & 0.840*** & -0.009 &       & 4.524\\   
+& \scriptsize{(0.002)} & \scriptsize{(0.037)} & \scriptsize{(0.077)} & \scriptsize{(0.014)} &       & \scriptsize{(0.873)} \\
+\vspace{-0.3cm} Magdalena & -0.005*** & 	0.310*** &	0.828*** &	-0.023 &  & 5.578\\   
+& \scriptsize{(0.001)} & \scriptsize{(0.053)} & \scriptsize{(0.060)} & \scriptsize{(0.014)} &     & \scriptsize{(0.781)} \\
+\vspace{-0.3cm} Meta & -0.005*** & 	0.384*** &	0.771*** &	-0.009 &       &  3.325 \\  
+& \scriptsize{(0.002)} & \scriptsize{(0.252)} & \scriptsize{(0.048)} & \scriptsize{(0.011)} &       & \scriptsize{(0.950)} \\
+\vspace{-0.3cm} Nariño & -0.004** &	0.261*** &	0.844*** &	-0.017 &       & 5.189 \\   
+& \scriptsize{(0.002)} & \scriptsize{(0.053)} & \scriptsize{(0.067)} & \scriptsize{(0.014)} &  & \scriptsize{(0.817)} \\
+\vspace{-0.3cm} Norte de Santander & -0.003** & 0.332*** & 0.759*** & 0.028*** & 0.916 & 3.959\\   
+& \scriptsize{(0.001)} & \scriptsize{(0.045)} & \scriptsize{(0.053)} & \scriptsize{(0.007)} & \scriptsize{12}    & \scriptsize{(0.914)} \\
+\vspace{-0.3cm} Quindío & -0.002 & 0.364*** & 0.691*** & -0.004 &       & 10.33 \\  
+& \scriptsize{(0.002)} & \scriptsize{(0.056)} & \scriptsize{(0.083)} & \scriptsize{(0.007)} &       & \scriptsize{(0.324)} \\
+\vspace{-0.3cm} Risaralda & -0.002*** & 0.297*** & 0.769*** & 0.034*** & 0.900 & 4.911\\   
+& \scriptsize{(0.001)} & \scriptsize{(0.021)} & \scriptsize{(0.025)} & \scriptsize{(0.005)} & \scriptsize{10}    & \scriptsize{(0.842)} \\
+\vspace{-0.3cm} Santander & -0.005* & 0.229*** & 0.873*** & 0.027 & 0.891 & 8.392\\   
+& \scriptsize{(0.003)} & \scriptsize{(0.087)} & \scriptsize{(0.109)} & \scriptsize{(0.036)} & \scriptsize{9}     & \scriptsize{(0.495)} \\
+\vspace{-0.3cm} Sucre & -0.004*** &	0.363*** &	0.751*** &	0.012 &  0.958  & 5.873\\   
+& \scriptsize{(0.001)} & \scriptsize{(0.040)} & \scriptsize{(0.031)} & \scriptsize{(0.042)} &  \scriptsize{24}  & \scriptsize{(0.752)} \\
+\vspace{-0.3cm} Tolima & -0.008*** &	0.225*** &	0.983*** &	-0.111*** &  & 5.812\\   
+& \scriptsize{(0.002)} & \scriptsize{(0.032)} & \scriptsize{(0.058)} & \scriptsize{(0.016)} &    & \scriptsize{(0.868)} \\
+\end{tabular}
+\label{tab31}\\
+\raggedright  \scriptsize \
+\end{table}%
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lllllll}
+\vspace{-0.3cm} Valle del Cauca& -0.004* & 0.226*** & 0.871*** & 0.033 & 0.877 & 6.493\\   
+& \scriptsize{(0.002)} & \scriptsize{(0.064)} & \scriptsize{(0.091)} & \scriptsize{(0.039)} & \scriptsize{8}     & \scriptsize{(0.689)} \\
+\vspace{-0.3cm} Todas las regiones & -0.002 & 0.346*** & 0.700*** & -0.017 &       & 7.539\\   
+& \scriptsize{(0.001)} & \scriptsize{(0.035)} & \scriptsize{(0.050)} & \scriptsize{(0.014)} &       & \scriptsize{(0.581)} \\
+\hline
+\end{tabular}
+\label{}\\
+  \raggedright  \scriptsize \textbf{Fuente:} estimaciones propias.\\
+\raggedright  \scriptsize \textbf{Nota:} ***,  **, * representan significancia estadistica al 1\%, 5\% y 10\%, respectivamente. Bartlett KerneL, Newey-West fijo, errores estándar robustos de HAC entre paréntesis.\\
+Instrumentos: brecha de los costos marginales: t-2 a t-7, inflación: t-1 a t-6.\\
+$\theta$ se encuentra al despejar en $\lambda$ a partir de la ecuación \eqref{18}. El coeficiente $\gamma_{f}$ es utilizado en la ecuación, en lugar de $\beta$ para calcular $\theta$. Las figuras \ref{dispf} y \ref{estim} presentan un panorama amplio del comportamiento de los diferentes coeficientes.
+\end{table}%
+
+Para Norte de Santander, donde la volatilidad de la inflación y los costos marginales para el período 2010-2019 fueron más altos (tabla \ref{res3}), la NKPC híbrida se ajusta bien a los datos. De igual manera,  se observa que Atlántico, Boyacá, Caldas, Caquetá, Huila y Risaralda son acordes al modelo de referencia con significancia estadística al 1\%, similar a la inflación en rezagos y vista en prospectiva. Por otra parte, el desajuste  del NKPC híbrido en Santander y Sucre  se debe a  que los coeficientes de la brecha de los costos marginales ($\lambda$) no es estadísticamente significativa, resultando grandes errores estándar alrededor de las estimaciones. Esto evidencia que el proceso inflacionario no es similar en todos los departamentos, sino por el contrario, existe heterogeneidad en la dinámica inflacionaria regional.\\
+
+En concordancia, la fracción de empresas que cambian su precio usando en menor medida una regla empírica retrospectiva, el coeficiente $\gamma_{b}$ de forma reducida asociado con los rezagos de la inflación es menor y el coeficiente asociado con la inflación esperada ($\gamma_{f}$) es mayor. Esto significa que a medida que la fracción de empresas atrasadas es menor, la persistencia de la inflación disminuye, en este sentido, las empresas establecen los precios en su mayoría dependiendo del futuro. Además, esto implica que la empresa fije sus precios cada vez menos según una regla basada en el comportamiento pasado de los precios y que la relación entre la brecha de los costos marginales y la inflación se fortalezca.\\
+
+Esta relación al presentar mayores coeficientes en la inflación esperada y la brecha de los costos marginales explican la baja probabilidad que las empresas mantengan sin cambios los precios en el tiempo, como en el caso de Boyacá y Caldas. Por el contrario, si existe mayor explicación de la dinámica inflacionaria en los departamentos por parte de la persistencia de la inflación ($\gamma_{b}$), de la misma manera las empresas mantendrán los precios sin cambios por un tiempo considerable. \\
+
+
+\begin{table}%[H]
+\centering
+\caption{Estimación de forma reducida de la versión híbrida de la NKPC por departamento (Alternativa) (2010-2019)}
+\begin{tabular}{lllllll}
+\hline
+\hline
+Departamento & Constante  & $\gamma_{b}$  & $\gamma_{f}$ & $\lambda$   & $\theta$ & J -Test \\
+ &       &   $\pi_{t-k}$    &    $\pi_{t+k}$    &  $mcr_{t}$    &   $\frac{1}{1-\theta}$    & (p-value) \\
+\hline
+\vspace{-0.3cm} Antioquia (c)  & -0.006** & 0.407*** & 0.756*** & -0.056* &       & 6.026\\   
+& \scriptsize{(0.003)} & \scriptsize{(0.029)} & \scriptsize{(0.086)} & \scriptsize{(0.033)} &       & \scriptsize{(0.737)} \\
+\vspace{-0.3cm} Atlántico (c) & -0.010*** & 0.395*** & 0.878*** & 0.049*** & 0.842 & 4.818\\   
+& \scriptsize{(0.002)} & \scriptsize{(0.049)} & \scriptsize{(0.060)} & \scriptsize{(0.014)} & \scriptsize{6}    & \scriptsize{(0.849)} \\
+\vspace{-0.3cm} Bogotá (c) & -0.005 & 0.368*** & 0.764*** & 0.001 &       & 6.863\\   
+& \scriptsize{(0.003)} & \scriptsize{(0.064)} & \scriptsize{(0.106)} & \scriptsize{(0.019)} &       & \scriptsize{(0.651)} \\
+\vspace{-0.3cm} Bolivar (d) & -0.006 & 0.810*** & 0.453*** & 0.370*** & 0.655 & 4.891\\   
+& \scriptsize{(0.007)} & \scriptsize{(0.092)} & \scriptsize{(0.156)} & \scriptsize{(0.072)} & \scriptsize{3}     & \scriptsize{(0.843)} \\
+\vspace{-0.3cm} Boyacá (c) & -0.020*** & 0.276*** & 1.257*** & 0.345*** &       & 4.032\\   
+& \scriptsize{(0.005)} & \scriptsize{(0.092)} & \scriptsize{(0.149)} & \scriptsize{(0.070)} &       & \scriptsize{(0.909)} \\
+\vspace{-0.3cm} Caldas (c) & -0.019*** & 0.484*** & 0.987*** & 0.199*** & 0.646 & 3.604\\   
+& \scriptsize{(0.002)} & \scriptsize{(0.056)} & \scriptsize{(0.087)} & \scriptsize{(0.043)} & \scriptsize{3}     & \scriptsize{(0.935)} \\
+\vspace{-0.3cm}Caquetá  (c) & -0.009*** & 0.356*** & 0.898*** & 0.040** & 0.854 & 3.993\\   
+& \scriptsize{(0.003)} & \scriptsize{(0.044)} & \scriptsize{(0.089)} & \scriptsize{(0.016)} & \scriptsize{7}    & \scriptsize{(0.911)} \\
+\vspace{-0.3cm}Cauca (c) & -0.009*** & 0.378*** & 0.877*** & -0.041 &       & 3.392\\   
+& \scriptsize{(0.003)} & \scriptsize{(0.042)} & \scriptsize{(0.104)} & \scriptsize{(0.053)} &       & \scriptsize{(0.946)} \\
+\vspace{-0.3cm}Cesar  (c) & -0.019*** & 0.535*** & 0.985*** & -0.022 &       & 7.239\\   
+& \scriptsize{(0.007)} & \scriptsize{(0.113)} & \scriptsize{(0.134)} & \scriptsize{(0.062)} &       & \scriptsize{(0.612)} \\
+\vspace{-0.3cm}Córdoba (c) & -0.008 & 0.447*** & 0.763*** & -0.035 &       & 9.036\\   
+& \scriptsize{(0.005)} & \scriptsize{(0.079)} & \scriptsize{(0.105)} & \scriptsize{(0.023)} &       & \scriptsize{(0.433)} \\
+\vspace{-0.3cm}Cundinamarca (c)   & -0.006*** & 0.288*** & 0.880*** & -0.200*** &       & 3.752\\   
+& \scriptsize{(0.002)} & \scriptsize{(0.030)} & \scriptsize{(0.066)} & \scriptsize{(0.035)} &       & \scriptsize{(0.927)} \\
+\vspace{-0.3cm}Chocó  (c) & -0.007 & 0.436*** & 0.788*** & -0.012 &       & 3.475\\   
+& \scriptsize{(0.006)} & \scriptsize{(0.061)} & \scriptsize{(0.158)} & \scriptsize{(0.019)} &       & \scriptsize{(0.942)} \\
+\vspace{-0.3cm}Huila  (c) & -0.023*** & 0.504*** & 1.112*** & 0.157*** &       & 4.635\\   
+& \scriptsize{(0.005)} & \scriptsize{(0.058)} & \scriptsize{(0.084)} & \scriptsize{(0.033)} &       & \scriptsize{(0.864)} \\
+\vspace{-0.3cm}La Guajira  (a) & 0.000 & 0.518*** & 0.479*** & 0.004** &       & 4.619\\   
+& \scriptsize{(0.000)} & \scriptsize{(0.028)} & \scriptsize{(0.031)} & \scriptsize{(0.002)} &       & \scriptsize{(0.866)} \\
+\vspace{-0.3cm}Magdalena (b)\dag & 0.000 & 0.570*** & 0.417*** & 0.016*** & 0.974 & 4.954\\   
+& \scriptsize{(0.001)} & \scriptsize{(0.028)} & \scriptsize{(0.032)} & \scriptsize{(0.005)} & \scriptsize{38}    & \scriptsize{(0.894)} \\
+\vspace{-0.3cm}Meta (d) & 0.116*** & -1.160*** & -1.022** & 0.335*** &       & 2.97 \\  
+& \scriptsize{(0.025)} & \scriptsize{(0.267)} & \scriptsize{(0.484)} & \scriptsize{(0.044)} &       & \scriptsize{(0.965)} \\
+\vspace{-0.3cm}Nariño (a)\dag & 0.000 & 0.612*** & 0.376*** & 0.007** &       & 6.625\\   
+& \scriptsize{(0.000)} & \scriptsize{(0.048)} & \scriptsize{(0.050)} & \scriptsize{(0.003)} &       & \scriptsize{(0.76)} \\
+\vspace{-0.3cm}Norte de Santander (c) & -0.013** & 0.451*** & 0.894*** & 0.074*** & 0.796 & 6.818\\   
+& \scriptsize{(0.007)} & \scriptsize{(0.107)} & \scriptsize{(0.119)} & \scriptsize{(0.018)} & \scriptsize{5}     & \scriptsize{(0.656)} \\
+\vspace{-0.3cm} Quindío  (c) & -0.006*** & 0.447*** & 0.736*** & -0.018* &       & 4.518\\   
+& \scriptsize{(0.002)} & \scriptsize{(0.032)} & \scriptsize{(0.056)} & \scriptsize{(0.010)} &       & \scriptsize{(0.874)} \\
+\vspace{-0.3cm}Risaralda  (c) & -0.009*** & 0.432*** & 0.835*** & 0.073*** & 0.814 & 5.305\\   
+& \scriptsize{(0.003)} & \scriptsize{(0.061)} & \scriptsize{(0.099)} & \scriptsize{(0.017)} & \scriptsize{5}    & \scriptsize{(0.806)} \\
+\vspace{-0.3cm}Santander (c) & -0.021*** & 0.477*** & 1.024*** & 0.027 &       & 4.769\\   
+& \scriptsize{(0.007)} & \scriptsize{(0.087)} & \scriptsize{(0.121)} & \scriptsize{(0.059)} &       & \scriptsize{(0.854)} \\
+\vspace{-0.3cm}Sucre (a)\dag & -0.002** & 0.670*** & 0.388*** & 0.070** & 0.903 & 11.671\\   
+& \scriptsize{(0.001)} & \scriptsize{(0.062)} & \scriptsize{(0.042)} & \scriptsize{(0.032)} & \scriptsize{10}    & \scriptsize{(0.307)} \\
+\vspace{-0.3cm} Tolima (b)\dag & 0.000 & 0.553*** & 0.449*** & 0.029* & 0.952 & 5.812\\   
+& \scriptsize{(0.001)} & \scriptsize{(0.048)} & \scriptsize{(0.061)} & \scriptsize{(0.017)} & \scriptsize{21}    & \scriptsize{(0.83)} \\
+\end{tabular}%
+\label{tabane1}%
+\end{table}%
+
+
+
+\begin{table}%[H]
+\centering
+\begin{tabular}{lllllll}
+\vspace{-0.3cm}Valle del Cauca  (c) & -0.009 & 0.320*** & 0.919*** & 0.137 & 0.715 & 6.881\\   
+& \scriptsize{(0.007)} & \scriptsize{(0.078)} & \scriptsize{(0.206)} & \scriptsize{(0.095)} & \scriptsize{4}     & \scriptsize{(0.649)} \\
+\vspace{-0.3cm}Todas las regiones (c) & -0.009** & 0.421*** & 0.817*** & -0.038 &       & 6.015\\   
+& \scriptsize{(0.004)} & \scriptsize{(0.063)} & \scriptsize{(0.124)} & \scriptsize{(0.035)} &       & \scriptsize{(0.738)} \\
+\hline
+\end{tabular}
+\label{tab:addlabel}\\
+  \raggedright  \scriptsize \textbf{Fuente:} estimaciones propias.\\
+\raggedright  \scriptsize \textbf{Nota:} ***,  **, * representan significancia estadistica al 1\%, 5\% y 10\%, respectivamente. Bartlett KerneL, Newey-West fijo, errores estándar robustos de HAC entre paréntesis.\\
+Instrumentos: brecha de los costos marginales: t-2 a t-7, inflación: t-1 a t-6.\\
+\dag Instrumentos alternativos: brecha de los costos marginales: t-8 a t-13, inflación: t-6 a t-12. \\
+Estos instrumentos alternativos se enfatizan en la captura del nivel de significancia del coeficiente $\lambda$.
+Los modelos se estiman de la siguiente manera: (a) $\pi_{t}=\pi_{t-1}+\pi_{t+1}+mcr_{t}$, (b) $\pi_{t}=\pi_{t-3}+\pi_{t+3}+mcr_{t}$, (c) $\pi_{t}=\pi_{t-6}+\pi_{t+6}+mcr_{t}$, (d) $\pi_{t}=\pi_{t-12}+\pi_{t+12}+mcr_{t}$.
+\end{table}%
+
+
+Departamentos con estructuras económicas que no pertenecen -según \cite{quintero2019impactos}- a  la industria, servicios y minería como Chocó, Córdoba, Huila, Magdalena, Norte de Santander, Quindío y Sucre, presentan mayor valor  del coeficiente de persistencia en la inflación, siendo quienes establecen los precios de manera retrospectiva, así como en la adopción de medidas en materia de política monetaria pueden tener un efecto lento en la actividad económica. No obstante, estimaciones alternativas aparecen en la tabla \ref{tabane1}, donde ocurren casos particulares para los departamentos de Tolima, Sucre, Nariño, Magdalena, La Guajira y Bolivar en diferentes rezagos e instrumentos.\\
+
+Por lo anterior, la figura \ref{estim} presenta la ubicación geográfica de los coeficientes $\gamma_{b}$, $\gamma_{b}$, $\lambda$ y $\theta$ a partir de los resultados de la tabla \ref{tab31}, permitiendo observar en primer lugar la baja persistencia de la inflación en departamentos que comunican el pacífico y el caribe con el centro del país, en este sentido, el impacto que pueda tener un mecanismo de transmisión de la política monetaria como es el caso de la tasa de interés pueden tener mayor incidencia por la alta ponderación observada en la inflación futura. En contraste, el coeficiente de la brecha del costo marginal ($\lambda$) difiere su tamaño en diferentes regiones, sin embargo, al apreciar la baja probabilidad de que las empresas mantengan los precios sin cambios en el tiempo, los departamentos ubicados en la zona central del país -a excepción de Bolivar- van a ser quienes cuenten con esta característica.
+
+
+\begin{figure}[H]
+\caption{Resultados de estimaciones espaciales}
+\begin{subfigure}{0.22\textwidth}
+  \centering
+  % include first image
+	\includegraphics[width=2\textwidth]{Figuras/bac} 
+  \caption{$\gamma_{b}$}
+  \label{}
+\end{subfigure}
+\begin{subfigure}{0.22\textwidth}
+  \centering
+  % include second image
+	\includegraphics[width=2\textwidth]{Figuras/forw} 
+  \caption{$\gamma_{f}$}
+  \label{}
+\end{subfigure}
+\begin{subfigure}{0.22\textwidth}
+  \centering
+  % include first image
+	\includegraphics[width=2\textwidth]{Figuras/cm} 
+  \caption{$\lambda$}
+  \label{}
+\end{subfigure}
+\begin{subfigure}{0.22\textwidth}
+  \centering
+  % include second image
+	\includegraphics[width=2\textwidth]{Figuras/theta} 
+  \caption{$\theta$}
+  \label{estimd}
+\end{subfigure}\\
+  \raggedright  \scriptsize \textbf{Fuente:} estimaciones propias.\\
+\raggedright  \scriptsize \textbf{Nota:} la representación gráfica de los coeficientes se expresa  cuantiles. El color oscuro presenta menor tamaño del coeficiente y el más claro mayor. Color gris no presenta información.\\
+\label{estim}	
+\end{figure}
+ 
+El grado de competencia en que se mueven las empresas es de la mayor importancia para entender la forma como éstas ajustan sus precios. En mercados altamente competitivos las empresas son más susceptibles de cambiar sus precios como respuesta a un choque, dado que el costo de oportunidad de no hacerlo a un nivel óptimo es muy alto \citep{misas2009formacion}. En este sentido, cuando se observa la probabilidad de mantener sin cambio los precios (figura \ref{estimd}), las empresas en los departamentos parecen operar en mercados poco competidos, principalmente en lugares aledaños al epicentro del país.\\
+	
+Por otra parte, la forma reducida del modelo NKPC para cada departamento muestra que las restricciones de sobreidentificación son válidas  en sus parámetros.\footnote{La hipótesis nula muestra  que las restricciones de sobreidentificación son válidas.} Además,  por naturaleza el modelo cuenta con autocorrelación, debido a que una de las características de la estructura teórica es la adición de la prospección en la dinámica inflacionaria. Para \cite{baardsen2004econometric}, la autocorrelación está relacionada con el problema de especificación incorrecta y puede generar afectación en los instrumentos planteados por GMM como lo evidencia \cite{zhang2009observed}. No obstante, esto no fue tenido en cuenta en los trabajos preliminares de la NKPC \citep{gali1999inflation,gali2001european,gali2005monetary}.\\
+
+Para \cite{mehrotra2010modelling}, la posibilidad de que las tasas de inflación hayan experimentado choques comunes, evidencian movimientos comunes por parte de los residuos de las regresiones. La correlación de los residuos para el caso de los departamentos de Colombia (figura  \ref{anefig2}), es aparentemente alta entre 2010 y 2019. En promedio la correlación del residual del departamento hacia los demás va desde 0.42 (Chocó) a 0.70 (Meta), con un promedio total de 0.59. Sin embargo, al comparar el comportamiento de la tasa de inflación a partir de  los residuos de las regresiones según su estructura económica, los departamentos basados en la minería y  la industria presentan una correlación del 61\% y 62\%, respectivamente, mientras que las economías que no se agrupan en las anteriores estructuras están en 52\%. \\
+
+Por otro lado, la división entre regiones muestra divergencias más claras en el comportamiento de la inflación. Las correlaciones de los residuos en el modelo planteado indican que las regiones del Centro Oriental y Occidental presentan en promedio movimientos similares del 66\%, mientras que para economías de la región del Caribe y el Pacífico los coeficientes de correlación son más bajos, correspondientes al 62\% y 57\%. Estos hallazgos se asemejan a los encontrados por \cite{quintero2019impactos}, donde las zonas costeras del país presentan mayores efectos diferenciales de la política monetaria.\footnote{La agrupación entre estructuras económicas y regiones se toma de \cite{quintero2019impactos}.} \\
+
+Para complementar las estimaciones de la tabla \ref{tab31}, se construye un panel dinámico para estimar el modelo de la ecuación \eqref{21}. No obstante, \cite{mileva2007using} aclara que este tipo de modelos puede enfrentar diferentes problemas como: a) problemas de endogeneidad en donde el regresor se correlaciona con el término de error, b) características invariantes en el tiempo del departamento (efecto fijo), como la geografía y la demografía pueden estar correlacionados con las variables explicativas, c)  la existencia de autocorrelación con variables rezagadas, y d) la naturaleza de los datos panel al tener una dimensión corta de tiempo y amplia dimensión espacial. Por lo anterior, \cite{mileva2007using}  sugiere que estos problemas se resuelven usando GMM a partir del método de \cite{arellano1991some}.\\
+
+\begin{figure}%[H]
+  	\centering 		
+  	\caption{Residuos de las regresiones}
+	\includegraphics[width=1\textwidth]{Figuras/resi}
+	\raggedright % \scriptsize \textbf{Nota:} 
+		\label{anefig2}\\
+  \raggedright  \scriptsize \textbf{Fuente:} estimaciones propias.
+	\end{figure}
+Inicialmente, se realiza estimaciones constatando que la NKPC se cumpla para el país. La tabla \ref{tab:D2} considera la ecuación preliminar en $\pi_{t-3}$, $\pi_{t+3}$ y $mcr_{t}$. A pesar que los coeficientes $\gamma_{b}$ y $\gamma_{f}$ son estadísticamente significativos en 1\% y para $\lambda$ en 5\%, este último es negativo. De igual manera, en periodos rezagados y en prospección para la inflación, la brecha de los costos marginales en periodos $t$, $t-3$, $t-6$ y $t-12$ presenta coeficientes negativos. Sin embargo, sería hasta  $t-18$ (un año y medio) que el coeficiente de la brecha de los costos marginales ($\lambda$)  explica la dinámica inflacionaria para el caso de Colombia, consistente con la teoría, como se presenta en la Tabla \ref{panel}. Estos modelos evidencian la capacidad explicativa de las variables en su conjunto a partir de la prueba de Wald ($\gamma_{f}+\gamma_{b}=1$), la cual presenta $prob>chi^{2} =0.000$, indicando que el total de los regresores explican significativamente la variable dependiente, $\pi_{t}$.
+
+\begin{table}[H]
+\centering
+\caption{Panel dinámico de la NKPC en Colombia (2010-2019)}
+\resizebox{15cm}{!} {
+  \begin{tabular}{ p{3cm} p{1.2cm} p{1.2cm} p{1.5cm} p{1.2cm} p{1.2cm} p{1.2cm} p{1.2cm} p{1.2cm} p{1.2cm}}
+  \hline
+  Modelo  & $\gamma_{b}$  & $\gamma_{f}$ & $\lambda$   & $\theta$ &  Wald  &  AR(1)  &  AR(2)  & Hansen &  Sargan   \\
+  &        $\pi_{t-k}$    &    $\pi_{t+k}$    &   $mcr_{t}$    &   $\frac{1}{1-\theta}$    &  \scriptsize{(p-value)}  &  \scriptsize{(p-value)}  &  \scriptsize{(p-value)}  & \scriptsize{(p-value)} &  \scriptsize{(p-value)}   \\
+   \hline
+    \hline
+   \scriptsize{$\pi_{t-3}+\pi_{t+3}+mcr_{t-18}$} & 0.479*** & 0.509*** & 0.143** &  0.804  &   268.66  &  2.043  &  1.042  &  23.93 &  2927.3    \\
+  & \scriptsize{(0.052)} & \scriptsize{(0.064)} & \scriptsize{(0.064)} & \scriptsize{5}     & \scriptsize{(0.000)} & \scriptsize{(0.041)} & \scriptsize{(0.297)} & \scriptsize{(1.000)} & \scriptsize{(0.000)} \\
+   \scriptsize{$\pi_{t-6}+\pi_{t+6}+mcr_{t-18}$} & 0.513*** & 0.376* & 0.487*** &  0.612  &   27.74  &  2.467  &  1.948  & 20.93 &  2276.2   \\
+  & \scriptsize{(0.139)} & \scriptsize{(0.198)} & \scriptsize{(0.173)} &  \scriptsize{3}    & \scriptsize{(0.000)} & \scriptsize{(0.013)} & \scriptsize{(0.041)} & \scriptsize{(1.000)} & \scriptsize{(0.000)} \\
+   \hline
+  \end{tabular}%
+}
+\label{panel}\\
+  \raggedright  \scriptsize \textbf{Fuente:} estimaciones propias. \\
+\raggedright  \scriptsize \textbf{Nota:} ***,  **, * representan significancia estadistica al 1\%, 5\% y 10\%, respectivamente. Bartlett KerneL, Newey-West fijo, errores estándar robustos de HAC entre paréntesis.\\
+Instrumentos: inflación: t-12. \cite{wardhonoestimated}  utiliza  $\pi_{t-4}$ como variable instrumental para estudiar la NKPC para países del Sur de Asia con datos panel en trimestres.\\
+\end{table}%
+
+En primer lugar se contrasta con tres periodos de inflación tanto atrás como hacia adelante, luego en seis períodos.  Esta última presenta serios inconvenientes, como lo son:  a) en sus coeficientes la robustez de los errores estándar son grandes, b)  a pesar de que se acepta la hipótesis nula en el test de \cite{hansen1982generalized}  frente a la validez de las restricciones de sobreidentificación, al tomar el valor 1 se anula lo mencionado (no se considera el test \cite{sargan1958estimation} la cual considera la misma hipótesis de Hansen),\footnote{Es más conveniente utilizar el test de Hansen cuando los errores están distribuidos de forma heterocedástica (Two-step para xtabond2 en Stata). Lo anterior se comprueba en la prueba de White al rechazar la hipótesis nula que señala la presencia de homocedasticidad.}  por lo tanto, se rechaza la hipótesis nula, no estaría cumpliendo con el test de \cite{roodman2009note} (este problema ocurre en todas las estimaciones).\footnote{Este test señala que el número de instrumentos debe ser menor que al número de grupos, lo cual para este caso es de 116 instrumentos y 24 grupos.  La reducción de los instrumentos esta sujeta al aumento de los rezagos, por lo tanto, se opta por elegir el modelo acorde con otras condiciones.} c)  Presencia de autocorrelación serial de segundo orden según el test de \cite{arellano1991some} (AR(2)), debido a que se rechaza la hipótesis nula de no autocorrelación.\footnote{Es previsible que exista correlación serial de primer orden (AR (1) $pr > z < 0.05$). En este caso estimar el modelo utilizando directamente el regresor para este caso $\pi_{t-1}$ estaría sesgado.} \\
+
+Por lo anterior, el primer modelo configura gran parte de su validez al considerar que el coeficiente de la inflación vista hacia el futuro, $\gamma_{f}$, aún sigue siendo importante en la explicación de la dinámica inflacionaria del país, como se evidenció en cada uno de los departamentos. Así mismo, el bajo tamaño en la robustez de los errores y la no autocorrelación serial (AR(2)) lo hace apto en su validez, a pesar de los problemas de sobreidentificación. No obstante, los resultados arrojados se asemejan al grado de rigidez de precios en las empresas evidenciado por \cite{galvis2010estimacion}, señalando que alrededor del 80\% empresas dejan fijo los precios en promedio durante 5 periodos, que para el caso del presente modelo sería en meses, a su vez que alrededor del 20\% de las empresas ajustan su precio según el valor previo de los costos marginales reales.
+
+\begin{figure}[H]
+\caption{Resultados de las estimaciones en $\gamma{b}$, $\gamma{f}$ y $\lambda$}
+\begin{subfigure}{0.48\textwidth}
+  \centering
+  % include first image
+	\includegraphics[width=1\textwidth]{Figuras/pas} 
+  \caption{$\gamma{b}$ vs $\lambda$}
+  \label{}
+\end{subfigure}
+\begin{subfigure}{0.48\textwidth}
+  \centering
+  % include second image
+	\includegraphics[width=1\textwidth]{Figuras/fut} 
+  \caption{$\gamma{f}$ vs $\lambda$}
+  \label{}
+\end{subfigure}
+	\label{grap}\\
+  \raggedright  \scriptsize \textbf{Fuente:} estimaciones propias.
+\end{figure}	
+
+En resumen, la figura \ref{grap} recoge los coeficientes expuestos en las tablas \ref{tab31} y \ref{panel}, donde se contrasta la relación entre  la brecha de los costos marginales ($\lambda$), inflación rezagada ($\gamma{b}$) y la inflación esperada ($\gamma{f}$). En general, los coeficientes presentan mayor ponderación en cuanto a brecha de los costos marginales e inflación esperado se refiere, esencial en el modelo NKPC. Sin embargo, al comparar el coeficiente obtenido por información del panel y de manera agregada por departamento, permanecen distantes a los coeficientes individuales. El primero presenta mayor incidencia de la inflación rezagada que al resto de los departamentos según la explicación que se le da a la dinámica inflacionaria, mientras que en el otro caso, el  coeficiente negativo de la brecha de los costos marginales sobresale que al resto de los coeficientes por su valor negativo. 
+
+\section{Rigidez de precios y variables por departamentos}
+A partir de las diferencias presentadas en el modelo NKPC híbrido para explicar  la dinámica inflacionaria de cada departamento, este mismo no infiere de las posibles razones de la formación en la rigidez de precios. Por lo tanto, en este apartado se adaptan los modelos probit  y OLS para analizar el proceso inflacionario frente a otras variables económicas. La tabla \ref{probit} muestra los resultados de la estimación probit con base en una variable ficticia que toma valores de uno cuando la inflación es prospectiva y la brecha del costo marginal es significativa al 1\% y 5\%, de lo contrario dicha variable tomaría cero,  similar a las estimaciones realizadas por \cite{mehrotra2010modelling}.
+
+\begin{table}[H]
+\centering
+\caption{Resultados de la estimación probit}
+\begin{tabular}{cccc}
+\hline
+& (1)   & (2)   & (3) \\ 
+\hline
+\hline
+\vspace{-0.3cm}   Apertura & -0.159* & -0.148* & -0.165* \\
+& \scriptsize{(0.089)} & \scriptsize{(0.079)} & \scriptsize{(0.088)} \\
+\vspace{-0.3cm}    Tasa de ocupación  & -0.358** & -0.400** & -0.391* \\
+& \scriptsize{(0.181)} & \scriptsize{(0.200)} & \scriptsize{(0.202)} \\
+\vspace{-0.3cm}    Sector primario  & -0.424* & -0.517** & -0.471* \\
+& \scriptsize{(0.230)} & \scriptsize{(0.245)} & \scriptsize{(0.242)} \\
+\vspace{-0.3cm}    Tasa de crecimiento del PIB & -6.073 &       &  \\
+& \scriptsize{(9.672)} &       &  \\
+\vspace{-0.3cm}    Participación del PIB  &       & -0.358 &  \\
+&       & \scriptsize{(0.366)} &  \\
+\vspace{-0.3cm}     PIB per cápita  &       &       & -0.001 \\
+&       &       & \scriptsize{(0.001)} \\
+\vspace{-0.3cm}     constante & 26.493** & 30.243** & 29.648** \\
+& \scriptsize{(13.427)} & \scriptsize{(14.741)} & \scriptsize{(15.028)} \\
+\hline
+\end{tabular}%
+\label{probit}\\
+  \raggedright  \scriptsize \textbf{Fuente:} estimaciones propias. \\
+\raggedright  \scriptsize \textbf{Nota:} ***,  **, * representan significancia estadistica al 1\%, 5\% y 10\%, respectivamente. Errores estándar entre paréntesis.
+\end{table}%
+
+La apertura definida como la relación entre el comercio exterior y el PIB regional es estadísticamente significativa al 10\% con signo negativo en los tres modelos, esto sugiere que la NKPC se ajusta a los datos de aquellos departamentos que no presentan una transición de la economía basada más en el mercado. La tasa de ocupación  y el sector primario al igual que la variable de apertura, explican la variable dummy de manera negativa. Una menor tasa de ocupación puede estar expresada en la dinámica inflacionaria a partir de la inflexibilidad parcial o total de los precios a la baja, desajustes sectoriales que afecten a bienes determinados o por características estructurales de los mercados de trabajo y de bienes.\\
+
+El marco neokeynesiano con visión de futuro no implica ningún compromiso entre inflación y costos marginales o estabilización de la brecha del producto, señalando \cite{blanchard2007real} que la coincidencia divina desaparece una vez que se introducen imperfecciones reales (por ejemplo, rigideces de los salarios reales) al modelo. Por otra parte, el sector primario caracterizado por revisar sus precios con mayor frecuencia que en otros sectores \citep{misas2009formacion}, presume un posible direccionamiento  contrario al que supone el modelo en un entorno de rigideces de precios. No obstante, variables que no se tienen en cuenta en el momento pueden explicar las estimaciones obtenidos en la NKPC para los departamentos de Colombia.\\
+
+Los resultados encontrados en la tabla 	\ref{tab31}  referente a la probabilidad  de mantener  los precios sin cambios en el tiempo en empresas para cada departamento ($\theta$), se intentan dar posibles razones de tal fenómeno, por medio de la estimación OLS explicadas por diferentes variables (tabla \ref{mco}). En este caso el índice departamental de competitividad (IDC)\footnote{Los componentes que integran el IDC pueden ser vistos en el pie de tabla \ref{variab}.}  explica de manera negativa la rigidez de precios en los departamentos, es decir, los supuestos implícitos en el modelo sobre competencia imperfecta hacen que el IDC  se comporte con el coeficiente esperado, por lo tanto, a mayor valor del IDC que tome el departamento menor será la probabilidad de mantener los precios rígidos por parte de las empresas.\\
+
+En contraste, la rigidez en los precios es explicado positivamente para variables como el PIB per cápita y el sector terciario. En el caso especial del sector terciario, la mayor participación en el PIB departamental por parte de  subsectores como información y comunicaciones, actividades financieras, inmobiliarias, profesionales y en materia de administración pública y defensa, han originado posibles rigideces de precios en los departamentos. La menor productividad del sector terciario por su baja exposición a la competencia tanto a nivel local como internacional, así como la participación estatal en la baja competitividad, generando mayor rigidez en la oferta, permite inferir un comportamiento de precios rígidos en el tiempo establecidos por las empresas.\\
+
+\begin{table}%[H]
+\centering
+\caption{Resultados de  estimación por OLS}
+\begin{tabular}{cccc}
+\hline
+& (1)   & (2)  &  (3) \\
+\hline
+\hline
+\vspace{-0.3cm}    IDC  & -0.067** & -0.076*** & -0.071*** \\
+& \scriptsize{(0.025)} & \scriptsize{(0.026)} & \scriptsize{(0.025)} \\
+\vspace{-0.3cm}    PIB per cápita  & 0.001* & 0.001** & 0.001** \\
+& \scriptsize{(0.001)} & \scriptsize{(0.001)} & \scriptsize{(0.001)} \\
+\vspace{-0.3cm}    Sector terciario  & 0.009*** & 0.009*** & 0.008*** \\
+& \scriptsize{(0.003)} & \scriptsize{(0.003)} & \scriptsize{(0.003)} \\
+\vspace{-0.3cm}    Tasa de crecimiento del PIB & 0.481 &       &  \\
+& \scriptsize{(0.682)} &       &  \\
+\vspace{-0.3cm}    Tasa de ocupación &       & 0.003 &  \\
+&       & \scriptsize{(0.004)} &  \\
+\vspace{-0.3cm}    Apertura &       &       & 0.001 \\
+&       &       & \scriptsize{(0.001)} \\
+\vspace{-0.3cm}     constante & 0.683*** & 0.535** & 0.709*** \\
+& \scriptsize{(0.126)} & \scriptsize{(0.242)} & \scriptsize{(0.112)} \\
+\hline
+\end{tabular}
+\label{mco}\\
+  \raggedright  \scriptsize \textbf{Fuente:} estimaciones propias. \\
+\raggedright  \scriptsize \textbf{Nota:} ***,  **, * representan significancia estadistica al 1\%, 5\% y 10\%, respectivamente. Errores estándar entre paréntesis.\\
+El grado de rigidez de precios ($\theta$) obtenido en la Tabla \ref{tab31} y que hace de variable explicada en estos modelos, es despejada a partir de los valores absolutos de $\lambda$.\\
+Los modelos estimados no presentan multicolinealidad, se acepta la hipótesis de normalidad en los residuales de los  modelos, y por último, se encuentra que  las varianzas de los
+residuales son constantes, por lo que se dice que la varianza de los residuales es homocedastica.
+\end{table}%
+
+Por otro lado, otras variables como la tasa de crecimiento del PIB, tasa de ocupación y el grado de apertura de manera aparecen con coeficientes no significativos para explicar este fenómeno. Esta última esperaría que las economías caracterizadas por problemas estructurales e instituciones débiles (incluidos, por ejemplo, los mercados emergentes)  presenten mayores pesos de persistencia de la inflación en el NKPC que en mercados liberales. Sin embargo, al igual que los modelos probit, aún queda por explicar el proceso inflacionario en variables que posiblemente fueron descartadas por ausencia de información. 
+
+\section{Discusión de los resultados}
+Los resultados anteriores específicos para cada departamento permiten sacar algunas conclusiones generales. En particular, las tasas de inflación en todos los departamentos analizados tienen importantes componentes prospectivos y, por lo tanto, la inflación actual está determinada (al menos parcialmente) por su valor futuro esperado. Además, el término retrospectivo también es significativo, pero tiene menos incidencia que el coeficiente de inflación esperada. Esto es consistente con el resultado de estudios previos utilizando mayor relevancia en la inflación con expectativas \citep{gali2001european,ramos2008inflation,mehrotra2010modelling,vavsivcek2011inflation}.\\ 
+
+Los resultados son robustos a la inclusión de rezagos adicionales de la inflación (tabla \ref{tabane1}).\footnote {Los resultados por la metodología de eliminación de tendencia para el caso de la brecha de los costos marginales. Sin embargo, los datos con su tendencia no cambian significativamente los resultados de las estimaciones.}  Sin embargo,  aún queda por abordar problemas referentes a la instrumentación débil e impertinente vistos en la inexactitud de la estimación de los parámetros estructurales de la NKPC \citep{ma2002gmm}  y, por otra parte, revisar con mayor detenimiento los componentes de los costos marginales. Por lo tanto,  la  solución a estos inconvenientes, posiblemente van a facilitar la   comprensión  del proceso inflacionario en un país como Colombia que conduce su política monetaria dentro de un marco de metas de inflación. \\
+
+El modelo estructural detrás de la NKPC sugiere que el efecto de la política monetaria sobre la inflación se produce a través del costo marginal, pero si esta no es una variable que impulse la inflación, la política monetaria puede influir en la inflación solo a través de su credibilidad y su efecto sobre las expectativas de inflación. Los resultados utilizando el GMM tienden a respaldar la NKPC  y  resaltan la participación de la inflación esperada en cada uno de los departamentos, a pesar que el coeficiente $\lambda$  es estadísticamente significativo y consistente con la teoría en  solo 7 de los 24 departamentos (incluido la capital del país, Bogotá). \\
+
+Por otra parte, cada vez es más amplia la discusión de si la participación del ingreso laboral es una buena \textit{proxy} del costo marginal real, por ejemplo, para este caso se evidenció que tan solo la mitad de los departamentos cumplió con el requisito en que $\lambda>0$, para explicar la prociclicidad de los costos marginales. Sin embargo, para mejorar este supuesto de una manera razonable, \cite{mazumder2010new} sugiere reconocer el comportamiento del empleo cuasi fijo y que el salario real este en  función de las horas, lo cual supondría más realismo durante el ciclo económico al tenerse en cuenta en la medida de los costos marginales reales.  \\
+
+Los costos marginales en algunos departamentos son de hecho relevantes en la explicación de la dinámica inflacionaria, enfatizada por la NKPC. Las diferencias en el proceso de formación de precios entre los departamentos son importantes, porque de ello dependerá directamente la efectividad de la política monetaria. El coeficiente de \cite{calvo1983staggered} ($\theta$)  que explica la probabilidad de mantener los precios fijos en el tiempo es heterogénea entre departamentos, donde mantiene un rango de 0.695 a 0.958, lo cual implica duraciones de precios en promedio entre 3 hasta 24 meses.  Al comparar por regiones, la zona central perteneciente a Boyacá, Cundinamarca, Tolima y Caldas presentan menor rigidez de precios (figura \ref{estim}), asociado a la baja persistencia de la inflación ($\gamma_{b}$) y por consiguiente mayor énfasis en la inflación esperada ($\gamma_{b}$) por parte de las empresas. \\
+%En el caso del coeficiente de la brecha de los costos marginales ($\lambda$) no es observable algún patrón espacial.\\
+
+Acerca del total de las regiones, cuando se considera que la fijación de precios se realiza con base en el valor actual de los costos marginales reales, estos presentan comportamiento anticíclico, contrario a la relación procíclica que debe presentar la inflación y los costos marginales. No obstante, la estimación de la NKPC por medio de un panel dinámico, explica que hasta el valor en el período 18 de los costos marginales se observan de manera significativa movimientos similares a la inflación, dando como resultados iguales a los obtenidos por \cite{galvis2010estimacion} en términos de la probabilidad de mantener inalterados los precios, aunque en diferentes periodos y tamaño en los coeficientes $\gamma_{b}$, $\gamma_{f}$ y $\lambda$.\footnote{Al tomar los datos en trimestres \cite{galvis2010estimacion}, se dice que en promedio las empresas mantienen los precios rígidos en 6 trimestres, contrario en este caso que es a 6 meses.} Este hecho puede deberse a un lento movimiento del costo marginal, factor  importante que explica el alto grado evidenciado en la persistencia de la inflación.
+ 
+
+
+\chapter*{Conclusiones} \label{conclusiones}
+\addcontentsline{toc}{chapter}{Conclusiones}
+Este estudio emplea una Curva de Phillips Neokeynesiana (NKPC) híbrida para analizar la dinámica de los precios en los departamentos en Colombia. La evidencia muestra que el proceso inflacionario ha sido más prospectivo en los últimos años, lo que también es consistente con una mayor credibilidad en la meta de inflación, puesto que la eficacia de la política monetaria depende del papel de expectativas en la determinación de la inflación, que es de importancia para la conducción de la política en una economía con diferencias regionales como la colombiana. No obstante, la inflación rezagada (persistencia de la inflación)  también es significativa para todos los departamentos y aunque con menor incidencia   también juega un papel clave en la dinámica inflacionaria. \\
+
+Los resultados obtenidos muestran que la formación de precios presenta comportamientos diferenciales en las regiones geográficas del país. Las regiones ubicadas en el centro del país  presentan en su mayoría menor probabilidad de que sus empresas mantengan los precios sin cambios en el tiempo, destacando el papel de la inflación esperada y los costos marginales. Por el contrario, las regiones situadas en la zonas costeras parecen evidenciar mayor grado de rigidez en los precios, puesto que las empresas tardan en modificar los precios. Además, al evaluar los choques comunes que resulta de las correlaciones de los residuos en las estimaciones, el comportamiento de la inflación diverge en departamentos que no se basan en economías mineras e industriales y por regiones como en el caso del Pacifico y el Caribe. \\
+
+No obstante, al evaluar la dinámica inflacionaria independiente sobre cada uno de los departamentos, las diferencias encontradas no están relacionadas con la ubicación geográfica. En el caso de la región Caribe, el fuerte impacto de la política monetaria puede ser explicado por la importancia que tiene las expectativas en la inflación principalmente en el departamento de Bolivar. Para la región Pacifica es clave Nariño y Valle del Cauca, para el Centro Oriente son Boyacá, Santander y Tolima, y por último, en el caso de Centro Occidental es determinante el departamento de Caldas.\\
+
+Dadas las diferencias departamentales encontradas, en este trabajo se buscó también determinar si se podía encontrar una explicación a estas diferencias y su incidencia en el comportamiento de los precios a partir de la composición económica de cada departamento, el grado de apertura y otras variables económicas. Por lo tanto, se detecta un bajo grado de desarrollo del sistema de mercado (apertura al comercio) y la relativa exposición a presiones excesivas de demanda (tasa de ocupación, sector primario, tasa de crecimiento del PIB) explica la relevancia del modelo NKPC en los departamentos en Colombia. Así mismo, el grado de  rigidez de precios presentados en las empresas de cada departamento es explicado por su baja competitividad, incidencia por mayores ingresos en la población  y alta participación del sector terciario en las economías. Las diferencias en los procesos y mecanismos de inflación entre departamentos tienen implicaciones importantes para la conducción de política monetaria en Colombia.\\
+
+Los resultados encontrados son alentadores en relación con la literatura internacional, evidenciando que la curva de Phillips neokeynesiana es también verificada empíricamente para la economía colombiana y puede dar luces sobre la explicación de la dinámica inflacionaria. La importancia de tener una estimación a escala regional a partir de micro fundamentos alrededor de la NKPC, sugiere  la participación de la política económica como herramienta estabilizadora ante los ciclos adversos que enfrenta la economía colombiana.
