@@ -1,1 +1,2485 @@
+/*//#crear tabla*/*/
+CREATE TABLE empleados(
+numempleado INTEGER,
+nombre VARCHAR (45),
+apellidopaterno VARCHAR(45),
+apellidomaterno VARCHAR(45),
+fechanacimiento DATE,
+sueldo DECIMAL (7,2),
+puesto VARCHAR(45)
+);
+/*//# mostrar la tabla*/
+SELECT * FROM empleados;
+
+/*//#insertar los datos*/
+INSERT INTO empleados (numempleado, nombre,apellidopaterno, apellidomaterno, fechanacimiento, sueldo,puesto)
+VALUES (1, 'Juan Jose', 'Lopez', 'Sanchez', '1992-07-28',4250.8,'Contador'),
+(2,'Ana Maria','Gonzalez', 'Miranda','1988-05-25',3845.2, 'Secretaria'),
+(3,'Danel', 'Garza', 'Lopez', '1991-02-18','6000', 'Gerente');
+
+/*//#Solo ver un par de columnas*/
+SELECT nombre,apellidopaterno, apellidomaterno, sueldo FROM empleados;
+
+/*###################################################
+###################################################
+###################################################*/
+
+CREATE TABLE alumnos2(
+numcontrol BIGINT,
+nombre VARCHAR(45),
+apellidopaterno VARCHAR(45),
+apellidomaterno VARCHAR(45),
+fechanacimiento DATE,
+fechaingreso DATE,
+telefono VARCHAR(12),
+carrera VARCHAR(45),
+promedio DECIMAL(6,2)
+);
+
+
+
+INSERT INTO alumnos2(numcontrol,nombre,apellidopaterno,apellidomaterno,fechaingreso,fechanacimiento,telefono,carrera,promedio)
+ VALUES(1000,'Juan','Vazquez','Perez','2016-05-08','1992-02-18',
+'1234564343','Mercadotecnia',95.92),(1001,'Juan','Vazquez','Perez','2018-02-08','1991-05-12',
+'1234564348','Ingenieria en Sistemas',85.2),(1002,'Carlos Miguel','Lopez','Perez','2017-03-15','1989-07-15',
+'1234564349','Fisico Matematico',90),(1003,'Maria Carlota','SAnchez','Perez','2018-02-02','1995-08-17',
+'1234564322','Psicologia',95.8),(1004,'Casandra','Gavilan','Gonzalez','2018-07-25','1995-06-18',
+'1234564335','Matematicas puras',89.2),(1005,'Andrea','Davila','Antonios','2018-06-02','1996-06-21',
+'1234564326','Biologia',99),(1006,'Joao','Aguiar','Garza','2015-03-15','1993-03-28',
+'1234564327','Ingenieria Mecatronica',92.4),(1007,'Daniel','Zambrano','Espino','2015-07-18','1996-02-05',
+'1234564328','Robotica',100),(1008,'Flor','Velazquez','Espinoza','2017-02-08','1995-05-07',
+'1234564345','Contabilidad',100),(1009,'Celeste','Vazquez','De la O','2015-08-22','1995-01-31',
+'1234564385','Bionica',99.9),(1010,'Abigail','Andrade','Beltran','2020-05-12','1999-01-17',
+'1234564373','Fisico Matematico',85.2),(1011,'Juan Carlos','Espinoza','Campos','2020-05-15','1995-01-15',
+'1234564399','Fisico Matematico',100),(1012,'Dionicio','Espino','Espinoza','2021-06-15','2003-05-12',
+'1234564398','Ingenieria en Sistemas',85),(1013,'Jose Carlos','Flores','Garcia','2021-07-17','2003-08-12',
+'1234564390','Contabilidad',82.9),(1014,'Jose Pedro','Valle','Perez','2021-08-01','2002-06-25',
+'1234564312','Ingenieria Quimica',84.2),(1015,'Miguel Luis','Flores','Sanchez','2021-01-15','2002-05-28',
+'1234564315','Fisico Matematico',92.5),(1016,'JoseMarcelo','Gonzalez','Miranda','2018-05-12','1998-06-25',
+'1234564222','Mercadotecnia',75.9),(1017,'Flor Estela','Huerta','Espinosa','2018-07-09','1998-06-25',
+'1234564555','Fisica',91.1),(1018,'Cristian Jesus','Kilberth','Perez','2018-01-08','1998-02-01',
+'1234564532','Artes',94.2),(1019,'Maria Cecilia','Lopez','Lopez','2020-07-28','2003-05-25',
+'1234564145','Psicologia',85.6),(1020,'Juan Alberto','Martinez','Vazquez','2016-07-22','1998-02-25',
+'1234564142','Medicina',80.2),(1021,'Franchesco Daniel','Nunez','Perez','2017-07-15','1995-09-02',
+'1234564248','Medicina',99.2),(1022,'Laura','Quinonez','Garcia','2020-02-08','2003-05-04',
+'1234564788','Medicina',95.2);
+
+
+SELECT * FROM alumnos2 where promedio>= 90
+
+select nombre,apellidopaterno,apellidomaterno,carrera,promedio FROM alumnos2
+select nombre,apellidopaterno,apellidomaterno,carrera,promedio FROM alumnos2 where promedio>= 90
+
+/*#Se realiza un melt (R), unir columnas en una fila (Nombrecompleto)*/
+SELECT nombre||' '||apellidopaterno||' '||apellidomaterno AS Nombrecompleto, carrera,promedio FROM alumnos2 where promedio>= 90
+
+/*//#adicion de una condicion (and)*/
+select * FROM alumnos2 where promedio>= 90 AND carrera='Mercadotecnia'
+select * FROM alumnos2 where promedio< 90 AND carrera='Ingenieria en Sistemas'
+
+/*//#Diferencia entre and y or (si o si con and se deben cumplir las dos carreras, con or las dos pasan)*/
+select * FROM alumnos2 where carrera='Ingenieria en Sistemas' or carrera='Contabilidad'
+select * FROM alumnos2 where carrera='Ingenieria en Sistemas' and carrera='Contabilidad'
+
+/*//#excepto los de la carrera*/
+select * FROM alumnos2 where not carrera='Ingenieria en Sistemas'
+
+
+/*###################################################
+###################################################
+###################################################*/
+CREATE TABLE clientes(
+idcliente INTEGER,
+	nombre VARCHAR(45),
+	apellidopaterno VARCHAR(45),
+	apellidomaterno VARCHAR(45),
+	telefono VARCHAR(12),
+	ciudad VARCHAR(45),
+	estado VARCHAR(45),
+	totaldeuda DECIMAL(8,2),
+	tipocliente CHARACTER(1)
+	);
+	
+	INSERT INTO clientes VALUES(1000,'Alberto','Esparza','Suarez','2222222222','Mochis','Sinaloa',8000,'A'),
+	(1001,'Alberto','Gomez','Perez','2222222222','Mochis','Sinaloa',8000,'A'),
+	(1002,'Juan Jose','Sanchez','Guerra','2222222222','Mazatlan','Sinaloa',15000,'A'),
+	(1003,'Maria Antonia','Lopez','Gamez','2222222222','Guasave','Sinaloa',2500,'B'),
+	(1004,'Luis Roman','Espino','Garza','2222222222','Guadalajara','Jalisco',1000,'A'),
+	(1005,'Ana Estela','Juarez','Lima','2222222222','Mochis','Sinaloa',250.4,'C'),
+	(1006,'Jose','Esparza','Suarez','2222222222','Guadalajara','Jalisco',800,'A'),
+	(1007,'Alberto','Flores','Gonzalez','2222222222','Tijuana','Baja California',1500,'B'),
+	(1008,'Luis Pedro','Higo','Suarez','2222222222','Tijuana','Baja California',1000,'A'),
+	(1009,'Jose Carlos','Mendoza','Lopez','2222222222','Ensenada','Baja California',4500,'A'),
+	(1010,'Maria Laura','Puga','Gomez','2222222222','Mochis','Sinaloa',2000,'A'),
+	(1011,'Sasha','Lopez','Quintana','2222222222','Puerto Vallarta','Jalisco',1500,'B'),
+	(1012,'Flor Celeste','Ramos','Espino','2222222222','Veracruz','Veracruz',8000,'A'),
+	(1013,'Jose Alberto','Sosa','Flores','2222222222','Acapulco','Guerrero',8000,'B'),
+	(1014,'Luis Miguel','Beltran','Gamez','2222222222','Mochis','Sinaloa',4000.2,'A'),
+	(1014,'Daniel','Esparza','Suarez','2222222222','Mochis','Sinaloa',12000,'C');
+
+SELECT*FROM clientes WHERE estado='Sinaloa' AND totaldeuda>=10000
+
+/*//#Todos coincidan*/
+SELECT*FROM clientes WHERE tipocliente='A' AND totaldeuda>=5000 AND estado='Sinaloa'
+SELECT*FROM clientes WHERE ciudad='Mochis' AND estado='Sinaloa'
+/*//#Cualquiera de los dos*/
+SELECT*FROM clientes WHERE tipocliente='A' OR tipocliente='C'
+
+/*//#se borra toda la informacion*/
+DELETE FROM alumnos2 WHERE numcontrol=1000
+
+DELETE FROM alumnos2 WHERE nombre='Juan' AND apellidopaterno='Vazquez' AND apellidomaterno='Perez'
+
+SELECT * FROM alumnos2
+
+/*//#eLiminar rangos*/
+DELETE FROM alumnos2 WHERE promedio>=90 AND promedio<95
+DELETE FROM alumnos2 WHERE promedio>=90 BETWEEN promedio<95
+
+/*//#borrar tablas*/
+DROP TABLE clientes, alumnos2
+
+DROP TABLE IF EXISTS tablal
+
+
+
+/*#####################################*/
+SELECT * FROM empleados
+/*//#actualizar los datos pero como no esta where(filtro) todos se reemplazan*/
+UPDATE empleados SET nombre='Luis Jose'
+
+UPDATE clientes SET telefono='1234567888' WHERE idcliente=1000;
+UPDATE clientes SET telefono='1255567888' WHERE idcliente=1001;
+UPDATE clientes SET telefono='1288567888' WHERE idcliente=1002;
+UPDATE clientes SET telefono='1299567888' WHERE idcliente=1003;
+UPDATE clientes SET telefono='1236567888' WHERE idcliente=1004;
+UPDATE clientes SET telefono='1268567888' WHERE idcliente=1005;
+UPDATE clientes SET telefono='1255567888' WHERE idcliente=1005;
+UPDATE clientes SET telefono='1252567888' WHERE idcliente=1006;
+UPDATE clientes SET telefono='1234567888' WHERE idcliente=1007;
+UPDATE clientes SET telefono='1231267888' WHERE idcliente=1008;
+UPDATE clientes SET telefono='1235867888' WHERE idcliente=1009;
+UPDATE clientes SET telefono='1238867888' WHERE idcliente=1010;
+UPDATE clientes SET telefono='1237767888' WHERE idcliente=1011;
+UPDATE clientes SET telefono='1234567888' WHERE idcliente=1012;
+UPDATE clientes SET telefono='1237967888' WHERE idcliente=1013;
+UPDATE clientes SET telefono='1231567888' WHERE idcliente=1014;
+
+SELECT*FROM clientes
+
+/*//#Reemplazar id iguales*/
+UPDATE clientes SET idcliente=1015 WHERE nombre='Daniel' AND apellidopaterno='Esparza' AND apellidomaterno='Suarez'
+/*//#Reemplazar varios a la vez*/
+UPDATE clientes SET ciudad='Guadalajara',estado='Jalisco' WHERE idcliente=1000
+UPDATE clientes SET nombre='Florentina Celeste',apellidomaterno='Espinoza' WHERE idcliente=1012
+
+/*//#ordenado de menor a mayor y mayor a menor (DESC)*/
+SELECT*FROM clientes ORDER BY idcliente 
+SELECT*FROM clientes ORDER BY totaldeuda DESC
+
+/*//#valores distintos o no repetidos*/
+SELECT DISTINCT totaldeuda FROM clientes
+/*/#ordenado de mayor a menor (ASC MENOR A MAYOR)*/
+SELECT DISTINCT totaldeuda FROM clientes ORDER BY totaldeuda DESC
+
+
+
+/*#####################################################
+#####################################################
+#####################################################
+#####################################################*/
+
+
+CREATE TABLE personas(
+dni VARCHAR(8),
+nombre VARCHAR(45),
+apellidopaterno VARCHAR(45),
+apellidomaterno VARCHAR(45),
+fechanacimiento DATE,
+municipio VARCHAR(45),
+estado VARCHAR(45),
+telefono VARCHAR(12),
+sexo CHARACTER(1)
+);
+
+
+INSERT INTO personas(dni,nombre,apellidopaterno,apellidomaterno,fechanacimiento,municipio,estado,telefono,sexo)
+ VALUES('100012A','Juan','Vazquez','Perez','2020-05-08','Guadalajara', 'Jalisco','1234564343','M'),
+('1001B12','Juan','Vazquez','Perez','2021-02-08','Merida','Yucatan','1234564348','M'),
+('1002W12','Carlos Miguel','Lopez','Perez','2020-03-15','Morelia','Michoacan','1234564349','M'),
+('1003Q43','Maria Carlota','SAnchez','Perez','2018-02-02','Guasave','Sinaloa','1234564322','F'),
+('1004S23','Casandra','Gavilan','Gonzalez','2021-07-25','Monterrey','Nuevo Leon','1234564335','F'),
+('1005F32','Andrea','Davila','Antonios','2018-06-02','Guadalajara','Jalisco','1234564326','F'),
+('1006H78','Joao','Aguiar','Garza','2015-03-15','Morelia','Michoacan','1234564327','M'),
+('1007Y54','Daniel','Zambrano','Espino','2015-07-18','Toluca','Estado de Mexico','1234564328','M'),
+('1008W43','Flor','Velazquez','Espinoza','2017-02-08','Guadalajara','Jalisco','1234564345','F'),
+('1009W23','Celeste','Vazquez','De la O','2015-08-22','Tijuana','Baja California','1234564385','F'),
+('1010W12','Abigail','Andrade','Beltran','2020-05-12','Guadalajara','Jalisco','1234564373','F'),
+('1011Q25','Juan Carlos','Espinoza','Campos','2020-05-15','Tijuana','Baja California','1234564399','M'),
+('1012W25','Dionicio','Espino','Espinoza','2021-06-15','Guadalajara','Jalisco','1234564398','F'),
+('1013Q45','Jose Carlos','Flores','Garcia','2021-07-17','Guasave','Sinaloa','1234564390','M'),
+('1014Y59','Jose Pedro','Valle','Perez','2021-08-01','Mazatlan','Sinaloa','1234564312','M'),
+('1015P45','Miguel Luis','Flores','Sanchez','2021-01-15','Monterrey','Nuevo Leon','1234564315','M'),
+('1016H89','JoseMarcelo','Gonzalez','Miranda','2018-05-12','Guadalajara','Jalisco','1234564222','M'),
+('1017278','Flor Estela','Huerta','Espinosa','2018-07-09','Guadalajara','Jalisco','1234564555','F'),
+('1018Q34','Cristian Jesus','Kilberth','Perez','2018-01-08','Ensenada','Baja California','1234564532','F'),
+('1019W47','Maria Cecilia','Lopez','Lopez','2045-07-28','Guadalajara','Jalisco','1234564145','F'),
+('1020P30','Juan Alberto','Martinez','Vazquez','2016-07-22','Guadalajara','Jalisco','1234564142','M'),
+('1021Q25','Franchesco Daniel','Nunez','Perez','2017-07-15','Puerto Vallarta','Jalisco','1234564248','M'),
+('1022F78','Laura','Quinonez','Garcia','2020-02-08','Puebla','Puebla','1234564788','F');
+
+SELECT*FROM personas
+/*//#contar todos los registros*/
+SELECT COUNT (*) FROM personas
+/*//tabular sexo*/
+SELECT sexo,COUNT(*) FROM personas GROUP BY sexo
+
+/*//#ponerle nombre a count (importante poner luego de select sexo)*/
+SELECT sexo,COUNT(*) AS cantidadporsexo FROM personas GROUP BY sexo
+SELECT estado, COUNT(*) FROM personas GROUP BY estado
+/*#verificar que son 10 personas de jalisco*/*/
+SELECT*FROM personas WHERE estado='Jalisco'
+
+
+/*//###################################################
+###################################################
+###################################################*/
+
+DROP TABLE IF EXISTS libros
+
+CREATE TABLE libros(
+codigolibro INTEGER,
+titulo VARCHAR(40),
+autor VARCHAR(30),
+nombreeditorial VARCHAR(45),
+precio DECIMAL(5,2),
+cantidad SMALLINT);
+
+
+INSERT INTO libros(codigolibro,titulo, autor,nombreeditorial,precio,cantidad)
+VALUES(10001,'El lago','Gil Gamez','El buen lector',850,4),
+(10002,'El conejito','Flors','Libro abierto',200.5,2),
+(10003,'El elefante','De la Rosa','Mexico',100.5,3),
+(10004,'Sor Juana','Juan Galileo','1998',400,4),
+(10005,'La Bella','Flors','El lago',500.5,1),
+(10006,'Los zapatos de Juana','Flors','La esperanza',100,1),
+(10007,'Tasa de café','Anastacia Arco','Forever',200.5,1),
+(10008,'Los pecesitos','Cristina Tomás','El buen lector',100.5,2),
+(10009,'El sueño dorado','Ana Camello','Mexico',99.9,2),
+(10010,'Andrés','Andrés Camareno','Mexico',200.5,4),
+(10011,'Tasa de café 2','Anastacia Arco','España',200.5,1),
+(10012,'LA tortuga','María Booleana','El buen lector',85.9,null),
+(10013,'a felicidad','Gise Esmeralda','Libro abierto',600.5,null),
+(10014,'Encontrando a Nemo','Marcos Marcos','Mexico',200.5,2),
+(10015,'El arcoiris','Antonio Town','El buen lector',800,null),
+(10016,'Programación web extensa','Mauricio Pérez','España',100.5,null),
+(10017,'Sin ti','Lorena Garza','Forever',400,null),
+(10019,'Antonieta','Flors','El buen lector',200.5,2),
+(10020,'Cocinando sueños','De la Rosa','Mexico',100.5,3),
+(10021,'El perdedor','Juan Galileo','Mexico',400,4),
+(10022,'Doña Juana','Flors','Forever',500.5,1),
+(10023,'Caperuza busa','Camilo Rosas','España',100,1),
+(10024,'Es resplandor','Anastacia Arco','Mexico',200.5,1),
+(10025,'Volver a comenzar','Cristina Tomás','1998',100.5,2),
+(10026,'La sonrisa de Amalia','Ana Camello','Esperanza',99.9,2),
+(10027,'El piano de Jose','Andrés Camareno','El buen lector',238.5,4),
+(10028,'El huerto del terror','Anastacia Arco','Mexico',200.5,1),
+(10029,'El payaso de las tinieblas','María Booleana','El buen lector',85.9,null),
+(10030,'El bals de la esperanza','Gise Esmeralda','Mexico',600.5,null),
+(10031,'Buscando a Hyun','Marcos Marcos','España',520,2),
+(10032,'El arcoiris II','Antonio Town','Mexico',800.5,null),
+(10033,'Programación en Java a fondo','Mauricio Pérez','España',100.5,null),
+(10034,'Calculo I','Lorena Garza','España',150,null),
+(10035,'Aprender CSS con Flor','Gise Esmeralda','Esperanza',600.5,null),
+(10036,'MySQL a fondo','Marcos Marcos','Libro abierto',200.5,2),
+(10037,'Calculo II','Antonio Town','Mexico',800.5,null),
+(10038,'Programación en Java a fondo II','Mauricio Pérez','Mexico',100.5,null),
+(10039,'Calculo III','Lorena Garza','El pueblo',200.5,null);
+
+SELECT*FROM libros
+
+SELECT nombreeditorial, COUNT(*) FROM libros GROUP BY nombreeditorial
+SELECT*FROM libros WHERE nombreeditorial='Forever'
+/*//maximo o min()*/
+SELECT nombreeditorial, max(precio) AS preciomayor FROM libros GROUP BY nombreeditorial
+
+SELECT nombreeditorial, COUNT(*) FROM libros WHERE precio BETWEEN 100 AND 300 GROUP BY nombreeditorial
+
+/*//tabulacion de las 3 variables filtrando el precio entre 100 y 300*/
+SELECT nombreeditorial,precio,titulo, COUNT(*) FROM libros WHERE precio BETWEEN 100 AND 300
+GROUP BY nombreeditorial,precio, titulo
+
+SELECT*FROM libros WHERE codigolibro=10015
+
+/*// introducir los 3 datos con la misma identificacion para lugo arreglarlo*/
+INSERT INTO libros VALUES (10001,'La casona demoniaca', 'Flors','El buen lector',450,2);
+INSERT INTO libros VALUES (10001, 'Payaso amable','Flors','El buen lector',480,1);
+INSERT INTO libros VALUES (10001,'Volver a amanecer','Casandra Galvez','España',500,2);
+
+SELECT*FROM libros WHERE codigolibro=10001
+
+
+/*//se borra para introducir el tema de las llaves*/
+DROP TABLE IF EXISTS libros
+
+/*//####################################################*/
+
+CREATE TABLE libros(
+codigolibro INTEGER PRIMARY KEY,
+titulo VARCHAR(40),
+autor VARCHAR(30),
+nombreeditorial VARCHAR(45),
+precio DECIMAL(5,2),
+cantidad SMALLINT);
+
+
+INSERT INTO libros(codigolibro,titulo, autor,nombreeditorial,precio,cantidad)
+VALUES(10001,'El lago','Gil Gamez','El buen lector',850,4),
+(10002,'El conejito','Flors','Libro abierto',200.5,2),
+(10003,'El elefante','De la Rosa','Mexico',100.5,3),
+(10004,'Sor Juana','Juan Galileo','1998',400,4),
+(10005,'La Bella','Flors','El lago',500.5,1),
+(10006,'Los zapatos de Juana','Flors','La esperanza',100,1),
+(10007,'Tasa de café','Anastacia Arco','Forever',200.5,1),
+(10008,'Los pecesitos','Cristina Tomás','El buen lector',100.5,2),
+(10009,'El sueño dorado','Ana Camello','Mexico',99.9,2),
+(10010,'Andrés','Andrés Camareno','Mexico',200.5,4),
+(10011,'Tasa de café 2','Anastacia Arco','España',200.5,1),
+(10012,'LA tortuga','María Booleana','El buen lector',85.9,null),
+(10013,'a felicidad','Gise Esmeralda','Libro abierto',600.5,null),
+(10014,'Encontrando a Nemo','Marcos Marcos','Mexico',200.5,2),
+(10015,'El arcoiris','Antonio Town','El buen lector',800,null),
+(10016,'Programación web extensa','Mauricio Pérez','España',100.5,null),
+(10017,'Sin ti','Lorena Garza','Forever',400,null),
+(10019,'Antonieta','Flors','El buen lector',200.5,2),
+(10020,'Cocinando sueños','De la Rosa','Mexico',100.5,3),
+(10021,'El perdedor','Juan Galileo','Mexico',400,4),
+(10022,'Doña Juana','Flors','Forever',500.5,1),
+(10023,'Caperuza busa','Camilo Rosas','España',100,1),
+(10024,'Es resplandor','Anastacia Arco','Mexico',200.5,1),
+(10025,'Volver a comenzar','Cristina Tomás','1998',100.5,2),
+(10026,'La sonrisa de Amalia','Ana Camello','Esperanza',99.9,2),
+(10027,'El piano de Jose','Andrés Camareno','El buen lector',238.5,4),
+(10028,'El huerto del terror','Anastacia Arco','Mexico',200.5,1),
+(10029,'El payaso de las tinieblas','María Booleana','El buen lector',85.9,null),
+(10030,'El bals de la esperanza','Gise Esmeralda','Mexico',600.5,null),
+(10031,'Buscando a Hyun','Marcos Marcos','España',520,2),
+(10032,'El arcoiris II','Antonio Town','Mexico',800.5,null),
+(10033,'Programación en Java a fondo','Mauricio Pérez','España',100.5,null),
+(10034,'Calculo I','Lorena Garza','España',150,null),
+(10035,'Aprender CSS con Flor','Gise Esmeralda','Esperanza',600.5,null),
+(10036,'MySQL a fondo','Marcos Marcos','Libro abierto',200.5,2),
+(10037,'Calculo II','Antonio Town','Mexico',800.5,null),
+(10038,'Programación en Java a fondo II','Mauricio Pérez','Mexico',100.5,null),
+(10039,'Calculo III','Lorena Garza','El pueblo',200.5,null);
+
+/*//#Pk primary key*/
+SELECT*FROM libros
+/*//no permite agregarlo porque ya esta el codigo*/
+INSERT INTO libros VALUES (10001, 'El payaso feliz', 'Laura Garza','El buen lector',450,2);
+
+
+
+
+
+/*//###################################################
+###################################################
+###################################################*/
+DROP TABLE IF EXISTS clientes
+
+
+CREATE TABLE pedidos(
+    idpedido INTEGER PRIMARY KEY,
+    idcliente INTEGER,
+	descripcion VARCHAR(100),
+	fecha DATE);
+	 /* //CONSTRAINT FK_id_pedidos FOREIGN KEY (idcliente) REFERENCES clientes(idcliente)*/
+	  
+	  
+CREATE TABLE clientes(
+    idcliente INTEGER PRIMARY KEY,
+	nombre VARCHAR(45),
+    apellidopaterno VARCHAR(45),
+	apellidomaterno VARCHAR(45),
+	telefono VARCHAR(45));
+
+SELECT*FROM clientes
+
+INSERT INTO clientes(idcliente,nombre,apellidopaterno,apellidomaterno,telefono)
+VALUES (1001,'Alberto','Gomez','Perez','2222222222'),
+	(1002,'Juan Jose','Sanchez','Guerra','4822222222'),
+	(1003,'Maria Antonia','Lopez','Gamez','2277222222'),
+	(1004,'Luis Roman','Espino','Garza','2222262222'),
+	(1005,'Ana Estela','Juarez','Lima','2222224522'),
+	(1006,'Jose','Esparza','Suarez','2222223822'),
+	(1007,'Alberto','Flores','Gonzalez','2222289222'),
+	(1008,'Luis Pedro','Higo','Suarez','22222423222'),
+	(1009,'Jose Carlos','Mendoza','Lopez','2222125222'),
+	(1010,'Maria Laura','Puga','Gomez','2222267422'),
+	(1011,'Sasha','Lopez','Quintana','2222267422'),
+	(1012,'Flor Celeste','Ramos','Espino','2228832222'),
+	(1013,'Jose Alberto','Sosa','Flores','2222888222'),
+	(1014,'Luis Miguel','Beltran','Gamez','2222211122'),
+	(1015,'Daniel','Esparza','Suarez','2222220002');
+	
+	INSERT INTO pedidos(idpedido,idcliente,descripcion,fecha)
+	VALUES(1,'1015','8 Kg de carne para asar','2021-09-01'),
+	(2,'1012','12 Kg queso fresco','2021-09-01'),
+	(3,'1001','6 Kg de carne para bictec','2021-09-02'),
+	(4,'1001','1 Kg de asaderar','2021-09-02'),
+	(5,'1002','4 Kg de queso crema','2021-09-02'),
+	(6,'1011','4 L de crema','2021-09-03'),
+	(7,'1012','1 Kg de carne para asar','2021-09-03'),
+	(8,'1013','2 Kg de carne para asar','2021-09-03'),
+	(9,'1008','8 Kg de carne para asar','2021-09-04'),
+	(10,'1008','1 de asadera','2021-09-05'),
+	(11,'1001','4 Kg de manteca de cerdo','2021-09-06'),
+	(12,'1002','2 Kg mantequilla','2021-09-06'),
+	(13,'1002','12 Kg de carne para bictec','2021-09-07'),
+	(14,'1009','4 Kg de pata de puerco','2021-09-08'),
+	(15,'1012','8 Kg de carne de puerco','2021-09-08'),
+	(16,'1015','15 Kg de cabeza de res','2021-09-09'),
+	(17,'1012','2 Kg de carne para asar','2021-09-10'),
+	(18,'1012','1 Kg de carne para asar','2021-09-12');
+	
+/*//para la union las dos tablas tienen idcliente, una la tiene como primary key (clientes)
+// y la otra foreing key (pedidos)*/
+SELECT p.idpedido,p.descripcion,p.fecha,c.idcliente,c.nombre,c.apellidopaterno,c.apellidomaterno
+FROM clientes c
+INNER JOIN pedidos p
+ON c.idcliente=p.idcliente
+
+/*//se reduce para verlo mejor*/
+SELECT p.idpedido,p.descripcion,c.idcliente,c.nombre,c.apellidopaterno
+FROM clientes c
+INNER JOIN pedidos p
+ON c.idcliente=p.idcliente
+
+
+/*//###relacion 1 a 1 la PK podria ser la misma FK*/
+
+CREATE TABLE estudiantes(
+idestudiante INTEGER PRIMARY KEY,
+apellidos VARCHAR(45),
+nombre VARCHAR(45)
+);
+/*//primero se crea la tabla de estudiantes para ir fijando la FK. */
+/*//El id_estudiante (infoestudiante) se restrinje segun el idestudiante (estudiantes) */
+CREATE  TABLE infoestudiante(
+id_estudiante INTEGER PRIMARY KEY,
+ciudad VARCHAR(45),
+	telefono VARCHAR(12),
+	CONSTRAINT FK_id_estudiante FOREIGN KEY (id_estudiante)
+    REFERENCES estudiantes(idestudiante));
+
+INSERT INTO estudiantes(idestudiante,apellidos,nombre)
+VALUES(1,'Gomez Perez','Juan'),(2,'Gonzalez Sazueta','Carlos'),
+(3,'Sanchez Ortiz','Cecilia'),(4,'Camello Perez','Carlos'),
+(5,'Gamez Hoya','Ana Maria'),(6,'Delfin Garza','Jose');
+
+INSERT INTO infoestudiante(id_estudiante,ciudad,telefono)
+VALUES(1,'Guadalajara','1242222299'),(2,'Monterrey','7742222299'),
+(3,'Hermosillo','7878434323'),(4,'Obregon','8842222299'),
+(5,'Guadalajara','8999222299'),(6,'Cd. de Mexico','1242222299');
+
+SELECT*FROM estudiantes
+/*#como ya contiene el id 2 no se acepta*/
+INSERT INTO estudiantes (2, 'Vega Gamez', '9989898983');
+
+/*//como primero se agrego en estudiantes, luego se agrega en infoestudiantes*/
+INSERT INTO estudiantes VALUES (8, 'Toledo Gamez', 'Carlos');
+INSERT INTO infoestudiante VALUES (8,'Monterrey','7878734234');
+
+
+SELECT*FROM estudiantes e
+INNER JOIN infoestudiante i
+ON e.idestudiante=i.id_estudiante
+
+/*//################################
+##################################*/
+SELECT*FROM clientes c
+JOIN pedidos p
+ON c.idcliente=p.idcliente
+
+SELECT*FROM clientes
+SELECT*FROM pedidos
+
+/*//###################################################
+###################################################
+###################################################
+########*/
+DROP TABLE IF EXISTS libros
+CREATE TABLE libros(
+codigo INTEGER,
+titulo VARCHAR(40),
+autor VARCHAR(30),
+codigoeditorial INTEGER,
+precio DECIMAL(5,2),
+cantidad SMALLINT,
+			
+PRIMARY KEY(codigo)
+);
+INSERT INTO libros(codigo,titulo, autor,codigoeditorial,precio,cantidad)
+VALUES(10001,'el aleph','Borges',220,450,5),
+(10002,'El conejito','Flors',221,200.5,2),
+(10003,'El elefante','De la Rosa',222,100.5,3),
+(10004,'Sor Juana','Juan Galileo',223,400,4),
+(10005,'La Bella','Flors',224,500.5,1),
+(10006,'Los zapatos de Juana','Camilo Rosas',225,100,1),
+(10007,'Tasa de café','Anastacia Arco',226,200.5,1),
+(10008,'Los pecesitos','Cristina Tomás',227,100.5,2),
+(10009,'El sueño dorado','Ana Camello',228,99.9,2),
+(10010,'Andrés','Andrés Camareno',229,200.5,4),
+(10011,'Tasa de café 2','Anastacia Arco',230,200.5,1),
+(10012,'LA tortuga','María Booleana',231,85.9,null),
+(10013,'a felicidad','Gise Esmeralda',232,600.5,null),
+(10014,'Encontrando a Nemo',',Marcos Marcos',233,200.5,2),
+(10015,'El arcoiris','Antonio Town',234,800.5,null),
+(10016,'Programación web extensa','Mauricio Pérez',235,100.5,null),
+(10017,'Sin ti','Lorena Garza',236,200.5,null),
+(10018,'Los sueños de Andrea','Borges',238,450,5),
+(10019,'Antonieta','Flors',239,200.5,2),
+(10020,'Cocinando sueños','De la Rosa',240,100.5,3),
+(10021,'El perdedor','Juan Galileo',241,400,4),
+(10022,'Doña Juana','Flors',232,500.5,1),
+(10023,'Caperuza busa','Camilo Rosas',228,100,1),
+(10024,'Es resplandor','Anastacia Arco',226,200.5,1),
+(10025,'Volver a comenzar','Cristina Tomás',225,100.5,2),
+(10026,'La sonrisa de Amalia','Ana Camello',228,99.9,2),
+(10027,'El piano de Jose','Andrés Camareno',229,238.5,4),
+(10028,'El huerto del terror','Anastacia Arco',221,200.5,1),
+(10029,'El payaso de las tinieblas','María Booleana',221,85.9,null),
+(10030,'El bals de la esperanza','Gise Esmeralda',220,600.5,null),
+(10031,'Buscando a Hyun',',Marcos Marcos',226,200.5,2),
+(10032,'El arcoiris II','Antonio Town',221,800.5,null),
+(10033,'Programación en Java a fondo','Mauricio Pérez',227,100.5,null),
+(10034,'Calculo I','Lorena Garza',232,200.5,null),
+(10035,'Aprender CSS con Flor','Gise Esmeralda',220,600.5,null),
+(10036,'MySQL a fondo',',Marcos Marcos',226,200.5,2),
+(10037,'Calculo II','Antonio Town',221,800.5,null),
+(10038,'Programación en Java a fondo II','Mauricio Pérez',227,100.5,null),
+(10039,'Calculo III','Lorena Garza',232,200.5,null);
+
+SELECT*FROM libros
+
+CREATE TABLE editorial(
+codigo_editorial INTEGER,
+nombre VARCHAR(45),
+ciudad VARCHAR(45),
+estado VARCHAR(45)
+);
+
+INSERT INTO editorial VALUES(220,'Mexico','Tijuana','Baja California'),
+(221,'El buen lector','Celaya','Guanajuato'),
+(222,'El capricho','Leon','Guanajuato'),
+(223,'Forever 89','Mazatlan','Sinaloa'),
+(224,'1950','Hermosillo','Sonora'),
+(225,'Violeta','Navojoa','Sonora'),
+(226,'Esperanza','Monterrey','Nuevo Leon'),
+(227,'La luna','Monterrey','Nuevo Leon'),
+(228,'Horizonte del mañana','Puebla','Puebla'),
+(229,'Las flores','Guadalajara','Jalisco'),
+(230,'Renacer','Puerto Vallarta','Jalisco'),
+(231,'Celeste','Tepic','Nayarit'),
+(232,'Antonios','Guadalajara','Jalisco'),
+(233,'Madrid','Tijuana','Baja California'),
+(234,'Paris','Mexicali','Baja California'),
+(235,'California','Monterrey','Nuevo Leon'),
+(236,'Monterrey','Monterrey','Nuevo Leon'),
+(237,'Editorial Castellana','Guadalajara','Jalisco'),
+(238,'La aventura lectora','Monterrey','Nuevo Leon'),
+(800,'Los ojos del lector','Tijuana','Baja California'),
+(801,'El puerto','Celaya','Guanajuato'),
+(802,'El intelectual','Leon','Guanajuato'),
+(803,'Cartoons','Mazatlan','Sinaloa'),
+(804,'Renacer','Hermosillo','Sonora'),
+(805,'La casita del lector','Navojoa','Sonora'),
+(806,'La hermosa','Monterrey','Nuevo Leon');
+
+SELECT*FROM libros
+
+SELECT titulo,autor, codigoeditorial, nombre, ciudad, estado FROM libros l
+JOIN editorial e
+ON l.codigoeditorial=e.codigo_editorial
+
+/*//es lo mismo que decir*/
+SELECT l.titulo,l.autor, l.codigoeditorial, e.nombre, e.ciudad, e.estado FROM libros l
+JOIN editorial e
+ON l.codigoeditorial=e.codigo_editorial
+
+/*//#select join*/*/
+SELECT*FROM editorial
+LEFT JOIN libros
+ON libros.codigoeditorial=editorial.codigo_editorial
+ORDER BY codigo_editorial
+
+
+/*//###################################################
+###################################################
+###################################################
+########*/
+DROP TABLE IF EXISTS empleados, puestos
+CREATE TABLE empleados(
+idempleado INTEGER PRIMARY KEY,
+nombre VARCHAR(45),
+puestoid INTEGER
+);
+
+CREATE TABLE puestos(
+puestoid INTEGER PRIMARY KEY,
+nombrepuesto VARCHAR(45)
+);
+
+INSERT INTO empleados VALUES(1000,'Juan',1);
+INSERT INTO empleados VALUES(1001,'Jose',1);
+INSERT INTO empleados VALUES(1002,'Daniel',4);
+INSERT INTO empleados VALUES(1003,'Laura',2);
+INSERT INTO empleados VALUES(1004,'Carlos',1);
+INSERT INTO empleados VALUES(1005,'Daniel',1);
+INSERT INTO empleados VALUES(1006,'Luna',3);
+INSERT INTO empleados VALUES(1007,'Oscar',5);
+INSERT INTO empleados VALUES(1008,'Joao',6);
+INSERT INTO empleados VALUES(1009,'Gabriel',7);
+INSERT INTO empleados VALUES(1010,'Pedro',7);
+INSERT INTO empleados VALUES(1011,'Jesus',2);
+INSERT INTO empleados VALUES(1012,'Linda',6);
+INSERT INTO empleados VALUES(1013,'Ana',7);
+INSERT INTO empleados VALUES(1014,'Maria',7);
+INSERT INTO empleados VALUES(1015,'Jose Carlos',2);
+
+INSERT INTO puestos VALUES(1,'Limpieza');
+INSERT INTO puestos VALUES(2,'Secretaria');
+INSERT INTO puestos VALUES(3,'Cajera');
+INSERT INTO puestos VALUES(4,'Facturista');
+INSERT INTO puestos VALUES(5,'Capturista');
+INSERT INTO puestos VALUES(6,'Contador');
+INSERT INTO puestos VALUES(7,'RH');
+INSERT INTO puestos VALUES(8,'Gerente');
+INSERT INTO puestos VALUES(9,'Subgerente');
+INSERT INTO puestos VALUES(10,'Jardinero');
+INSERT INTO puestos VALUES(11,'Office boy');
+INSERT INTO puestos VALUES(12,'Cocinero personal');
+
+SELECT*FROM empleados
+SELECT*FROM puestos
+
+/*//No importa como esta el ON e.puestoid=p.puestoid*/
+/*//Los de empleados estan todos y los puestos se unen*/
+SELECT*FROM empleados e
+JOIN puestos p
+ON e.puestoid=p.puestoid
+
+
+/*// Los de puestos estan todos y los empleados se unen
+//con left join se le da prioridad a puestos en este caso
+// puestos es la tabla izquierda*/
+SELECT*FROM puestos p
+LEFT JOIN empleados e
+ON e.puestoid=p.puestoid
+ORDER BY ep.puestoid ASC
+
+
+INSERT INTO empleados VALUES (1016,'Spndra',15);
+INSERT INTO empleados VALUES (1017,'Ismael',15);
+INSERT INTO empleados VALUES (1018,'Jonas',15);
+INSERT INTO empleados VALUES (1019, 'Lorena',13);
+INSERT INTO empleados VALUES (1020,'Yuridia',14);
+
+select * From empleados ORDER BY idempleado ASC
+/*//se le da prioridad a empleados*/
+SELECt*FROM empleados e
+LEFT JOIN puestos p
+ON e.puestoid=p.puestoid
+ORDER BY e.idempleado ASC
+
+/*//con right join se le da prioridad a puestos*/
+SELECT*FROM empleados e
+RIGHT JOIN puestos p
+ON e.puestoid=p.puestoid
+ORDER BY p.puestoid ASC
+
+
+/*//prioridad al empleado que esta a la derecha*/
+SELECT*FROM puestos p
+RIGHT JOIN empleados e
+ON e.puestoid=p.puestoid
+ORDER BY e.idempleado ASC
+
+/* se organiza segun idempleado */
+SELECT e.idempleado,p.puestoid,p.nombrepuesto
+FROM empleados e
+LEFT JOIN puestos p
+ON e.puestoid=p.puestoid
+ORDER BY e.idempleado
+
+/*ahora interesa segun right join  ver puestoid */
+SELECT e.idempleado,p.puestoid,p.nombrepuesto
+FROM empleados e
+RIGHT JOIN puestos p
+ON e.puestoid=p.puestoid
+ORDER BY e.idempleado
+
+
+DROP TABLE IF EXISTS infoestudiante
+
+CREATE  TABLE infoestudiante(
+id_estudiante INTEGER,
+ciudad VARCHAR(45),
+	telefono VARCHAR(12),
+	CONSTRAINT FK_id_estudiante FOREIGN KEY (id_estudiante)
+    REFERENCES estudiantes(idestudiante));
+
+
+INSERT INTO infoestudiante(id_estudiante,ciudad,telefono)
+VALUES(1,'Guadalajara','1242222299'),(2,'Monterrey','7742222299'),
+(3,'Hermosillo','7878434323'),(4,'Obregon','8842222299'),
+(5,'Guadalajara','8999222299'),(1,'Cd. de Mexico','1242222299');
+
+SELECT*FROM infoestudiante
+/*//se edita el nombre*/
+ALTER TABLE infoestudiante RENAME TO informacionalumnos
+/*//adicionar columna*/
+ALTER TABLE informacionalumnos ADD columnaprueba VARCHAR(45)
+ALTER TABLE informacionalumnos ADD COLUMN columnaprueba2 VARCHAR (45)
+
+
+SELECT*FROM informacionalumnos
+SELECT*FROM estudiantes
+
+/*//borrar columnas*/
+ALTER TABLE informacionalumnos DROP COLUMN columnaprueba, DROP COLUMN columnaprueba2
+//se adiciona una fila*/
+INSERT INTO informacionalumnos VALUES(1,'Mochis', '9898999991');
+
+/*//borrar algunas filas que tengan id repetido para agregar primary key*/
+DELETE FROM informacionalumnos WHERE id_estudiante=1 AND ciudad='Cd. de Mexico';
+DELETE FROM informacionalumnos WHERE id_estudiante=1 AND ciudad='Mochis';
+
+ALTER TABLE informacionalumnos ADD PRIMARY KEY(id_estudiante);
+
+ALTER TABLE informacionalumnos ADD FOREIGN KEY(id_estudiante) REFERENCES estudiantes (idestudiante);
+
+/*//no funciona agregarlo porque el valor 100 no aparece en la de estudiantes*/
+INSERT INTO informacionalumnos VALUES(100, 'Hermosillo','2222222222')
+/*// en este caso si*/
+INSERT INTO informacionalumnos VALUES(8, 'Hermosillo','2222222222')
+
+
+/*//###################################################
+###################################################
+###################################################
+//utilizar join con group by (las tablas son la continuacion del renglon 512)*/
+SELECT*FROM libros
+SELECT*FROM libros ORDER BY codigoeditorial ASC
+SELECT*FROM editorial
+
+SELECT e.nombreeditorial,e.codigo_editorial,COUNT(*)
+FROM editorial e
+JOIN libros l
+ON l.codigoeditorial=e.codigo_editorial
+GROUP BY e. nombreeditorial,e.codigo_editorial
+
+SELECT e.nombreeditorial, COUNT(*) AS cantidadporeditorial
+FROM editorial e
+JOIN libros l
+ON l.codigoeditorial=e.codigo_editorial
+GROUP BY e.nombreeditorial
+
+SELECT l.titulo,l.autor,e.codigo_editorial,e.nombreeditorial
+FROM editorial e
+LEFT JOIN libros l
+ON e.codigo_editorial=l.codigoeditorial
+ORDER BY e.codigo_editorial ASC
+
+SELECT e.nombreeditorial, COUNT(*)
+FROM editorial e
+LEFT JOIN libros l
+ON e.codigo_editorial=l.codigoeditorial
+GROUP BY e.nombreeditorial
+
+SELECT e.nombreeditorial, COUNT(l.codigoeditorial)
+FROM editorial e
+LEFT JOIN libros l
+ON e.codigo_editorial=l.codigoeditorial
+GROUP BY e.nombreeditorial
+
+/*//###################################################
+###################################################
+###################################################*/
+
+DROP TABLE empleados
+
+CREATE TABLE empleados(
+empleadoid INTEGER,
+nombre VARCHAR (45),
+apellidopaterno VARCHAR(45),
+apellidomaterno VARCHAR(45),
+edad INTEGER,
+telefono BIGINT,
+sueldo DECIMAL (8,2),
+puesto VARCHAR(45)
+);
+/*//prueba para saubirlos*/
+COPY empleados FROM '~/Documents/Investigacion/Libri/Practica/Codigos\ de\ tablas/employees.csv' HEADER CSV DELIMITER ','
+copy empleados FROM '~/Documents/Investigacion/Libri/Practica/Codigos de tablas/employees.csv' CSV HEADER DELIMITER ','
+COPY empleados FROM '/Documents/employees.csv' HEADER CSV DELIMITER ','
+
+/*(sino lo puedo importar lo pego aqui ayudandome con excel)*/
+
+INSERT INTO empleados VALUES 	(2234,'Juan','Lopez ','Sanchez',25,'1234567853',2000,'Limpieza');
+INSERT INTO empleados VALUES 	(2235,'Luis Miguel','Perez','Lopez',28,'1234567854',4000,'Secretaria');
+INSERT INTO empleados VALUES 	(2236,'Amanda','Castelo','Cabos',22,'1234567855',8500,'Gerente');
+INSERT INTO empleados VALUES 	(2237,'Carlos','Rosas','Barrera',22,'1234567856',2000,'Limpieza');
+INSERT INTO empleados VALUES 	(2238,'Laura Maria','Flores','Ibarra',35,'1234567857',2000,'Limpieza');
+INSERT INTO empleados VALUES 	(2239,'Jose Carlos','Gonzalez','Gustavo',26,'1234567858',1500,'Vendedor');
+INSERT INTO empleados VALUES 	(2240,'Antonio','De la O','Campos',29,'1234567859',2000,'Limpieza');
+INSERT INTO empleados VALUES 	(2241,'Jose Carlos','Betan','Dominguez',34,'1234567860',4000,'Auxiliar RH');
+INSERT INTO empleados VALUES 	(2242,'Juan Jose','Dominguez','Espino',39,'1234567861',4000,'Auxiliar RH');
+INSERT INTO empleados VALUES 	(2243,'Alberto','Cabos','Flores',44,'1234567862',6000,'Jefe RH');
+INSERT INTO empleados VALUES 	(2244,'Flor','Barrera','Huerta',25,'1234567863',6000,'Desarrollo');
+INSERT INTO empleados VALUES 	(2245,'Celeste','Ibarra','Koll',28,'1234567864',6000,'Desarrollo');
+INSERT INTO empleados VALUES 	(2246,'Violeta','Gustavo','Lima',22,'1234567865',4000,'Soporte');
+INSERT INTO empleados VALUES 	(2247,'Flor Celeste','Campos','Nunen',22,'1234567866',6000,'Subgerente');
+INSERT INTO empleados VALUES 	(2248,'Laura Maria','Dominguez','Obama',18,'1234567867',1500,'Vendedor');
+INSERT INTO empleados VALUES 	(2249,'Daniel','Espino','Esparza',25,'1234567868',1500,'Vendedor');
+INSERT INTO empleados VALUES 	(2250,'Josafat','Flores','Gomez',45,'1234567869',1500,'Vendedor');
+INSERT INTO empleados VALUES 	(2251,'Irving','Huerta','Lopez ',48,'1234567870',3500,'Auxiliar administrativo');
+INSERT INTO empleados VALUES 	(2252,'Jesus','Koll','Perez',35,'1234567871',5000,'Contador');
+INSERT INTO empleados VALUES 	(2253,'Pedro','Lima','Castelo',26,'1234567872',3000,'Jardineria');
+INSERT INTO empleados VALUES 	(2254,'Lorenza','Nunen','Rosas',29,'1234567873',3500,'Auxiliar administrativo');
+INSERT INTO empleados VALUES 	(2255,'Andrea','Obama','Flores',34,'1234567874',3500,'Auxiliar administrativo');
+INSERT INTO empleados VALUES 	(2256,'Andres Luis','Esparza','Gonzalez',39,'1234567875',3500,'Auxiliar administrativo');
+INSERT INTO empleados VALUES 	(2257,'Armando','Gomez','De la O',45,'1234567876',3500,'Auxiliar administrativo');
+INSERT INTO empleados VALUES 	(2258,'Felipe','Sanchez','Nunen',48,'2234567892',2500,'Cocina');
+INSERT INTO empleados VALUES 	(2259,'Amado','Lopez','Obama',36,'2235678921',2500,'Cocina');
+INSERT INTO empleados VALUES 	(2260,'Carlos','Cabos','Esparza',34,'2236789950',1500,'Vendedor');
+INSERT INTO empleados VALUES 	(2261,'Daniel','Barrera','Gomez',26,'2237900979',3500,'Recepcionista');
+INSERT INTO empleados VALUES 	(2262,'Jose Carlos','Ibarra','Lopez ',29,'2239012008',3500,'Recepcionista');
+INSERT INTO empleados VALUES 	(2263,'Irma','Gustavo','Perez',34,'2240123037',7000,'Subgerente');
+INSERT INTO empleados VALUES 	(2264,'Jonathan','Campos','Castelo',39,'2241234066',7000,'Subgerente');
+INSERT INTO empleados VALUES 	(2265,'Jonas','Dominguez','Rosas',25,'2242345095',5000,'Compras');
+INSERT INTO empleados VALUES 	(2266,'Amadeus','Espino','Flores',28,'2243456124',6000,'Logistica');
+INSERT INTO empleados VALUES 	(2267,'Gilberto','Flores','Gonzalez',22,'2244567153',6000,'Logistica');
+INSERT INTO empleados VALUES 	(2268,'Carlota','Huerta','De la O',22,'2245678182',8000,'Jefe de Logistica');
+INSERT INTO empleados VALUES 	(2269,'Alberto','Koll','Sanchez',35,'2246789211',3500,'Cargador');
+INSERT INTO empleados VALUES 	(2270,'Andres Luis','Lima','Bojorquez',26,'2247900240',3500,'Cargador');
+INSERT INTO empleados VALUES 	(2271,'Gilberta','Nunen','Espinoza',29,'2249011269',3500,'Cargador');
+INSERT INTO empleados VALUES 	(2272,'Jose Carlos','Obama','Moreno',34,'2250122298',3500,'Control de entregas');
+INSERT INTO empleados VALUES 	(2273,'Juan Manuel','Esparza','Ibarra',39,'2251233327',3500,'Cargador');
+INSERT INTO empleados VALUES 	(2274,'Donatella','Gomez','Vergara',44,'2252344356',3500,'Cargador');
+INSERT INTO empleados VALUES 	(2275,'Itzel','Lopez ','Gomez',25,'2253455385',3500,'Cargador');
+INSERT INTO empleados VALUES 	(2276,'Irving','Perez','Quintana',28,'2254566414',4000,'Control de entregas');
+INSERT INTO empleados VALUES 	(2277,'Lorenza','Castelo','Quintanilla',22,'2255677443',3000,'Quejas');
+INSERT INTO empleados VALUES 	(2278,'Tomas','Rosas','Acosta',22,'2256788472',4000,'Conductor');
+INSERT INTO empleados VALUES 	(2279,'Beatriz','Flores','Quintana',18,'2257899501',4000,'Conductor');
+INSERT INTO empleados VALUES 	(2280,'Alberto','Gonzalez','Morales',25,'2259010530',4000,'Conductor');
+INSERT INTO empleados VALUES 	(2281,'Juan Pedro','De la O','Armenta',45,'2260121559',4000,'Conductor');
+INSERT INTO empleados VALUES 	(2282,'Alondra','Sanchez','Campos',48,'2261232588',5000,'Mecanico ');
+INSERT INTO empleados VALUES 	(2283,'Alonso','Bojorquez','Lopez',35,'2262343617',4000,'Mantenimiento');
+INSERT INTO empleados VALUES 	(2284,'Eustaquio','Espinoza','Sanchez',26,'2263454646',4000,'Mantenimiento');
+INSERT INTO empleados VALUES 	(2285,'Ivan','Moreno','Dominguez',29,'2264565675',5500,'Jefe de mantenimiento');
+INSERT INTO empleados VALUES 	(2286,'Jose Ivan','Ibarra','Rojas',34,'2265676704',3500,'Jefe de cocina');
+INSERT INTO empleados VALUES 	(2287,'Saul','Vergara','Flores',39,'2266787733',3500,'Jefe de limpieza');
+INSERT INTO empleados VALUES 	(2288,'Alicia','Gomez','Rojo',45,'2267898762',7000,'Jefe de desarrollo');
+INSERT INTO empleados VALUES 	(2289,'Doroteo','Quintana','Acosta',48,'2269009791',1500,'Vendedor');
+INSERT INTO empleados VALUES 	(2290,'Jose','Quintanilla','Lopez',36,'2270120820',1500,'Vendedor');
+INSERT INTO empleados VALUES 	(2291,'Maria Laura','Lopez','Celaya',34,'2271231849',1500,'Vendedor');
+
+SELECT*FROM empleados
+
+SELECT DISTINCT puesto from empleados
+
+/*//crear tablas de filtros*/
+CREATE TABLE puestos2 AS SELECT DISTINCT puesto
+FROM empleados
+SELECT*FROM puestos2
+
+
+CREATE TABLE vendedores
+AS SELECT nombre, apellidopaterno, apellidomaterno,
+edad, telefono, sueldo FROM empleados
+WHERE puesto='Vendedor';
+/*//DROP TABLE vendedores*/
+
+SELECT*FROM vendedores
+
+CREATE TABLE rangoa
+AS SELECT nombre, apellidopaterno, apellidomaterno,
+edad, sueldo,puesto
+FROM empleados
+WHERE sueldo>=5000
+
+SELECT*FROM rangoa
+
+
+/*//###################################################
+###################################################
+###################################################*/
+
+CREATE TABLE vendedor(
+id INTEGER,
+nombre VARCHAR(45),
+apellidopaterno VARCHAR(45),
+apellidomaterno VARCHAR(45),
+antiguedad DATE,
+ciudad VARCHAR(45),
+estado VARCHAR(45),
+telefono VARCHAR(12)
+);
+
+
+INSERT INTO vendedor(id,nombre,apellidopaterno,apellidomaterno,antiguedad,ciudad,
+estado,telefono) VALUES(1000,'Juan','Vazquez','Perez','2020-05-08','Guadalajara','Jalisco',
+'1234564343'),(1001,'Juan','Vazquez','Perez','2021-02-08','Merida','Yucatan',
+'1234564348'),(1002,'Carlos Miguel','Lopez','Perez','2020-03-15','Morelia','Michoacan',
+'1234564349'),(1003,'Maria Carlota','SAnchez','Perez','2018-02-02','Guasave','Sinaloa',
+'1234564322'),(1004,'Casandra','Gavilan','Gonzalez','2021-07-25','Monterrey','Nuevo Leon',
+'1234564335'),(1005,'Andrea','Davila','Antonios','2018-06-02','Guadalajara','Jalisco',
+'1234564326'),(1006,'Joao','Aguiar','Garza','2015-03-15','Morelia','Michoacan',
+'1234564327'),(1007,'Daniel','Zambrano','Espino','2015-07-18','Toluca','Estado de Mexico',
+'1234564328'),(1008,'Flor','Velazquez','Espinoza','2017-02-08','Guadalajara','Jalisco',
+'1234564345'),(1009,'Celeste','Vazquez','De la O','2015-08-22','Tijuana','Baja California',
+'1234564385'),(1010,'Abigail','Andrade','Beltran','2020-05-12','Guadalajara','Jalisco',
+'1234564373'),(1011,'Juan Carlos','Espinoza','Campos','2020-05-15','Tijuana','Baja California',
+'1234564399'),(1012,'Dionicio','Espino','Espinoza','2021-06-15','Guadalajara','Jalisco',
+'1234564398'),(1013,'Jose Carlos','Flores','Garcia','2021-07-17','Guasave','Sinaloa',
+'1234564390'),(1014,'Jose Pedro','Valle','Perez','2021-08-01','Mazatlan','Sinaloa',
+'1234564312'),(1015,'Miguel Luis','Flores','Sanchez','2021-01-15','M;onterrey','Nuevo Leon',
+'1234564315'),(1016,'JoseMarcelo','Gonzalez','Miranda','2018-05-12','Guadalajara','Jalisco',
+'1234564222'),(1017,'Flor Estela','Huerta','Espinosa','2018-07-09','Guadalajara','Jalisco',
+'1234564555'),(1018,'Cristian Jesus','Kilberth','Perez','2018-01-08','Ensenada','Baja California',
+'1234564532'),(1019,'Maria Cecilia','Lopez','Lopez','2045-07-28','Guadalajara','Jalisco',
+'1234564145'),(1020,'Juan Alberto','Martinez','Vazquez','2016-07-22','Guadalajara','Jalisco',
+'1234564142'),(1021,'Franchesco Daniel','Nunez','Perez','2017-07-15','Puerto Vallarta','Jalisco',
+'1234564248'),(1022,'Laura','Quinonez','Garcia','2020-02-08','Puebla','Puebla',
+'1234564788');
+
+CREATE TABLE sucursales(  
+  municipio varchar(45),
+  estado varchar(45)
+  );
+  ALTER TABLE sucursales ADD COLUMN numsucursal INTEGER
+  
+  INSERT INTO sucursales(municipio,estado,numsucursal)
+  VALUES('Guadalajara','Jalisco',1),
+  ('Merida','Yucatan',7),
+  ('Morelia','Michoacan',4),
+  ('Guasave','Sinaloa',5),
+  ('Monterrey','Nuevo Leon',3),
+  ('Toluca','Estado de Mexico',11),
+  ('Tijuana','Baja California',8),
+  ('Mazatlan','Sinaloa',6),
+  ('Ensenada','Baja California',9),
+  ('Puerto Vallarta','Jalisco',2),
+  ('Puebla','Puebla',10),
+  ('Celaya','Guanajuato',12)
+
+SELECT*FROM sucursales
+/*//Añadimos una nueva columna.*/*/
+ALTER TABLE vendedor ADD COLUMN num_sucursal INTEGER
+/*//Eliminamos las columnas ciudad y estado:*/
+
+ALTER TABLE vendedor DROP ciudad;
+ALTER TABLE vendedor DROP estado;
+
+
+UPDATE vendedor SET num_sucursal=2 WHERE id=1000;
+UPDATE vendedor SET num_sucursal=4 WHERE id=1001;
+UPDATE vendedor SET num_sucursal=1 WHERE id=1002;
+UPDATE vendedor SET num_sucursal=3 WHERE id=1003;
+UPDATE vendedor SET num_sucursal=11 WHERE id=1004;
+UPDATE vendedor SET num_sucursal=12 WHERE id=1005;
+UPDATE vendedor SET num_sucursal=9 WHERE id=1006;
+UPDATE vendedor SET num_sucursal=10 WHERE id=1007;
+UPDATE vendedor SET num_sucursal=8 WHERE id=1008;
+UPDATE vendedor SET num_sucursal=5 WHERE id=1009;
+UPDATE vendedor SET num_sucursal=6 WHERE id=1010;
+UPDATE vendedor SET num_sucursal=7 WHERE id=1011;
+UPDATE vendedor SET num_sucursal=2 WHERE id=1012;
+UPDATE vendedor SET num_sucursal=4 WHERE id=1013;
+UPDATE vendedor SET num_sucursal=1 WHERE id=1014;
+UPDATE vendedor SET num_sucursal=3 WHERE id=1015;
+UPDATE vendedor SET num_sucursal=11 WHERE id=1016;
+UPDATE vendedor SET num_sucursal=12 WHERE id=1017;
+UPDATE vendedor SET num_sucursal=9 WHERE id=1018;
+UPDATE vendedor SET num_sucursal=10 WHERE id=1019;
+UPDATE vendedor SET num_sucursal=8 WHERE id=1020;
+UPDATE vendedor SET num_sucursal=5 WHERE id=1021;
+UPDATE vendedor SET num_sucursal=6 WHERE id=1022;
+UPDATE vendedor SET num_sucursal=7 WHERE id=1023;
+
+SELECT * FROM vendedor
+SELECT * FROM sucursales
+
+SELECT v.nombre,v.apellidopaterno,v.num_sucursal,s.municipio,s.estado
+FROM vendedor v
+JOIN sucursales s
+ON v.num_sucursal=s.numsucursal;
+
+/*//contar cuantas sucursales hay uniendo de vendedor a sucursales*/
+CREATE TABLE cantsucursal
+AS SELECT v.num_sucursal,
+COUNT (v.num_sucursal) AS cantidadporsucursal
+FROM vendedor v
+JOIN sucursales s
+ON v.num_sucursal=s.numsucursal
+GROUP BY v.num_sucursal
+ORDER BY v.num_sucursal
+
+SELECT * FROM cantsucursal
+
+
+/*//###################################################
+###################################################
+###################################################
+//insertar filas segun algun parametro*/
+SELECT codigo_editorial FROM editorial WHERE nombreeditorial='Mexico'
+INSERT INTO libros (codigo,titulo,autor,codigoeditorial,precio,cantidad)
+SELECT 10040, 'La perdida del baston', 'Dionicio Castillo',codigo_editorial,250.9,6
+FROM editorial
+WHERE nombreeditorial='Mexico';
+
+
+SELECT * FROM editorial
+/*//segun en select hace falta el dato de numsucurales pero con el from sucursales y where del municipio lo descubre*/
+INSERT INTO vendedor (id, nombre, apellidopaterno, apellidomaterno,antiguedad, telefono,num_sucursal)
+SELECT 1023,'Lorenzo','Gamez','Lu','2020-08-02','2222222222',numsucursal
+FROM sucursales
+WHERE municipio='Ensenada';
+
+SELECT * FROM sucursales
+
+
+/*//###################################################
+###################################################
+###################################################*/
+
+CREATE TABLE alumnossobresalientes(
+numcontrol BIGINT,
+nombre VARCHAR(45),
+apellidopaterno VARCHAR(45),
+apellidomaterno VARCHAR(45),
+fechaingreso TEXT,
+carrera VARCHAR(45),
+promedio DECIMAL(6,2)
+
+);
+
+SELECT * FROM alumnos
+
+/*//segun el filtro de promedio en alumnos se crea la tabla de aumnos sobresalientes*/
+INSERT INTO alumnossobresalientes (numcontrol,nombre,apellidopaterno,
+apellidomaterno, fechaingreso,carrera,promedio)
+SELECT DISTINCT (numcontrol),nombre,apellidopaterno,apellidomaterno, fechaingreso,carrera,promedio
+FROM alumnos
+WHERE promedio>=90
+
+SELECT * FROM alumnossobresalientes
+
+
+/*//###################################################
+###################################################
+###################################################*/
+
+SELECT * FROM vendedor
+/*se agregan 2 variables*/
+ALTER TABLE vendedor ADD COLUMN municipio VARCHAR (45);
+ALTER TABLE vendedor ADD COLUMN estado VARCHAR (45);
+
+
+SELECT * FROM sucursales
+/*se actualizan en la tabla de vendedoreslos municipios y estados segun el numero de sucursal de sucursales */
+UPDATE vendedor AS v
+SET municipio = s.municipio
+FROM sucursales AS s
+WHERE v.num_sucursal = s.numsucursal
+
+UPDATE vendedor AS v
+SET estado = s.estado
+FROM sucursales AS s
+WHERE v.num_sucursal = s.numsucursal
+
+
+/*//###################################################
+###################################################
+###################################################*/
+/*Para eliminar cierto valor de la tabla a apartir de otra
+1. opcion*/
+SELECT*FROM editorial WHERE nombreeditorial='Mexico'
+DELETE libros
+WHERE codigoeditorial=220
+
+/*
+2. opcion*/
+DELETE FROM libros USING editorial
+WHERE codigoeditorial = codigo_editorial AND nombreeditorial= 'Mexico'
+
+SELECT*FROM libros
+
+
+select* from editorial
+
+/*//###################################################
+###################################################
+###################################################
+Subconsultas*/
+
+select*from empleados
+/*promedio de los sueldos de los empleados*/
+SELECT AVG (sueldo) AS sueldopromedio
+FROM empleados
+/*suma total del sueldo*/
+SELECT sum(sueldo)
+FROM empleados
+/*se cuenta el numero de empleados*/
+SELECT COUNT (*) FROM empleados
+
+/*sueldos superiores a este promedio*/
+SELECT nombre,apellidopaterno,apellidomaterno, sueldo
+FROM empleados
+WHERE sueldo>3879.3
+
+
+/*Lo anterior no fue subconsulta
+Esto si es una subconsulta*/
+
+
+SELECT nombre, apellidopaterno, apellidomaterno,sueldo
+FROM empleados 
+WHERE sueldo> (SELECT AVG(sueldo)FROM empleados)
+
+
+/* sin subconsulta*/
+SELECT nombre, apellidopaterno,apellidomaterno, puesto
+FROM empleados
+WHERE puesto='Limpieza'
+/* Esto es una subconsulta donde where crea un condicional del puesto como "Juan" y demas*/
+SELECT nombre, apellidopaterno, apellidomaterno, puesto
+FROM empleados
+WHERE puesto=(SELECT puesto FROM empleados WHERE nombre LIKE '%Juan%' AND apellidopaterno LIKE '%Lopez%'AND
+apellidomaterno LIKE '%Sanchez%')
+/* Lo mismo es*/
+SELECT nombre, apellidopaterno, apellidomaterno, puesto
+FROM empleados
+WHERE puesto=(SELECT puesto FROM empleados WHERE empleadoid=2234)
+
+
+/* Otro ejercicio*/
+SELECT MIN(precio) FROM libros
+/* el precio se resta con la consulta que se selecciona del libro*/
+SELECT titulo, autor,
+precio-(SELECT MIN(precio) FROM libros)
+FROM libros WHERE titulo LIKE '%El conejito'
+
+
+
+SELECT nombre, apellidopaterno, apellidomaterno,
+promedio-(SELECT MAX(promedio)FROM alumnos)AS diferencia
+FROM alumnos WHERE numcontrol=1000;
+
+
+/*//###################################################
+###################################################
+###################################################
+Modificar registros con Subconsultas*/
+
+CREATE TABLE cobranza(
+idcliente INTEGER,
+nombre VARCHAR(45),
+apellidopaterno VARCHAR(45),
+apellidomaterno VARCHAR(45),
+fechacobro DATE,
+totaldeuda DECIMAL(7,2),
+cantidadabono DECIMAL(7,2)
+);   
+
+INSERT INTO cobranza(idcliente,nombre,apellidopaterno,apellidomaterno,fechacobro,totaldeuda,cantidadabono)
+ VALUES(1000,'Juan','Vazquez','Perez','2021-08-01',4585.2,0),
+ (1001,'Alberto','Gamez','Galvez','2021-08-01',2000.2,0),
+ (1002,'Damaris','Gomez','Zaragoza','2021-08-01',2000,0),
+ (1003,'Cristina','Lizarraga','Sanchez','2021-08-01',5000,0),
+ (1004,'Jesus','Gonzalez','Gamez','2021-08-01',1000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-08-01',2000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-08-01',2000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-08-01',2000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-08-02',2000,0),
+ (1001,'Alberto','Gamez','Galvez','2021-08-03',2000.2,0),
+ (1006,'Ana Laura','Barrera','Galvez','2021-08-03',5000.2,0),
+ (1007,'Azucena','Sanchez','Lopez','2021-08-03',5000.2,0),
+ (1008,'Jose','Serrano','Esparza','2021-08-03',4000.2,0),
+ (1009,'Adalberto','Gutierrez','Galvez','2021-08-03',1000.5,0),
+ (1000,'Juan','Vazquez','Perez','2021-08-04',4585.2,0),
+ (1001,'Alberto','Gamez','Galvez','2021-08-04',2000.2,0),
+ (1002,'Damaris','Gomez','Zaragoza','2021-08-04',2000,0),
+ (1003,'Cristina','Lizarraga','Sanchez','2021-08-05',5000,0),
+ (1004,'Jesus','Gonzalez','Gamez','2021-08-05',1000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-08-06',2000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-08-07',2000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-08-08',2000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-08-08',2000,0),
+ (1001,'Alberto','Gamez','Galvez','2021-08-09',2000.2,0),
+ (1006,'Ana Laura','Barrera','Galvez','2021-08-09',5000.2,0),
+ (1007,'Azucena','Sanchez','Lopez','2021-08-09',5000.2,0),
+ (1008,'Jose','Serrano','Esparza','2021-08-09',4000.2,0),
+ (1009,'Adalberto','Gutierrez','Galvez','2021-08-09',1000.5,0),
+ (1001,'Alberto','Gamez','Galvez','2021-08-09',2000.2,0),
+ (1002,'Damaris','Gomez','Zaragoza','2021-08-09',2000,0),
+ (1003,'Cristina','Lizarraga','Sanchez','2021-08-10',5000,0),
+ (1004,'Jesus','Gonzalez','Gamez','2021-08-10',1000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-08-10',2000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-08-10',2000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-08-10',2000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-08-10',2000,0),
+ (1001,'Alberto','Gamez','Galvez','2021-08-11',2000.2,0),
+ (1006,'Ana Laura','Barrera','Galvez','2021-08-11',5000.2,0),
+ (1007,'Azucena','Sanchez','Lopez','2021-08-11',5000.2,0),
+ (1008,'Jose','Serrano','Esparza','2021-08-11',4000.2,0),
+ (1009,'Adalberto','Gutierrez','Galvez','2021-08-12',1000.5,0),
+ (1000,'Juan','Vazquez','Perez','2021-08-12',4585.2,0),
+ (1001,'Alberto','Gamez','Galvez','2021-08-12',2000.2,0),
+ (1002,'Damaris','Gomez','Zaragoza','2021-08-12',2000,0),
+ (1003,'Cristina','Lizarraga','Sanchez','2021-08-14',5000,0),
+ (1004,'Jesus','Gonzalez','Gamez','2021-08-14',1000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-08-14',2000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-08-15',2000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-08-15',2000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-08-15',2000,0),
+ (1001,'Alberto','Gamez','Galvez','2021-08-16',2000.2,0),
+ (1006,'Ana Laura','Barrera','Galvez','2021-08-16',5000.2,0),
+ (1007,'Azucena','Sanchez','Lopez','2021-08-16',5000.2,0),
+ (1008,'Jose','Serrano','Esparza','2021-08-16',4000.2,0),
+ (1009,'Adalberto','Gutierrez','Galvez','2021-08-16',1000.5,0),
+ (1003,'Cristina','Lizarraga','Sanchez','2021-09-01',5000,0),
+ (1004,'Jesus','Gonzalez','Gamez','2021-09-01',1000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-09-02',2000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-09-03',2000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-09-03',2000,0),
+ (1005,'Eustaquio','Aranza','Mercado','2021-09-04',2000,0),
+ (1001,'Alberto','Gamez','Galvez','2021-09-05',2000.2,0),
+ (1006,'Ana Laura','Barrera','Galvez','2021-09-06',5000.2,0),
+ (1007,'Azucena','Sanchez','Lopez','2021-09-07',5000.2,0),
+ (1008,'Jose','Serrano','Esparza','2021-09-07',4000.2,0),
+ (1009,'Adalberto','Gutierrez','Galvez','2021-09-08',1000.5,0);
+ 
+ 
+ CREATE TABLE historialcobranza(
+idcliente INTEGER,
+nombre VARCHAR(45),
+apellidopaterno VARCHAR(45),
+apellidomaterno VARCHAR(45),
+cantidadllamadas INTEGER DEFAULT 0
+);
+
+ INSERT INTO historialcobranza (idcliente,nombre,apellidopaterno,apellidomaterno)
+  SELECT distinct  idcliente,nombre,apellidopaterno,apellidomaterno FROM cobranza
+
+select * from historialcobranza ORDER BY idcliente
+/* Averiguar cuanto se le marco a cada uno*/
+SELECT*FROM cobranza WHERE idcliente=1009
+ 
+ 
+ 
+ UPDATE historialcobranza SET cantidadllamadas=subquery.contador /* tomo de las subconsultas*/
+	from (
+		select 
+			idcliente,
+			count( fechacobro::date) as contador /* cuanto se va a contar por fecha cobro*/
+		from cobranza group by 1) as subquery /* a todo lo del parentesis se le dice subquery*/
+	where historialcobranza.idcliente=subquery.idcliente;
+ 
+ /* truncate vacia la tabla pero deja encabezado*/
+ TRUNCATE historialcobranza
+ 
+ INSERT INTO historialcobranza(idcliente,nombre, apellidopaterno, apellidomaterno)
+SELECT DISTINCT idcliente, nombre, apellidopaterno,apellidomaterno FROM cobranza
+
+SELECT*FROM historialcobranza
+SELECT*FROM cobranza
+
+CREATE TEMPORARY TABLE temp AS
+SELECT DISTINCT idcliente, COUNT (fechacobro::DATE)AS contador
+FROM cobranza
+GROUP BY 1
+ /*se tabula el idcliente con el numero de llamadas a la fecha IMPORTANTE */
+SELECT*FROM temp
+
+/*DROP TABLE temp*/
+
+CREATE TEMPORARY TABLE temporal AS
+SELECT DISTINCT idcliente, COUNT (fechacobro::DATE)AS contador
+FROM cobranza
+GROUP BY 1 /*el 1 hace referencia a la columna primera*/
+ORDER BY 1
+
+SELECT*FROM temporal
+/*muy importante este paso puesto que de cobranza se hizo la tabla de historial de cobranza con la opcion 
+de la cantidad de llamadas, se crea la tabla temporal para tabular la frecuencia de la llamada y 
+luego se inserta en la tabla mayor*/
+UPDATE historialcobranza h
+SET cantidadllamadas=t.contador
+FROM temporal t
+WHERE t.idcliente=h.idcliente
+
+
+/*//###################################################
+###################################################
+###################################################
+continuar con operador like y not like
+Like funciona como un patron especifico*/
+SELECT*FROM alumnos
+/*apellidos que comiencen con la letra E*/
+SELECT*FROM alumnos WHERE apellidopaterno LIKE 'E%'
+/*apellidos que finalicen con la letra z en paterno y materno*/
+SELECT*FROM alumnos WHERE apellidopaterno LIKE '%z' AND apellidomaterno LIKE '%z'
+/*apellidos que NO comiencen con la letra V*/
+SELECT*FROM alumnos WHERE apellidopaterno NOT LIKE 'V%'
+
+
+/*//###################################################
+###################################################
+###################################################
+Analizar el tipo de datos numericos.  Tener encuenta las caracteristicas de cada columna 
+segun su almacenamiento*/
+CREATE TABLE tiposdedatos (
+numi SMALLINT,
+num2 INT2,
+num3 INT,
+num4 INT4,
+num5 BIGINT,
+num6 INT8,
+num7 DECIMAL(6,2),
+num8 FLOAT,
+num9 SERIAL);/*serial funciona como numero consecutivo*/
+
+
+INSERT INTO tiposdedatos (numl,num2,num3,num4,num5,num6,num7,num8)
+
+
+
+/*//###################################################
+###################################################
+###################################################
+/###################################################
+###################################################
+###################################################
+//###################################################
+###################################################
+###################################################
+//###################################################
+###################################################
+###################################################
+CURSO2*/
+
+
+
+CREATE TABLE deportistas(
+id SMALLSERIAL PRIMARY KEY, /*Se autoincrementa*/
+nombre VARCHAR (45) NOT NULL, /*Obligatorio poner el nombre*/
+deporte VARCHAR(45),
+fechainicio DATE DEFAULT '1900-01-01'
+)
+INSERT INTO deportistas (nombre,deporte)
+VALUES ('Ramon Vazquez', null) /*se puede adicionar solo nombre y deporte*/
+
+SELECT*FROM deportistas
+DELETE FROM deportistas WHERE id=1 /*al eliminar una variable el id serial continua con los numeros siguientes */
+
+INSERT INTO deportistas(nombre, deporte)
+VALUES (' Laura Garza', 'Natacion'); /*continua con el 2*/
+
+/*//###################################################
+###################################################
+###################################################*/
+DROP TABLE IF EXISTS clientes, ventas
+
+CREATE TABLE clientes(
+id_cliente INTEGER PRIMARY KEY,
+nombre_cliente VARCHAR(45)
+);
+
+CREATE TABLE ventas(
+id_venta INTEGER PRIMARY KEY,
+id_cliente INTEGER, /*foreing key*/
+CONSTRAINT FK_id_ventas FOREIGN KEY (id_cliente) /*esta restriccion esta sujeto a que las ventas tengan el id del cliente*/
+ REFERENCES clientes(id_cliente)
+);
+
+
+CREATE TABLE detalle_ventas(
+id_venta INTEGER PRIMARY KEY,
+descripcion VARCHAR(45),
+cantidad INTEGER,
+CONSTRAINT FK_id_detalles FOREIGN KEY (id_venta)
+ REFERENCES ventas(id_venta)
+);
+
+
+INSERT INTO clientes VALUES(10000,'Juan Roman');
+INSERT INTO clientes VALUES(10001,'Jose Esparza');
+INSERT INTO clientes VALUES(10002,'Lucia Gamez');
+INSERT INTO clientes VALUES(10003,'Alberto Luna');
+INSERT INTO clientes VALUES(10004,'Jonas Estrada');
+INSERT INTO clientes VALUES(10005,'Daniel Gomez');
+INSERT INTO clientes VALUES(10006,'Carlos Sanchez');
+INSERT INTO clientes VALUES(10007,'Ramon Lopez');
+INSERT INTO clientes VALUES(10008,'Celeste Luna');
+INSERT INTO clientes VALUES(10009,'Luz Espino');
+
+INSERT INTO ventas VALUES(1,10000);/*debe coincidir con id_clientes*/
+INSERT INTO ventas VALUES(2,10001);
+INSERT INTO ventas VALUES(3,10004);
+INSERT INTO ventas VALUES(4,10001);
+INSERT INTO ventas VALUES(5,10001);
+INSERT INTO ventas VALUES(6,10002);
+INSERT INTO ventas VALUES(7,10003);
+INSERT INTO ventas VALUES(8,10000);
+INSERT INTO ventas VALUES(9,10001);
+INSERT INTO ventas VALUES(10,10000);
+INSERT INTO ventas VALUES(11,10008);
+INSERT INTO ventas VALUES(12,10008);
+INSERT INTO ventas VALUES(13,10007);
+INSERT INTO ventas VALUES(14,10005);
+INSERT INTO ventas VALUES(15,10005);
+
+INSERT INTO detalle_ventas VALUES(1,'Cartón 100 plumas VICO',4);
+INSERT INTO detalle_ventas VALUES(2,'Paquete 100 hojas blancas tam carta',8);
+INSERT INTO detalle_ventas VALUES(3,'Cartón 100 lapices VICO',2);
+INSERT INTO detalle_ventas VALUES(4,'Paquete 50 borradores Almanza',1);
+INSERT INTO detalle_ventas VALUES(5,'Paquete 50 lapiceros Almanza',1);
+INSERT INTO detalle_ventas VALUES(6,'Paquete 50 sacapuntas Almanza',4);
+INSERT INTO detalle_ventas VALUES(7,'Cartón 100 plumas VICO',1);
+INSERT INTO detalle_ventas VALUES(8,'Cartón 100 lapices VICO',4);
+INSERT INTO detalle_ventas VALUES(9,'Plumón Aqua',25);
+INSERT INTO detalle_ventas VALUES(10,'Cartón 100 plumas VICO',1);
+INSERT INTO detalle_ventas VALUES(11,'Cartón 100 plumas VICO',2);
+INSERT INTO detalle_ventas VALUES(12,'Cartón 100 lapices VICO',6);
+INSERT INTO detalle_ventas VALUES(13,'Paquete 100 hojas blancas tam carta',4);
+INSERT INTO detalle_ventas VALUES(14,'Paquete 100 hojas blancas tam oficio',4);
+INSERT INTO detalle_ventas VALUES(15,'Paquete 100 hojas blancas tam carta',80);
+
+
+SELECT*FROM clientes  /*Sólo hay clientes del id_cliente=10000 al id_cliente=10009*/
+SELECT*FROM ventas  /*relacion 1 a muchos: 1 cliente puede tener muchas ventas, pero una venta pertenece a un cliente
+solamente se pueden ingresar clientes del 10000 al 10009
+Sólo hay ventas con id_venta=l al id_venta=16*/
+
+/*INSERT INTO ventas VALUES(16,10050); Este no va a funcionar*/
+
+SELECT*FROM detalle_ventas
+INSERT INTO detalle_ventas VALUES (17,'Paquete de 100 hojas blancas tam oficio',5); /*supera el id15 de ventas*/
+
+
+SELECT clientes.nombre_cliente, ventas.id_venta,/*tabla que une las 3 tablas*/
+detalle_ventas.descripcion,detalle_ventas.cantidad
+FROM clientes
+INNER JOIN ventas   
+ON clientes.id_cliente=ventas.id_cliente
+INNER JOIN detalle_ventas
+ON ventas.id_venta=detalle_ventas.id_venta
+
+
+
+/*//###################################################
+###################################################
+###################################################*/
+DROP TABLE IF EXISTS libros, autores, editorial
+
+
+
+CREATE TABLE libros(
+codigolibro INTEGER,
+titulo VARCHAR(40),
+codigoautor INTEGER,
+codigoeditorial INTEGER,
+precio DECIMAL(5,2),
+cantidad SMALLINT,
+			
+PRIMARY KEY(codigolibro)
+);
+
+INSERT INTO libros(codigolibro,titulo, codigoautor,codigoeditorial,precio,cantidad)
+VALUES(10001,'el aleph',1,220,450,5),
+(10002,'El conejito',1,221,200.5,2),
+(10003,'El elefante',5,222,100.5,3),
+(10004,'Sor Juana',3,223,400,4),
+(10005,'La Bella',2,224,500.5,1),
+(10006,'Los zapatos de Juana',1,225,100,1),
+(10007,'Tasa de café',7,226,200.5,1),
+(10008,'Los pecesitos',2,227,100.5,2),
+(10009,'El sueño dorado',4,228,99.9,2),
+(10010,'Andrés',8,229,200.5,4),
+(10011,'Tasa de café 2',1,230,200.5,1),
+(10012,'LA tortuga',1,231,85.9,null),
+(10013,'a felicidad',1,232,600.5,null),
+(10014,'Encontrando a Nemo',2,233,200.5,2),
+(10015,'El arcoiris',7,234,800.5,null),
+(10016,'Programación web extensa',7,235,100.5,null),
+(10017,'Sin ti',4,236,200.5,null);
+
+
+
+INSERT INTO libros(codigolibro,titulo, codigoautor,codigoeditorial,precio,cantidad)
+VALUES(10018,'Los sueños de Andrea',4,238,450,5),
+(10019,'Antonieta',1,239,200.5,2),
+(10020,'Cocinando sueños',9,240,100.5,3),
+(10021,'El perdedor',7,241,400,4),
+(10022,'Doña Juana',4,232,500.5,1),
+(10023,'Caperuza busa',1,228,100,1),
+(10024,'Es resplandor',2,226,200.5,1),
+(10025,'Volver a comenzar',4,225,100.5,2),
+(10026,'La sonrisa de Amalia',80,228,99.9,2),
+(10027,'El piano de Jose',81,229,238.5,4),
+(10028,'El huerto del terror',82,221,200.5,1),
+(10029,'El payaso de las tinieblas',83,221,85.9,null),
+(10030,'El bals de la esperanza',84,220,600.5,null),
+(10031,'Buscando a Hyun',85,226,200.5,2),
+(10032,'El arcoiris II',86,221,800.5,null),
+(10033,'Programación en Java a fondo',87,227,100.5,null),
+(10034,'Calculo I',88,232,200.5,null),
+(10035,'Aprender CSS con Flor',88,220,600.5,null),
+(10036,'MySQL a fondo',88,226,200.5,2),
+(10037,'Calculo II',87,221,800.5,null),
+(10038,'Programación en Java a fondo II',2,227,100.5,null),
+(10039,'Calculo III',1,232,200.5,null);
+
+/*Tabla editorial:*/
+
+CREATE TABLE editorial(
+codigo_editorial INTEGER,
+nombre VARCHAR(45),
+ciudad VARCHAR(45),
+estado VARCHAR(45)
+);
+
+INSERT INTO editorial VALUES(220,'Mexico','Tijuana','Baja California'),
+(221,'El buen lector','Celaya','Guanajuato'),
+(222,'El capricho','Leon','Guanajuato'),
+(223,'Forever 89','Mazatlan','Sinaloa'),
+(224,'1950','Hermosillo','Sonora'),
+(225,'Violeta','Navojoa','Sonora'),
+(226,'Esperanza','Monterrey','Nuevo Leon'),
+(227,'La luna','Monterrey','Nuevo Leon'),
+(228,'Horizonte del mañana','Puebla','Puebla'),
+(229,'Las flores','Guadalajara','Jalisco'),
+(230,'Renacer','Puerto Vallarta','Jalisco'),
+(231,'Celeste','Tepic','Nayarit'),
+(232,'Antonios','Guadalajara','Jalisco');
+
+/*/Insertar más datos a la tabla editorial.*/
+
+INSERT INTO editorial VALUES(233,'Madrid','Tijuana','Baja California'),
+(234,'Paris','Mexicali','Baja California'),
+(235,'California','Monterrey','Nuevo Leon'),
+(236,'Monterrey','Monterrey','Nuevo Leon'),
+(237,'Editorial Castellana','Guadalajara','Jalisco'),
+(238,'La aventura lectora','Monterrey','Nuevo Leon');
+
+ALTER TABLE editorial RENAME COLUMN nombre TO nombreeditorial;
+
+Insertamos más datos:
+
+INSERT INTO editorial VALUES(800,'Los ojos del lector','Tijuana','Baja California'),
+(801,'El puerto','Celaya','Guanajuato'),
+(802,'El intelectual','Leon','Guanajuato'),
+(803,'Cartoons','Mazatlan','Sinaloa'),
+(804,'Renacer','Hermosillo','Sonora'),
+(805,'La casita del lector','Navojoa','Sonora'),
+(806,'La hermosa','Monterrey','Nuevo Leon');
+
+Autores:
+
+CREATE TABLE autores(
+codigo_autor INTEGER PRIMARY KEY,
+nombre_autor VARCHAR(45)
+);
+INSERT INTO autores VALUES(1,'Luis Jimenez');
+INSERT INTO autores VALUES(2,'Camila Luna');
+INSERT INTO autores VALUES(3,'Flors');
+INSERT INTO autores VALUES(4,'Shakmuria');
+INSERT INTO autores VALUES(5,'Juan Roman');
+INSERT INTO autores VALUES(6,'Gabriel Esparza');
+INSERT INTO autores VALUES(7,'Gladys Perez');
+INSERT INTO autores VALUES(8,'William Dominguez');
+INSERT INTO autores VALUES(9,'Luis Jimenez');
+INSERT INTO autores VALUES(10,'Catalina Vega');
+INSERT INTO autores VALUES(11,'Daniel Gonzalez');
+INSERT INTO autores VALUES(12,'Claudia Sanchez');
+INSERT INTO autores VALUES(13,'Vladimir Esparza');
+INSERT INTO autores VALUES(14,'Luis Campos');
+INSERT INTO autores VALUES(15,'Jose Carlos Luna');
+
+SELECT*FROM libros
+/*son tablas cruzadas o uniones de 3 tablas*/
+SELECT l.titulo,a.nombre_autor,a.codigo_autor,e.nombreeditorial,e.ciudad
+FROM autores AS a
+INNER JOIN libros AS l
+ON l.codigoautor=a.codigo_autor
+INNER JOIN editorial AS e
+ON l.codigoeditorial=e.codigo_editorial
+
+SELECT l.titulo,a.nombre_autor,l.codigoautor,l.precio,e.nombreeditorial,e.ciudad
+FROM autores AS a
+INNER JOIN libros AS l
+ON l.codigoautor=a.codigo_autor
+INNER JOIN editorial AS e
+ON l.codigoeditorial=e.codigo_editorial
+WHERE l.precio<=200
+ORDER BY l.codigoautor ASC
+
+
+/*se mustra que left le da prioridad a autores pero cambia segun como esta select*/
+SELECT l.titulo,a.nombre_autor,a.codigo_autor
+FROM autores AS a
+LEFT JOIN libros AS l
+ON l.codigoautor=a.codigo_autor 
+/*se mustra que left le da prioridad a autores y luego el right a editorial*/
+SELECT l.titulo,a.nombre_autor,a.codigo_autor,e.codigo_editorial,e.nombreeditorial
+FROM autores AS a
+LEFT JOIN libros AS l
+ON l.codigoautor=a.codigo_autor
+RIGHT JOIN editorial AS e
+ON l.codigoeditorial=e.codigo_editorial
+ORDER BY e.codigo_editorial ASC
+
+
+
+/*primero se le da prioridad a la derecha que es la tabla libros y luego de esa tabla con left se le dara a editorial*/
+
+SELECT l.codigolibro,l.titulo,a.nombre_autor,a.codigo_autor,e.codigo_editorial,e.nombreeditorial
+FROM autores AS a
+RIGHT JOIN libros AS l
+ON l.codigoautor=a.codigo_autor
+LEFT JOIN editorial AS e
+ON l.codigoeditorial=e.codigo_editorial
+ORDER BY l.codigolibro ASC
+
+/*DROP TABLE  IF EXISTS    clientes
+
+DROP TABLE vendedor
+//###################################################
+###################################################
+###################################################
+Relaciones
+ventas--->clientes
+ventas--->vendedor
+detalleventas--->ventas
+detalleventas--->productos
+El vendedor con id 1, realizó la venta 100, al cliente 1, y ese cliente 1 es Juan López.
+El detalle de la venta 100, es que es del producto 1000, que es el código de los zapatos, y se vendieron 5 pares.
+
+Crea las tablas en este orden:
+1-clientes
+2-vendedor
+3-ventas
+4-productos
+5-detalle_ventas*/
+CREATE TABLE clientes(
+clienteid INTEGER PRIMARY KEY,
+nombre VARCHAR(45),
+tel_cliente BIGINT
+);
+CREATE TABLE vendedor(
+
+vendedorid INTEGER PRIMARY KEY,
+nombre_vendedor VARCHAR(45),
+tel_vendedor BIGINT
+
+);
+CREATE TABLE ventas(
+ventaid INTEGER PRIMARY KEY,
+vendedorid INTEGER, /*la foreign key para unirse con la tabla vendedor */
+clienteid INTEGER, /*la foreign key para unirse con la tabla cliente */
+descuento DECIMAL(3,2),
+CONSTRAINT FK_id_vendedor FOREIGN KEY (vendedorid)
+ REFERENCES vendedor(vendedorid),
+CONSTRAINT FK_id_cliente FOREIGN KEY (clienteid)
+ REFERENCES clientes(clienteid)
+);
+
+CREATE TABLE productos(
+productoid INTEGER PRIMARY KEY,
+descripcion VARCHAr(100),
+precio DOUBLE PRECISION
+
+);
+CREATE TABLE detalle_ventas(
+ventaid INTEGER PRIMARY KEY,
+cantidad INTEGER,
+productoid INTEGER,
+CONSTRAINT FK_id_venta FOREIGN KEY (ventaid)
+ REFERENCES ventas(ventaid),
+CONSTRAINT FK_id_producto FOREIGN KEY (productoid)
+ REFERENCES productos(productoid)
+
+);
+
+INSERT INTO clientes VALUES(10000,'Luis Perez',2234567834);
+INSERT INTO clientes VALUES(10001,'Carlos Valderde',4444567834);
+INSERT INTO clientes VALUES(10002,'Daniel Alvarez',1214567834);
+INSERT INTO clientes VALUES(10003,'Alvaro Luna',1234588834);
+INSERT INTO clientes VALUES(10004,'Laura Gomez',1234589934);
+INSERT INTO clientes VALUES(10005,'Adal Sanchez',1774567834);
+INSERT INTO clientes VALUES(10006,'Fausto Esparza',1234557834);
+INSERT INTO clientes VALUES(10007,'Gabriel Lopez',1234566634);
+INSERT INTO clientes VALUES(10008,'Juan Gamez',1234564534);
+INSERT INTO clientes VALUES(10009,'Laura Maria Lopez',1234567454);
+INSERT INTO clientes VALUES(10010,'Antonio Lopez',1234564234);
+INSERT INTO clientes VALUES(10011,'Adamari Perez',1234568934);
+INSERT INTO clientes VALUES(10012,'Antonieta Nieves',1844567834);
+INSERT INTO clientes VALUES(10013,'Roberto Perez',1233367834);
+INSERT INTO clientes VALUES(10014,'Anastasia Cervantes',1239967834);
+INSERT INTO clientes VALUES(10015,'Claudina Garza',1234560034);
+INSERT INTO clientes VALUES(10016,'Yesenia Delgado',1230067834);
+INSERT INTO clientes VALUES(10017,'Maria Delgado',1234567004);
+INSERT INTO clientes VALUES(10018,'Carlos Gomez',1234567800);
+INSERT INTO clientes VALUES(10019,'Luis Sanchez',1234524834);
+INSERT INTO clientes VALUES(10020,'Claudia Espino',1234525834);
+INSERT INTO clientes VALUES(10021,'Raul Gamez',1234562834);
+INSERT INTO clientes VALUES(10022,'Daniela Perez',1234127834);
+INSERT INTO clientes VALUES(10023,'Graciela Sanchez',1268567834);
+INSERT INTO clientes VALUES(10024,'Luis Perez Garza',1234887834);
+
+INSERT INTO vendedor VALUES(8501,'Agustin Perez',2222222222);
+INSERT INTO vendedor VALUES(8502,'Carmela Sanchez',3322222222);
+INSERT INTO vendedor VALUES(8503,'Laura Lara',2248222222);
+INSERT INTO vendedor VALUES(8504,'Laura Esparza',2278222222);
+
+INSERT INTO ventas VALUES(1,8501,10000,5);
+INSERT INTO ventas VALUES(2,8501,10000,5);
+INSERT INTO ventas VALUES(3,8502,10001,5);
+INSERT INTO ventas VALUES(4,8503,10002,5);
+INSERT INTO ventas VALUES(5,8501,10001,5);
+INSERT INTO ventas VALUES(6,8501,10004,5);
+INSERT INTO ventas VALUES(7,8502,10008,5);
+INSERT INTO ventas VALUES(8,8501,10007,5);
+INSERT INTO ventas VALUES(9,8504,10005,5);
+INSERT INTO ventas VALUES(10,8504,10004,5);
+INSERT INTO ventas VALUES(11,8502,10004,5);
+INSERT INTO ventas VALUES(12,8501,10006,5);
+INSERT INTO ventas VALUES(13,8503,10005,5);
+INSERT INTO ventas VALUES(14,8504,10006,5);
+INSERT INTO ventas VALUES(15,8501,10001,5);
+
+
+
+INSERT INTO productos VALUES(100,'Lata de atun Medusa 400 g',50.2);
+INSERT INTO productos VALUES(101,'Lata de camaron condimentado Medusa 400 g',120.5);
+INSERT INTO productos VALUES(102,'Lata de camaron sin condimentos Medusa 400 g',112);
+INSERT INTO productos VALUES(103,'Lata de ostiones Medusa 400 g',100.1);
+INSERT INTO productos VALUES(104,'Lata de frijoles refritos 500 g',25);
+INSERT INTO productos VALUES(105,'Lata de atun Medusa 1000 g',100);
+INSERT INTO productos VALUES(106,'Lata de camaron condimentado Medusa 1000 g',200);
+INSERT INTO productos VALUES(107,'Lata de carne asada Medusa 500 g',80);
+INSERT INTO productos VALUES(108,'Lata de refresco Medusa 300 ml',15);
+INSERT INTO productos VALUES(109,'Refresco Medusa 600 ml',18);
+INSERT INTO productos VALUES(110,'Refresco Medusa 1L',22);
+INSERT INTO productos VALUES(111,'Refresco Medusa 2L',28);
+
+
+
+INSERT INTO detalle_ventas VALUES(1,4,111);
+INSERT INTO detalle_ventas VALUES(2,1,109);
+INSERT INTO detalle_ventas VALUES(3,2,100);
+INSERT INTO detalle_ventas VALUES(4,1,101);
+INSERT INTO detalle_ventas VALUES(5,8,103);
+INSERT INTO detalle_ventas VALUES(6,25,102);
+INSERT INTO detalle_ventas VALUES(7,4,111);
+INSERT INTO detalle_ventas VALUES(8,1,110);
+INSERT INTO detalle_ventas VALUES(9,2,108);
+INSERT INTO detalle_ventas VALUES(10,3,107);
+INSERT INTO detalle_ventas VALUES(11,3,104);
+INSERT INTO detalle_ventas VALUES(12,8,111);
+INSERT INTO detalle_ventas VALUES(13,4,110);
+INSERT INTO detalle_ventas VALUES(14,100,111);
+INSERT INTO detalle_ventas VALUES(15,4,111);
+
+
+/*se une las subconsultas posibles*/
+SELECT clientes.clienteid, clientes.nombre,
+ventas.descuento, ventas.ventaid,
+vendedor.vendedorid, vendedor.nombre_vendedor
+FROM clientes
+INNER JOIN ventas
+ON ventas.clienteid=clientes.clienteid
+INNER JOIN vendedor
+ON ventas.vendedorid=vendedor.vendedorid
+
+
+/*se une todo*/
+
+SELECT clientes.clienteid, clientes.nombre,
+ventas.descuento, ventas.ventaid,
+vendedor.vendedorid, vendedor.nombre_vendedor,
+detalle_ventas.cantidad,productos.descripcion
+FROM clientes
+INNER JOIN ventas
+ON ventas.clienteid=clientes.clienteid
+INNER JOIN vendedor
+ON ventas.vendedorid=vendedor.vendedorid
+INNER JOIN detalle_ventas
+ON detalle_ventas.ventaid=ventas.ventaid
+INNER JOIN productos
+ON detalle_ventas.productoid=productos.productoid
+
+/*//###################################################
+###################################################
+###################################################
+cascade y no action*/
+SELECT*FROM puestos
+DROP TABLE puestos, empleados
+
+CREATE TABLE empleados(
+idempleado INTEGER PRIMARY KEY,
+nombre VARCHAR (45) ,
+puestoid INTEGER,
+CONSTRAINT FK_id_puestos FOREIGN KEY (puestoid)
+REFERENCES puestos(puestoid))
+
+CREATE TABLE puestos (
+puestoid INTEGER PRIMARY KEY,
+nombrepuesto VARCHAR (45))
+
+/*primero insertar los datos de puestos y empleados*/
+
+INSERT INTO empleados VALUES(1000,'Juan',1);
+INSERT INTO empleados VALUES(1001,'Jose',1);
+INSERT INTO empleados VALUES(1002,'Daniel',4);
+INSERT INTO empleados VALUES(1003,'Laura',2);
+INSERT INTO empleados VALUES(1004,'Carlos',1);
+INSERT INTO empleados VALUES(1005,'Daniel',1);
+INSERT INTO empleados VALUES(1006,'Luna',3);
+INSERT INTO empleados VALUES(1007,'Oscar',5);
+INSERT INTO empleados VALUES(1008,'Joao',6);
+INSERT INTO empleados VALUES(1009,'Gabriel',7);
+INSERT INTO empleados VALUES(1010,'Pedro',7);
+INSERT INTO empleados VALUES(1011,'Jesus',2);
+INSERT INTO empleados VALUES(1012,'Linda',6);
+INSERT INTO empleados VALUES(1013,'Ana',7);
+INSERT INTO empleados VALUES(1014,'Maria',7);
+INSERT INTO empleados VALUES(1015,'Jose Carlos',2);
+
+INSERT INTO puestos VALUES(1,'Limpieza');
+INSERT INTO puestos VALUES(2,'Secretaria');
+INSERT INTO puestos VALUES(3,'Cajera');
+INSERT INTO puestos VALUES(4,'Facturista');
+INSERT INTO puestos VALUES(5,'Capturista');
+INSERT INTO puestos VALUES(6,'Contador');
+INSERT INTO puestos VALUES(7,'RH');
+INSERT INTO puestos VALUES(8,'Gerente');
+INSERT INTO puestos VALUES(9,'Subgerente');
+INSERT INTO puestos VALUES(10,'Jardinero');
+INSERT INTO puestos VALUES(11,'Office boy');
+INSERT INTO puestos VALUES(12,'Cocinero personal');
+
+
+SELECT*FROM puestos
+SELECT*FROM empleados
+/*se borran las restricciones para construir el cascade */
+ALTER TABLE empleados DROP CONSTRAINT Fk_id_puestos
+
+/*sino se hubiese borrado no se hubiese podido agregar*/
+INSERT INTO empleados VALUES (1017, 'Ramona',100);
+
+/*se debe borrar, ya que este dato no coincide con puestos*/
+DELETE FROM empleados WHERE puestoid=100
+
+/*cascade permite borrar y actualizar datos y al mismo tiempo en otras tablas*/
+ALTER TABLE empleados
+ADD CONSTRAINT fk_id_puesto
+FOREIGN KEY (puestoid)
+REFERENCES puestos (puestoid)
+ON DELETE CASCADE ON UPDATE CASCADE;/*por defecto funciona no action*/
+
+
+/*al borrarse en puestos se borra en empleados */
+DELETE FROM puestos WHERE puestoid=1
+
+/*actualiza y se reemplaza los datos en puestos y empleados al mismo tiempo*/
+UPDATE puestos SET puestoid=500 WHERE puestoid=7
+
+
+
+/*DROP TABLE  IF EXISTS    clientes
+
+DROP TABLE libros, editorial
+//###################################################
+###################################################
+###################################################*/
+
+CREATE TABLE libros(
+codigolibro INTEGER,
+titulo VARCHAR(40),
+codigoautor INTEGER,
+codigoeditorial INTEGER,
+precio DECIMAL(5,2),
+cantidad SMALLINT,
+			
+PRIMARY KEY(codigolibro)
+);
+
+INSERT INTO libros(codigolibro,titulo, codigoautor,codigoeditorial,precio,cantidad)
+VALUES(10001,'el aleph',1,220,450,5),
+(10002,'El conejito',1,221,200.5,2),
+(10003,'El elefante',5,222,100.5,3),
+(10004,'Sor Juana',3,223,400,4),
+(10005,'La Bella',2,224,500.5,1),
+(10006,'Los zapatos de Juana',1,225,100,1),
+(10007,'Tasa de café',7,226,200.5,1),
+(10008,'Los pecesitos',2,227,100.5,2),
+(10009,'El sueño dorado',4,228,99.9,2),
+(10010,'Andrés',8,229,200.5,4),
+(10011,'Tasa de café 2',1,230,200.5,1),
+(10012,'LA tortuga',1,231,85.9,null),
+(10013,'a felicidad',1,232,600.5,null),
+(10014,'Encontrando a Nemo',2,233,200.5,2),
+(10015,'El arcoiris',7,234,800.5,null),
+(10016,'Programación web extensa',7,235,100.5,null),
+(10017,'Sin ti',4,236,200.5,null);
+
+
+CREATE TABLE editorial(
+codigo_editorial INTEGER PRIMARY KEY,
+nombre VARCHAR(45),
+ciudad VARCHAR(45),
+estado VARCHAR(45)
+);
+
+INSERT INTO editorial VALUES(220,'Mexico','Tijuana','Baja California'),
+(221,'El buen lector','Celaya','Guanajuato'),
+(222,'El capricho','Leon','Guanajuato'),
+(223,'Forever 89','Mazatlan','Sinaloa'),
+(224,'1950','Hermosillo','Sonora'),
+(225,'Violeta','Navojoa','Sonora'),
+(226,'Esperanza','Monterrey','Nuevo Leon'),
+(227,'La luna','Monterrey','Nuevo Leon'),
+(228,'Horizonte del mañana','Puebla','Puebla'),
+(229,'Las flores','Guadalajara','Jalisco'),
+(230,'Renacer','Puerto Vallarta','Jalisco'),
+(231,'Celeste','Tepic','Nayarit'),
+(232,'Antonios','Guadalajara','Jalisco');
+
+INSERT INTO libros(codigolibro,titulo, codigoautor,codigoeditorial,precio,cantidad)
+VALUES(10018,'Los sueños de Andrea',4,238,450,5),
+(10019,'Antonieta',1,239,200.5,2),
+(10020,'Cocinando sueños',9,240,100.5,3),
+(10021,'El perdedor',7,241,400,4),
+(10022,'Doña Juana',4,232,500.5,1),
+(10023,'Caperuza busa',1,228,100,1),
+(10024,'Es resplandor',2,226,200.5,1),
+(10025,'Volver a comenzar',4,225,100.5,2),
+(10026,'La sonrisa de Amalia',80,228,99.9,2),
+(10027,'El piano de Jose',81,229,238.5,4),
+(10028,'El huerto del terror',82,221,200.5,1),
+(10029,'El payaso de las tinieblas',83,221,85.9,null),
+(10030,'El bals de la esperanza',84,220,600.5,null),
+(10031,'Buscando a Hyun',85,226,200.5,2),
+(10032,'El arcoiris II',86,221,800.5,null),
+(10033,'Programación en Java a fondo',87,227,100.5,null),
+(10034,'Calculo I',88,232,200.5,null),
+(10035,'Aprender CSS con Flor',88,220,600.5,null),
+(10036,'MySQL a fondo',88,226,200.5,2),
+(10037,'Calculo II',87,221,800.5,null),
+(10038,'Programación en Java a fondo II',2,227,100.5,null),
+(10039,'Calculo III',1,232,200.5,null);
+
+DELETE FROM libros WHERE codigoeditorial=241;/*233,234,235,236...*/
+
+/*funciona como no action*/
+ALTER TABLE libros
+ADD CONSTRAINT fk_cod_editorial
+FOREIGN KEY (codigoeditorial)
+REFERENCES editorial(codigo_editorial);
+
+
+DELETE FROM editorial WHERE codigo_editorial=220;/*todavia esta referida a codigo libros*/
+
+
+/*se borra la restriccion para luego crear cascade */
+
+ALTER TABLE libros
+DROP CONSTRAINT fk_cod_editorial
+
+ALTER TABLE libros
+ADD CONSTRAINT fk_cod_editorial
+FOREIGN KEY (codigoeditorial)
+REFERENCES editorial(codigo_editorial)
+ON DELETE CASCADE
+/*no se puede actualizar porque no aparece update cascade */
+
+UPDATE editorial SET codigo_editorial=5000 WHERE codigo_editorial=221
+/*se borra la restriccion de nuevo */
+ALTER TABLE libros DROP
+CONSTRAINT fk_cod_editorial
+
+ALTER TABLE libros
+ADD CONSTRAINT fk_cod_editorial
+FOREIGN KEY (codigoeditorial)
+REFERENCES editorial(codigo_editorial)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+
+UPDATE editorial SET codigo_editorial=5000 WHERE codigo_editorial=221
+
+SELECT*FROM libros WHERE codigoeditorial=5000
+
+
+/*
+//###################################################
+###################################################
+###################################################*/
+DROP TABLE personas
+CREATE TABLE personas(
+personaid INTEGER PRIMARY KEY,
+persona_nombre VARCHAR(45),
+ciudadid INTEGER
+)
+CREATE TABLE ciudades(
+ciudadid INTEGER PRIMARY KEY,
+nombre_ciudad VARCHAR (45)
+);
+
+INSERT INTO personas VALUES (100, 'Juan' ,2) , (101, 'Jose',1), (102, 'Pepe',3),
+(4,'Miguel',3), (5,'Luis',2);
+
+
+ALTER TABLE personas
+ADD CONSTRAINT fk_ciudad_id
+FOREIGN KEY(ciudadid)
+REFERENCES ciudades(ciudadid);
+
+UPDATE personas SET personaid=102 WHERE personaid=4;
+UPDATE personas SET personaid=104 WHERE personaid=4;
+
+
+/*
+//###################################################
+###################################################
+###################################################*/
+SELECt*FROM alumnos WHERE carrera='Mercadotecnia' OR carrera='Psicologia'
+OR carrera='Biologia'
+
+SELECt*FROM alumnos WHERE carrera IN('Mercadotecnia','Psicologia','Biologia')
+SELECt*FROM alumnos WHERE carrera NOT IN('Mercadotecnia','Psicologia','Biologia')
+/*todos los estudiantes que no son de mercadotecnia*/
+SELECT*FROM alumnos WHERE carrera <>'Mercadotecnia'
+SELECT COUNT (*) FROM alumnos
+SELECT*FROM alumnos LIMIT 5
+SELECT*FROM alumnos LIMIT 5 OFFSET 0/*empezando desde 0*/
+
+
+
+/*se utiliza unique*/
+CREATE TABLE personas(
+idpersona INTEGER PRIMARY KEY,
+nombre VARCHAR(45) NOT NULL,
+telefono VARCHAR (45) UNIQUE,
+nombreconyuge VARCHAR(45) UNIQUE
+);
+
+
+INSERT INTO personas VALUES (1,'Romeo Lopez','2222222222','Raul Zazueta Mercado') ;
+INSERT INTO personas VALUES(2, 'Maria Perez','1222222222', 'Jose Zazueta Mercado');
+
+
+SELECt*FROM alumnos
+
+SELECT+FROM alumnos
+INSERT INTO alumnos VALUES (1023, 'Juan','Perez', 'Lopez', '1998-06-05','2020-08-05',
+'2222222222', 'Psicologia',1590.2);
+
+DELETE FROM alumnos WHERE promedio=1590.2
+
+ALTER TABLE alumnos
+ADD CONSTRAINT ck_alumnos_prom
+CHECK (promedio>=0 AND promedio<=100);
+
+
+
+/*
+//###################################################
+###################################################
+###################################################
+CURSO 3 CONVERSIONES*/
+
+SELECT 100 AS numeroentero
+SELECT CAST(100 AS VARCHAR)
+SELECT CAST('hola' AS INTEGER)/*No funciona esta conversion*/
+SELECT 100::VARCHAR
+SELECT 100::DOUBLE PRECISION
+
+
+CREATE TABLE tabla1(
+dato1 INTEGER)
+CREATE TABLE tabla2(
+dato2 VARCHAR (12))
+
+/*dato1 es de tipo INTEGER
+dato2 de tipo VARCHAR*/
+
+INSERT INTO tabla2 VALUES('a')
+INSERT INTO tabla1(dato1) SELECT dato2 FROM tabla2
+
+SELECt*FROM tabla1
+
+truncate tabla2
+
+INSERT INTO tabla2 VALUES(500)/*Caracter character varing*/
+
+INSERT INTO tabla1(dato1)SELECT dato2::INTEGER FROM tabla2 /*Integer permite que character varing pueda agregar datos
+a la otra tabla*/
+
+
+INSERT INTO tabla2 VALUES('1');
+INSERT INTO tabla2 VALUES('2');
+INSERT INTO tabla2 VALUES('4');
+INSERT INTO tabla2 VALUES('8');
+
+INSERT INTO tabla1(dato1)SELECT dato2::INTEGER FROM tabla2 /*Integer permite que character varing pueda agregar datos
+a la otra tabla*/
+
+
+SELECT '100'::INTEGER/*'100WP' ya no puede ser integer porque es texto*/ 
+ 
+ 
+SELECT CAST('1900-01-18' AS DATE)/*de texto pasa a fecha*/
+SELECT '1900-01-18':: DATE
+
+DROP TABLE tabla1, tabla2
+
+CREATE TABLE tabla1(
+fechal DATE
+);
+CREATE TABLE tabla2(
+texto VARCHAR(45))
+
+INSERT INTO tabla2 VALUES('2020-03-15'), ('2020-03-15'), ('2020-05-15'), ('2020-06-15')
+SELECt*FROM tabla2
+
+/*se copian los datos de la tabla 2 a la 1*/
+INSERT INTO tabla1(fechal) SELECT texto::DATE FROM tabla2
+
+
+
+SELECT '200.5' : : DOUBLE PRECISION
+
+SELECT CURRENT_DATE
+SELECT CURRENT_TIME
+SELECT EXTRACT (MONTH FROM '2018-05-12'::DATE)/*se extrae el mes*/
+SELECT EXTRACT (DAY FROM CURRENT_DATE)
+SELECT EXTRACT (YEAR FROM CURRENT_DATE)
+
+SELECT EXTRACT (YEAR FROM'2020-06-15'::DATE)
+SELECT 2020-06-15 /*asi no mas la variable es texto*/
+
+
+SELECT EXTRACT (HOUR FROM CURRENT_TIMESTAMP)
+SELECT EXTRACT (HOUR FROM CURRENT_TIME)
+SELECT EXTRACT (HOUR FROM '2021-09-19 08:08:00'::TIMESTAMP)
+SELECT EXTRACT (MINUTE FROM CURRENT_TIMESTAMP)
+SELECT NOW()-'1 day':: INTERVAL
+
+SELECT AGE(NOW() ,DATE('2021-01-01'))
+SELECT AGE (DATE('2022-01-01') , DATE('2021-01-01'))
+SELECT (NOW () -'24 hour':: INTERVAL)
+
+SELECT 'YESTERDAY'::TIMESTAMP WITH TIME ZONE
+SELECT*FROM alumnos
+
+
+INSERT INTO alumnos (numcontrol, nombre,apellidopaterno, apellidomaterno, fechanacimiento)
+VALUES (1024, 'Laura', 'Sanchez', 'Vidal', '1995-09-19');
+INSERT INTO alumnos (numcontrol,nombre, apellidopaterno, apellidomaterno, fechanacimiento)
+VALUES (1025, 'Pedro','Sanchez','Vidal','1996-09-19');
+
+INSERT INTO alumnos (numcontrol, nombre,apellidopaterno, apellidomaterno, fechanacimiento)
+VALUES (1024, 'Laura', 'Sanchez', 'Vidal', '1995-04-24');
+INSERT INTO alumnos (numcontrol,nombre, apellidopaterno, apellidomaterno, fechanacimiento)
+VALUES (1025, 'Pedro','Sanchez','Vidal','1996-04-24');
+
+SELECT*FROM alumnos WHERE numcontrol=1024 OR numcontrol=1025
+/*extrae la informacion de meses*/
+SELECT nombre, apellidopaterno, apellidomaterno, fechanacimiento FROM alumnos
+WHERE EXTRACT (MONTH FROM fechanacimiento) =EXTRACT (MONTH FROM CURRENT_DATE)
+AND EXTRACT (DAY FROM fechanacimiento)=EXTRACT(DAY FROM CURRENT_DATE)
+
+SELECT nombre, apellidopaterno, apellidomaterno, fechanacimiento, CURRENT_DATE
+AS fechaactual FROM alumnos
+WHERE EXTRACT (MONTH FROM fechanacimiento) =EXTRACT (MONTH FROM CURRENT_DATE)
+AND EXTRACT (DAY FROM fechanacimiento)= EXTRACT (DAY FROM CURRENT_DATE)
+
+/*por error estaban cambiadas*/
+ALTER TABLE alumnos RENAME COLUMN fechanacimiento TO fechaingreso2
+ALTER TABLE alumnos RENAME COLUMN fechaingreso TO fechanacimiento2
+
+SELECT COUNT (*) FROM alumnos WHERE
+EXTRACT (YEAR FROM fechaingreso2)='2021'
+
+
+/*se muestran los que ingresaron en 2021*/
+SELECT*FROM alumnos WHERE EXTRACT (YEAR FROM fechaingreso2) ='2021'
+
+SELECT COUNT(*) FROM alumnos WHERE
+EXTRACT (YEAR FROM fechaingreso2)=EXTRACT (YEAR FROM CURRENT_DATE)
+
+SELECT DATE_TRUNC('month' , CURRENT_DATE)/*primer dia de la fecha actual*/
+SELECT DATE_PART('day' , CURRENT_DATE) /*dia actual*/
+
+/*se muestran 30 dias empezando de 1 dia mas un mes y se le resta un segundo*/
+SELECT EXTRACT (DAY FROM (SELECT DATE_TRUNC('MONTH', CURRENT_DATE)+'1 month':: INTERVAL)-'1 SEC'::INTERVAL)
+
+SELECT*FROM alumnos WHERE
+fechaingreso2=CURRENT DATE-1 /*para saber los alumnosdel dia de ayer*/
+
+SELECT*FROM alumnos WHERE
+fechaingreso2=CURRENT DATE-7 /*hace 7 dias*/
+
+SELECT*FROM alumnos WHERE
+fechaingreso2=CURRENT DATE-'1 month':: INTERVAL /*hace un mes*/
+
+
+
+
+/*###################################################
+###################################################
+###################################################
+Curso4*/
+SELECT CAST(RANDOM()*1000 AS INT)
+SELECT CAST (12345678 AS CHAR (4))
+SELECT CAST ('Flortronic' AS CHAR (4))
+SELECT CAST ('Flortronic' AS CHAR (1))
+
+SELECT TRANSLATE('López', 'áéíóúÁÉÍÓÚ','aeiouAEIOU')/*reemplaza las tildes*/
+SELECT RTRIM('POSTGRESQL', 'SQL')/*para recortar*/
+SELECT REVERSE('Shakmuria')
+SELECT SUBSTR('Floricienta',LENGTH ('Floricienta')-10,4)/*11-1=10. para tener las letras del 1 al 4*/
+SELECT SUBSTR(1234567899::varchar, LENGTH (1234567899::varchar)-9,2);
+SELECT TRIM('      Flor')/*no deja espacios    SELECT '      Flor'    sin funcion trim no funciona*/
+SELECT TRIM(TRAILING '-' FROM 'Flortronic---------')
+SELECT LTRIM('----Florecita', '-')
+SELECT RTRIM('*******Florecita********','*'),LTRIM('*******Florecita********','*') /*solo muestra los de los lados*/
+SELECT TO_CHAR (CURRENT_DATE, 'YYYY')
+SELECT TO_CHAR(CURRENT_DATE, 'mm')
+/*el codigo ASCII permite */
+SELECT ASCII('@')
+SELECT CHR(70)/*para devolverlo*/
+/*un ejemplo */
+SELECT*FROM alumnos
+WHERE SUBSTRING(apellidopaterno, 1,1) =CHR(65)
+/*concatenar*/
+Select nombre||' '|| apellidopaterno||' '||apellidomaterno as nombrecompleto FROM alumnos
+/*mejor manera de concatenar*/
+Select CONCAT (nombre, apellidopaterno, apellidomaterno) FROM alumnos
+SELECT LOWER(' FLOR')/*en munuscula*/
+SELECT UPPER('flor')
+SELECT POSITION ('or' IN 'Flortronic')/*analiza la posicion*/
+SELECT SPLIT_PART ('2021-10-31','-',3)/*este split funciona tambien con 1 y 2*/
+SELECT SPLIT_PART('Jose+Perez+Mexico', '+',3)
+
+CREATE TABLE tablita(
+nomprecompleto VARCHAR(100)
+);
+ DELETE FROM tablita WHERE nombrecompleto='Miguel Lopez'
+ 
+INSERT INTO tablita VALUES('Jose Dominguez Perez'), ('Miguel Lopez Sanchez')
+
+/*diferentes maneras de unir*/
+SELECT SPLIT_PART(nomprecompleto,' ',1) FROM tablita
+
+SELECT SPLIT_PART(nomprecompleto,' ',1)||' '||
+SPLIT_PART(nomprecompleto,' ',2) FROM tablita
+SELECT SPLIT_PART('Juan|Miguel|Lopez|Sanchez','*',1)
+
+
+/*###################################################
+###################################################
+###################################################
+Curso5    CREAR FUNCIONES*/
+
+SELECT mifuncion ()
+/*SE PUEDE PONER */
+
+CREATE OR REPLACE FUNCTION mifuncion()
+RETURNS TEXT
+AS $$
+BEGIN
+RETURN 'Bienvenido a mi curso de PostgreSQL';
+END;
+$$ LANGUAGE plpgsql;
+/*DROP FUNCTION mifuncion*/
+
+CREATE OR REPLACE FUNCTION mifuncion()
+RETURNS INT
+AS $$
+BEGIN
+RETURN 100;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION mifuncion(num INT)
+RETURNS INT
+AS $$
+BEGIN
+RETURN num*2;
+
+END;
+$$ LANGUAGE plpgsql;
+
+SELECT mifuncion (25) /*por return se multiplica por 2*/
+
+/*retornaria como una funcion texto 2*/
+CREATE OR REPLACE FUNCTION mifuncion(num INT)
+RETURNS text
+AS $$
+BEGIN
+RETURN num*2;
+
+END;
+$$ LANGUAGE plpgsql;
+
+SELECT mifuncion (25)
+
+DROP FUNCTION mifuncion(int)
+
+/*no olvidar borrar la funcion*/
+CREATE OR REPLACE FUNCTION mifuncion(dato INT)
+RETURNS INT
+AS $$
+BEGIN
+RETURN dato/2;
+END;
+$$ LANGUAGE plpgsql;
+
+SELECT mifuncion (100)
+
+/*en el caso que al dividir la funcion tenga decimal se debe borrar la funcion
+y poner double precision*/
+DROP FUNCTION mifuncion(int)
+
+CREATE OR REPLACE FUNCTION mifuncion(dato INT)
+RETURNS DOUBLE PRECISION
+AS $$
+BEGIN
+RETURN dato/2::DOUBLE PRECISION;  /*::DOUBLE PRECISION  esto se agrega para permitir que en la division esten las decimas*/
+END;
+$$ LANGUAGE plpgsql;
+
+SELECT mifuncion (13)
+
+
+
+CREATE OR REPLACE FUNCTION mifuncion(dato1 INT, dato2 INT)
+RETURNS DOUBLE PRECISION
+AS $$
+BEGIN
+RETURN dato1+dato2;
+END;
+$$ LANGUAGE plpgsql;
+
+SELECT mifuncion(4,8)
+/*DROP FUNCTION mifuncion(INT,INT)*/
+
+/*###################################################*/
+/*DROP FUNCTION creartabla()*/
+
+CREATE OR REPLACE FUNCTION creartabla()
+RETURNS TEXT
+AS $$
+BEGIN
+CREATE TABLE tablapruebal(
+nom VARCHAR (45) ,
+edad INTEGER,
+pais VARCHAR (45)
+);
+RETURN 'Creación de tabla.';
+END;
+$$ LANGUAGE plpgsql;
+
+SELECT creartabla()
+ 
+ SELECT * FROM pg_tables/*tablas que sean realizado*/
+ /*Siempre la noticia detras de la accion
+ IMPORTANTE LAS FUNCIONES QUE MUESTRAN LOS PASOS QUE SE VAN REALIZANDO*/
+
+ CREATE OR REPLACE FUNCTION creartabla()
+RETURNS TEXT
+AS $$
+BEGIN
+    IF EXISTS (SELECT tablename FROM pg_tables WHERE tablename='tablaprueba1')
+           THEN
+                 DROP TABLE tablaprueba1;
+    END IF;
+	       RAISE NOTICE 'Borrado de la tabla llamada tablaprueba1';
+    IF NOT EXISTS(SELECT tablename FROM pg_tables WHERE tablename='tablaprueba1')
+           THEN
+                   CREATE TABLE tablaprueba1(
+                    nom VARCHAR(45),
+                    edad INT,
+                    pais VARCHAR(45)
+	);
+    END IF;	
+		    RAISE NOTICE 'Creación de la tabla llamada tablaprueba1';
+	INSERT INTO tablaprueba1(nom,edad,pais)
+VALUES ('Jose' ,45, 'Mexico');
+	RAISE NOTICE 'Inserción de datos en la tabla llamada tablapruebal'; 
+
+    ALTER TABLE tablaprueba1 ADD COLUMN telefono VARCHAR (12);
+    RAISE NOTICE 'Se añadió columna llamada telefono.';
+
+RETURN 'Creación de tabla.';
+END;
+$$ LANGUAGE plpgsql;
+ 
+ /*Otra manera de adicionar contenido con query*/
+
+
+ CREATE OR REPLACE FUNCTION creartabla()
+RETURNS TEXT
+AS $$
+
+DECLARE
+query TEXT;
+
+BEGIN
+    IF EXISTS (SELECT tablename FROM pg_tables WHERE tablename='tablaprueba1')
+           THEN
+                query:='DROP TABLE tablaprueba1;';
+                EXECUTE query;   
+    END IF;
+	       RAISE NOTICE 'Borrado de la tabla llamada tablaprueba1';
+    IF NOT EXISTS(SELECT tablename FROM pg_tables WHERE tablename='tablaprueba1')
+           THEN
+		   query:='CREATE TABLE tablaprueba1(
+                    nom VARCHAR(45),
+                    edad INT,
+                    pais VARCHAR(45)
+	);';
+           EXECUTE query;
+    END IF;	
+		    RAISE NOTICE 'Creación de la tabla llamada tablaprueba1';
+	INSERT INTO tablaprueba1(nom,edad,pais)
+VALUES ('Jose' ,45, 'Mexico');
+	RAISE NOTICE 'Inserción de datos en la tabla llamada tablapruebal'; 
+
+    ALTER TABLE tablaprueba1 ADD COLUMN telefono VARCHAR (12);
+    RAISE NOTICE 'Se añadió columna llamada telefono.';
+
+query:='UPDATE tablaprueba1 SET telefono=''1000055555'' WHERE nom=''Jose'';';
+EXECUTE query;
+
+RETURN 'Creación de tabla.';
+END;
+$$ LANGUAGE plpgsql;
+
+ 
+ SELECT creartabla()
+ SELECT * FROM tablaprueba1
+ 
+ /*###################################################
+###################################################
+###################################################
+continuar luego con Curso6*/
+ 
+ 
+SELECT * FROM productos
+
 
